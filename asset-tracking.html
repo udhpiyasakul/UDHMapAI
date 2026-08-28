@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH Asset & Medical Parcel Tracking — ระบบติดตามพัสดุและอุปกรณ์ราคาสูง</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="asset-tracking.css">
+</head>
+<body class="command-center-body">
+  <header class="cc-header">
+    <div class="brand">
+      <a href="index.html" class="back-link" title="กลับหน้าผู้ป่วย">‹ หน้าหลัก</a>
+      <span class="badge-udh">UDH RTLS</span>
+      <h1>ระบบติดตามพัสดุราคาสูง & อุปกรณ์ทางการแพทย์</h1>
+      <small>โรงพยาบาลอุดรธานี (Udon Thani Hospital RTLS Command System)</small>
+    </div>
+    <div class="system-status">
+      <span class="pulse-live">● LIVE MONITORED</span>
+      <div class="clock-display" id="live-clock">13:45:00</div>
+      <div class="user-profile">👤 พว.สิริขวัญ (ศูนย์พัสดุวิกฤต)</div>
+    </div>
+  </header>
+
+  <!-- Emergency Geofence Alert Banner -->
+  <div id="alert-banner" class="emergency-alert-banner" style="display: flex;">
+    <div class="alert-icon">⚠️</div>
+    <div class="alert-message">
+      <strong>แจ้งเตือนความปลอดภัย (GEOFENCE VIOLATION DETECTED):</strong>
+      <span id="alert-text">เครื่องติดตามสัญญาณชีพ #VM-008 ถูกเคลื่อนย้ายออกจากหอผู้ป่วยอายุรกรรม ชั้น 3 ลงมายังบริเวณลิฟต์ A ชั้น 1</span>
+    </div>
+    <button id="dismiss-alert-btn" class="dismiss-btn">รับทราบ / ระงับสัญญาณเตือน</button>
+  </div>
+
+  <main class="cc-workspace">
+    <!-- Sidebar Left: Asset & Parcel List & Filters -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-head">
+        <h2>📦 รายการพัสดุ & เครื่องมือราคาสูง</h2>
+        <span id="asset-count-badge" class="count-badge">6 รายการ</span>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="filter-box">
+        <div class="search-input-group">
+          <span>🔍</span>
+          <input id="asset-search" type="search" placeholder="ค้นหาชื่ออุปกรณ์, รหัสพัสดุ, Serial...">
+        </div>
+        
+        <div class="category-pills">
+          <button class="pill active" data-cat="all">ทั้งหมด</button>
+          <button class="pill" data-cat="พัสดุการแพทย์ราคาสูง">💊 ยาราคาสูง</button>
+          <button class="pill" data-cat="พัสดุการแพทย์วิกฤต">🩸 ถุงเลือดด่วน</button>
+          <button class="pill" data-cat="เครื่องมือแพทย์ราคาสูง">🫀 อุปกรณ์แพทย์</button>
+        </div>
+      </div>
+
+      <!-- Asset List Container -->
+      <div id="asset-list-container" class="asset-scroll-list">
+        <!-- Rendered dynamically via asset-tracking.js -->
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="btn-simulate-move" class="action-btn-secondary">🔄 จำลองการจัดส่งพัสดุ (Simulate Transit)</button>
+        <button id="btn-simulate-breach" class="action-btn-warning">⚡ จำลองเหตุการณ์พัสดุนอกเขต</button>
+      </div>
+    </aside>
+
+    <!-- Center Canvas: Interactive Floor Map & Pins -->
+    <section class="map-view-panel">
+      <div class="map-top-bar">
+        <div class="location-selectors">
+          <label>อาคาร:
+            <select id="map-building-select" class="cc-select"></select>
+          </label>
+          <label>ชั้น:
+            <select id="map-floor-select" class="cc-select"></select>
+          </label>
+        </div>
+        <div class="map-controls">
+          <button id="btn-toggle-geofence" class="toggle-control-btn active">🛡️ แสดงรัศมี Geofence</button>
+          <button id="btn-refresh-telemetry" class="toggle-control-btn">📡 อัปเดตพิกัดเรียลไทม์</button>
+        </div>
+      </div>
+
+      <div id="map-canvas-container" class="cc-map-canvas">
+        <div class="canvas-grid-overlay"></div>
+        <div id="geofence-circles-layer"></div>
+        <div id="asset-pins-layer"></div>
+        <div class="map-watermark">UDH INDOOR MAP RTLS LAYER</div>
+      </div>
+    </section>
+
+    <!-- Sidebar Right: Asset Detail & Parcel Custody Panel -->
+    <aside class="detail-panel">
+      <div class="panel-header">
+        <span id="detail-category-badge" class="cat-tag">ยาราคาสูง</span>
+        <h2 id="detail-title">เครื่องปั๊มสารน้ำอัตโนมัติ</h2>
+        <small id="detail-code-serial">รหัส: IP-024 | Serial: SN-IP-2026-024</small>
+      </div>
+
+      <div class="status-summary-card">
+        <div class="status-indicator">
+          <span id="detail-status-dot" class="status-dot green"></span>
+          <b id="detail-status-text">กำลังใช้งานวิกฤต</b>
+        </div>
+        <div class="value-tag">มูลค่า: <strong id="detail-value">฿185,000</strong></div>
+      </div>
+
+      <!-- Location & Telemetry Metadata -->
+      <section class="meta-section">
+        <h3>📍 ตำแหน่ง & ข้อมูลอุปกรณ์</h3>
+        <dl class="meta-grid">
+          <dt>อาคาร/ชั้น</dt>
+          <dd id="detail-location-floor">อาคารผู้ป่วยนอก ชั้น 3</dd>
+          <dt>ห้องที่ประทับอยู่</dt>
+          <dd id="detail-location-room">ห้องตรวจ 301</dd>
+          <dt>เขตที่ได้รับอนุญาต</dt>
+          <dd id="detail-assigned-zone">ศูนย์อายุรกรรม ชั้น 3</dd>
+          <dt>ระดับแบตเตอรี่แท็ก</dt>
+          <dd id="detail-battery">🔋 88% ( BLE Beacon Tag )</dd>
+          <dt>เวลาอัปเดตล่าสุด</dt>
+          <dd id="detail-last-update">10 วินาทีที่แล้ว</dd>
+        </dl>
+      </section>
+
+      <!-- Parcel Custody / Logistics Handoff -->
+      <section class="custody-section">
+        <h3>🚚 ข้อมูลการควบคุมความปลอดภัย & ห่วงโซ่พัสดุ (Chain of Custody)</h3>
+        <div class="custody-card">
+          <div class="custody-step">
+            <span class="step-icon">📤</span>
+            <div>
+              <small>ผู้ส่งมอบ / คลังส่ง</small>
+              <strong id="custody-sender">ภก.สมชาย (คลังยาหลัก ชั้น 1)</strong>
+            </div>
+          </div>
+          <div class="custody-arrow">↓</div>
+          <div class="custody-step">
+            <span class="step-icon">📥</span>
+            <div>
+              <small>ผู้รับมอบปลายทาง</small>
+              <strong id="custody-receiver">พว.สิรินธร (คลินิกเคมีบำบัด ชั้น 3)</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="temp-sensor-box">
+          <span>❄️ ควบคุมอุณหภูมิ: <b id="custody-temp">2 - 8 °C (ปัจจุบัน 4.2 °C)</b></span>
+        </div>
+      </section>
+
+      <!-- Action Buttons -->
+      <div class="detail-actions">
+        <button id="btn-ping-asset" class="action-btn-primary">🔊 ส่งสัญญาณ เสียง/ไฟ Ping ค้นหา</button>
+        <button id="btn-history-log" class="action-btn-outline">📜 ประวัติการเคลื่อนย้าย (Custody Log)</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- History Modal Dialog -->
+  <dialog id="history-modal" class="cc-dialog">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h3>📜 ประวัติบันทึกการเคลื่อนย้ายและพิกัด (RTLS Telemetry Audit Trail)</h3>
+        <button id="close-history-modal" class="close-x">×</button>
+      </div>
+      <div class="dialog-body">
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>เวลาบันทึก</th>
+              <th>ตำแหน่ง / ห้อง</th>
+              <th>สถานะ</th>
+              <th>เจ้าหน้าที่ผู้รับผิดชอบ</th>
+            </tr>
+          </thead>
+          <tbody id="audit-table-body">
+            <tr>
+              <td>13:42:10</td>
+              <td>อาคารผู้ป่วยนอก ชั้น 1 (ประตูหลัก)</td>
+              <td><span class="tag-status green">เข้าสู่ระบบ</span></td>
+              <td>ศูนย์เปล UDH</td>
+            </tr>
+            <tr>
+              <td>13:25:00</td>
+              <td>ห้องยาหลัก ชั้น 1</td>
+              <td><span class="tag-status blue">เบิกจ่ายพัสดุ</span></td>
+              <td>ภก.สมชาย</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </dialog>
+
+  <p id="toast" class="toast-popup" role="status"></p>
+
+  <script src="data-store.js"></script>
+  <script src="asset-tracking.js"></script>
+</body>
+</html>

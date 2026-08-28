@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH GPS & Satellite Layer Overlay — ซ้อนเลเยอร์แปลนอาคารบนภาพดาวเทียม Google Maps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet GIS Map Library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --panel-bg: #1e293b;
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --border-color: #475569;
+      --font-main: 'IBM Plex Sans Thai', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-dark);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #090d16;
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .back-btn {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 4px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: rgba(6, 182, 212, 0.1);
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .brand small {
+      color: #94a3b8;
+      font-size: 11px;
+    }
+
+    .gmaps-link-btn {
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      position: relative;
+    }
+
+    #gis-map {
+      flex: 1;
+      height: 100%;
+      background-color: #000;
+    }
+
+    /* Floating Layer Control Panel */
+    .layer-control-card {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      background-color: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    .layer-control-card h2 {
+      font-size: 14px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-group {
+      margin-bottom: 12px;
+    }
+
+    .control-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #cbd5e1;
+    }
+
+    .slider-input {
+      width: 100%;
+      accent-color: var(--accent-cyan);
+      cursor: pointer;
+    }
+
+    .btn-toggle-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .toggle-btn {
+      flex: 1;
+      background-color: #0f172a;
+      border: 1px solid var(--border-color);
+      color: #94a3b8;
+      padding: 6px;
+      border-radius: 6px;
+      font-family: var(--font-main);
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .toggle-btn.active {
+      background-color: var(--accent-cyan);
+      color: #000;
+      font-weight: 700;
+    }
+
+    .drag-hint-box {
+      background-color: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+
+    .action-btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .save-pins-btn {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-family: var(--font-main);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .export-pins-btn {
+      background-color: #1e293b;
+      border: 1px solid #475569;
+      color: #38bdf8;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: var(--font-main);
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .building-info-popup {
+      color: #0f172a;
+      font-family: var(--font-main);
+    }
+
+    .building-info-popup strong {
+      display: block;
+      font-size: 13px;
+      color: #0284c7;
+    }
+
+    .building-info-popup p {
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: #0f172a;
+      border: 1px solid var(--accent-cyan);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      transition: transform 0.3s;
+      z-index: 9999;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+    }
+
+    .toast-popup.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="building-select.html" class="back-link">‹ เลือกผังอาคาร</a>
+      <div>
+        <h1>🛰️ GPS Satellite Layer Overlay</h1>
+        <small>ซ้อนภาพแปลน CAD (Map.jpg) ทับภาพดาวเทียม Google Maps (17.4162989, 102.7806858)</small>
+      </div>
+    </div>
+    <a id="gmaps-external-link" href="https://www.google.com/maps/place/โรงพยาบาลอุดรธานี/@17.4162989,102.7806858,462m" target="_blank" class="gmaps-link-btn">🗺️ เปิดบน Google Maps ↗</a>
+  </header>
+
+  <main>
+    <div id="gis-map"></div>
+
+    <!-- Layer Control Card -->
+    <div class="layer-control-card">
+      <h2>
+        <span>⚙️ ปรับควบคุม & ลากขยับหมุด</span>
+        <small id="opacity-val-badge">Opacity: 70%</small>
+      </h2>
+
+      <!-- Draggable Hint -->
+      <div class="drag-hint-box">
+        💡 <b>วิธีขยับหมุด:</b> สามารถคลิกค้างที่หมุดอาคารบนแผนที่แล้ว <b>ลาก (Drag & Drop)</b> ไปวางตำแหน่งหลังคาตึกที่ถูกต้องได้ทันที!
+      </div>
+
+      <!-- Opacity Slider -->
+      <div class="control-group">
+        <label for="opacity-slider">
+          <span>ความโปร่งแสงแปลนอาคาร (Layer Opacity)</span>
+          <span id="slider-pct">70%</span>
+        </label>
+        <input id="opacity-slider" type="range" min="0" max="100" value="70" class="slider-input">
+      </div>
+
+      <!-- Basemap Switcher -->
+      <div class="control-group">
+        <label>โหมดภาพพื้นหลัง (Base Map)</label>
+        <div class="btn-toggle-group">
+          <button id="btn-satellite-img-90" class="toggle-btn active">📐 ดาวเทียม (หมุน 90° ขนานผัง)</button>
+          <button id="btn-satellite-img-0" class="toggle-btn">🧭 ดาวเทียม (0° ทิศเหนือ)</button>
+          <button id="btn-esri" class="toggle-btn">🛰️ Esri Tiles</button>
+        </div>
+      </div>
+
+      <!-- Toggle Features -->
+      <div class="control-group">
+        <label>ตัวเลือกการแสดงผล</label>
+        <div class="btn-toggle-group">
+          <button id="btn-toggle-plan" class="toggle-btn active">📐 เลเยอร์ Map.jpg</button>
+          <button id="btn-toggle-markers" class="toggle-btn active">📍 หมุดอาคาร (20 อาคาร)</button>
+        </div>
+      </div>
+
+      <!-- Save & Export Actions -->
+      <div class="action-btn-stack">
+        <button id="btn-save-pins" class="save-pins-btn">💾 บันทึกตำแหน่งหมุดที่ขยับแล้ว</button>
+        <button id="btn-export-json" class="export-pins-btn">📥 ดาวน์โหลด map-data.json อัปเดต</button>
+        <button id="btn-reset-pins" class="toggle-btn" style="color: #fca5a5; border-color: #ef4444;">🔄 รีเซ็ตตำแหน่งหมุดเริ่มต้น</button>
+      </div>
+    </div>
+  </main>
+
+  <p id="toast" class="toast-popup" role="status"></p>
+
+  <script src="data-store.js"></script>
+  <script>
+    let mapData = null;
+    let leafletMap = null;
+    let planOverlay = null;
+    let satImgOverlay90 = null;
+    let satImgOverlay0 = null;
+    let buildingMarkersGroup = null;
+
+    let esriSatLayer = null;
+    let isDirty = false;
+
+    const hospitalCenter = [17.4162989, 102.7806858];
+    const overlayBounds = [
+      [17.41320, 102.77800],
+      [17.41750, 102.78250]
+    ];
+
+    async function initGIS() {
+      try {
+        mapData = await UDHMapStore.load();
+
+        leafletMap = L.map('gis-map', {
+          center: hospitalCenter,
+          zoom: 17,
+          minZoom: 15,
+          maxZoom: 20
+        });
+
+        // 1. Google Satellite image 90 deg rotated overlay
+        satImgOverlay90 = L.imageOverlay('google-satellite-rotated90.jpg', overlayBounds, {
+          opacity: 1.0,
+          interactive: false
+        }).addTo(leafletMap);
+
+        // 2. Google Satellite image 0 deg (Original North Up)
+        satImgOverlay0 = L.imageOverlay('google-satellite.jpg', overlayBounds, {
+          opacity: 1.0,
+          interactive: false
+        });
+
+        // 3. Esri World Imagery
+        esriSatLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          attribution: 'Tiles &copy; Esri'
+        });
+
+        // 4. Map.jpg CAD Overlay on top
+        planOverlay = L.imageOverlay('Map.jpg', overlayBounds, {
+          opacity: 0.7,
+          interactive: false
+        }).addTo(leafletMap);
+
+        // 5. Building Markers Layer (Draggable!)
+        buildingMarkersGroup = L.layerGroup().addTo(leafletMap);
+        renderDraggableMarkers();
+
+        setupControls();
+      } catch (err) {
+        console.error('GIS Initialization failed:', err);
+        showToast('⚠️ ไม่สามารถโหลดระบบแผนที่ซ้อนทับดาวเทียมได้');
+      }
+    }
+
+    function renderDraggableMarkers() {
+      buildingMarkersGroup.clearLayers();
+
+      if (!mapData || !Array.isArray(mapData.buildings)) return;
+
+      mapData.buildings.forEach(b => {
+        if (b.lat && b.lng) {
+          const customIcon = L.divIcon({
+            className: 'custom-gps-pin',
+            html: `<div style="background:#0284c7; color:#fff; font-weight:bold; padding:4px 8px; border-radius:14px; font-size:11px; white-space:nowrap; border:2px solid #fff; box-shadow:0 4px 10px rgba(0,0,0,0.6); cursor:grab;">✋ ผัง #${b.mapNumber || '?'} ${b.code || b.id}</div>`,
+            iconSize: [85, 26],
+            iconAnchor: [42, 13]
+          });
+
+          // Enable Draggable Pin!
+          const marker = L.marker([b.lat, b.lng], { 
+            icon: customIcon,
+            draggable: true 
+          });
+
+          marker.bindPopup(`
+            <div class="building-info-popup">
+              <strong>หมายเลขผัง #${b.mapNumber}: ${b.name}</strong>
+              <p>${b.description || 'อาคารบริการทางการแพทย์'}</p>
+              <small style="color:#64748b;">พิกัด GPS: Lat ${b.lat.toFixed(6)}, Lng ${b.lng.toFixed(6)}</small><br>
+              <a href="index.html?building=${encodeURIComponent(b.id)}" style="display:inline-block; margin-top:6px; color:#0284c7; font-weight:bold; font-size:11px; text-decoration:none;">🚀 เริ่มนำทางอาคารนี้ ➔</a>
+            </div>
+          `);
+
+          // Event listener when staff drags pin!
+          marker.on('dragend', function(e) {
+            const newPos = e.target.getLatLng();
+            b.lat = parseFloat(newPos.lat.toFixed(6));
+            b.lng = parseFloat(newPos.lng.toFixed(6));
+            isDirty = true;
+
+            showToast(`📍 ขยับหมุด <b>ผัง #${b.mapNumber} (${b.name})</b> ไปที่ (${b.lat}, ${b.lng}) แล้ว <br><small>กด "บันทึกตำแหน่งหมุด" ด้านขวาเพื่อบันทึกข้อมูล</small>`);
+
+            marker.getPopup().setContent(`
+              <div class="building-info-popup">
+                <strong>หมายเลขผัง #${b.mapNumber}: ${b.name}</strong>
+                <p>${b.description || 'อาคารบริการทางการแพทย์'}</p>
+                <small style="color:#10b981; font-weight:bold;">พิกัดใหม่: Lat ${b.lat.toFixed(6)}, Lng ${b.lng.toFixed(6)}</small><br>
+                <a href="index.html?building=${encodeURIComponent(b.id)}" style="display:inline-block; margin-top:6px; color:#0284c7; font-weight:bold; font-size:11px; text-decoration:none;">🚀 เริ่มนำทางอาคารนี้ ➔</a>
+              </div>
+            `);
+          });
+
+          buildingMarkersGroup.addLayer(marker);
+        }
+      });
+    }
+
+    function setupControls() {
+      const slider = document.getElementById('opacity-slider');
+      slider.oninput = () => {
+        const val = slider.value / 100;
+        document.getElementById('slider-pct').textContent = `${slider.value}%`;
+        document.getElementById('opacity-val-badge').textContent = `Opacity: ${slider.value}%`;
+        if (planOverlay) planOverlay.setOpacity(val);
+      };
+
+      // Switchers
+      const btnSat90 = document.getElementById('btn-satellite-img-90');
+      const btnSat0 = document.getElementById('btn-satellite-img-0');
+      const btnEsri = document.getElementById('btn-esri');
+
+      btnSat90.onclick = () => {
+        setActiveBasemapBtn(btnSat90);
+        if (leafletMap.hasLayer(satImgOverlay0)) leafletMap.removeLayer(satImgOverlay0);
+        if (leafletMap.hasLayer(esriSatLayer)) leafletMap.removeLayer(esriSatLayer);
+        if (!leafletMap.hasLayer(satImgOverlay90)) leafletMap.addLayer(satImgOverlay90);
+        showToast('📐 ภาพดาวเทียมหมุน 90° ขนานผัง CAD (หนองประจักษ์อยู่ด้านล่าง)');
+      };
+
+      btnSat0.onclick = () => {
+        setActiveBasemapBtn(btnSat0);
+        if (leafletMap.hasLayer(satImgOverlay90)) leafletMap.removeLayer(satImgOverlay90);
+        if (leafletMap.hasLayer(esriSatLayer)) leafletMap.removeLayer(esriSatLayer);
+        if (!leafletMap.hasLayer(satImgOverlay0)) leafletMap.addLayer(satImgOverlay0);
+        showToast('🧭 ภาพดาวเทียม 0° ทิศเหนือจริง');
+      };
+
+      btnEsri.onclick = () => {
+        setActiveBasemapBtn(btnEsri);
+        if (leafletMap.hasLayer(satImgOverlay90)) leafletMap.removeLayer(satImgOverlay90);
+        if (leafletMap.hasLayer(satImgOverlay0)) leafletMap.removeLayer(satImgOverlay0);
+        if (!leafletMap.hasLayer(esriSatLayer)) leafletMap.addLayer(esriSatLayer);
+        showToast('🛰️ เปลี่ยนเป็นภาพดาวเทียม Esri Tiles');
+      };
+
+      // Toggle Plan Overlay
+      const btnPlan = document.getElementById('btn-toggle-plan');
+      btnPlan.onclick = () => {
+        const isShowing = leafletMap.hasLayer(planOverlay);
+        if (isShowing) {
+          leafletMap.removeLayer(planOverlay);
+          btnPlan.classList.remove('active');
+          showToast('🙈 ซ่อนแปลนอาคาร Map.jpg');
+        } else {
+          leafletMap.addLayer(planOverlay);
+          btnPlan.classList.add('active');
+          showToast('📐 แสดงแปลนอาคาร Map.jpg');
+        }
+      };
+
+      // Toggle Markers
+      const btnMarkers = document.getElementById('btn-toggle-markers');
+      btnMarkers.onclick = () => {
+        const isShowing = leafletMap.hasLayer(buildingMarkersGroup);
+        if (isShowing) {
+          leafletMap.removeLayer(buildingMarkersGroup);
+          btnMarkers.classList.remove('active');
+          showToast('🙈 ซ่อนหมุดอาคาร');
+        } else {
+          leafletMap.addLayer(buildingMarkersGroup);
+          btnMarkers.classList.add('active');
+          showToast('📍 แสดงหมุดอาคาร 20 แห่ง');
+        }
+      };
+
+      // Save Draggable Pins to LocalStorage
+      document.getElementById('btn-save-pins').onclick = () => {
+        if (!mapData) return;
+        UDHMapStore.save(mapData);
+        isDirty = false;
+        showToast('💾 <b>บันทึกพิกัดตำแหน่งหมุดใหม่เรียบร้อยแล้ว!</b> <br><small>ข้อมูลจะอัปเดตตรงกันทุกหน้าจอนำทาง</small>');
+      };
+
+      // Export updated map-data.json
+      document.getElementById('btn-export-json').onclick = () => {
+        if (!mapData) return;
+        UDHMapStore.download(mapData);
+        showToast('📥 ดาวน์โหลดไฟล์ map-data.json ล่าสุดแล้ว');
+      };
+
+      // Reset Pins
+      document.getElementById('btn-reset-pins').onclick = () => {
+        if (confirm('คุณต้องการรีเซ็ตตำแหน่งหมุดกลับเป็นค่าเริ่มต้น?')) {
+          UDHMapStore.reset();
+          location.reload();
+        }
+      };
+    }
+
+    function setActiveBasemapBtn(btn) {
+      document.querySelectorAll('.btn-toggle-group .toggle-btn').forEach(b => {
+        if (b.id.startsWith('btn-satellite') || b.id.startsWith('btn-esri')) {
+          b.classList.remove('active');
+        }
+      });
+      btn.classList.add('active');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerHTML = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    document.addEventListener('DOMContentLoaded', initGIS);
+  </script>
+</body>
+</html>

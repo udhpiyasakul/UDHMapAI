@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH Map Studio — CMS ออกแบบแผนที่โรงพยาบาล</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="map-builder.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">← หน้าผู้ป่วย</a>
+    <b><span>UDH</span> Map Studio (Map & Staff CMS)</b>
+    <div class="header-tools">
+      <a href="asset-tracking.html" class="btn-link">📦 Asset Tracking Dashboard</a>
+      <label class="file">นำเข้า JSON<input type="file" id="import" accept="application/json"></label>
+      <button id="export">💾 ส่งออก JSON</button>
+    </div>
+  </header>
+
+  <main>
+    <aside class="sidebar-tree">
+      <h2>โครงสร้างอาคาร & ชั้น</h2>
+      <div id="tree"></div>
+      <button class="add" id="add-building">＋ เพิ่มอาคารใหม่</button>
+      <button class="add" id="add-floor">＋ เพิ่มชั้นในอาคารนี้</button>
+      <hr>
+      <button class="reset" id="reset">🔄 คืนค่าข้อมูลต้นฉบับ</button>
+    </aside>
+
+    <section class="work">
+      <div class="workhead">
+        <div>
+          <p id="breadcrumb">กำลังโหลด…</p>
+          <h1 id="title">Map Studio Canvas</h1>
+        </div>
+        <div class="tools">
+          <button class="active" data-tool="select">↖ เลือก / แก้ไข</button>
+          <button data-tool="room">▱ วาดห้อง/แผนก</button>
+          <button data-tool="poi">📍 ปักหมุด POI</button>
+          <button data-tool="routeNode">🛣️ ปักจุดเดิน (Route Node)</button>
+        </div>
+      </div>
+
+      <div class="canvasbox">
+        <div id="canvas" data-tool="select">
+          <svg id="builder-route-svg" style="position: absolute; width: 100%; height: 100%; pointer-events: none;"></svg>
+        </div>
+        <footer>
+          <span id="tip">เลือกองค์ประกอบบนแผนที่เพื่อดูหรือแก้ไขรายละเอียด</span>
+          <span id="saved">บันทึกใน Browser แล้ว</span>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Property Panel Right -->
+    <aside class="properties">
+      <h2>คุณสมบัติองค์ประกอบ</h2>
+      <form id="form">
+        <label>ชื่อองค์ประกอบ / ห้อง
+          <input id="name" required placeholder="เช่น ห้องตรวจ 301">
+        </label>
+        <label>ประเภท
+          <select id="kind">
+            <option value="room">ห้อง / พื้นที่บริการ (Room)</option>
+            <option value="poi">จุดสนใจ (POI / Lift / Toilet)</option>
+            <option value="routeNode">เส้นทางเดิน (Route Node)</option>
+          </select>
+        </label>
+        <label>หมวดหมู่ / คำบรรยาย
+          <input id="category" placeholder="เช่น อายุรกรรม, ลิฟต์, ห้องน้ำ">
+        </label>
+        <label>รายละเอียดเพิ่มเติม
+          <input id="description" placeholder="คำอธิบายบริการสำหรับผู้ป่วย">
+        </label>
+
+        <!-- Phone Contacts Section -->
+        <fieldset class="contact-fieldset">
+          <legend>📞 เบอร์โทรศัพท์ติดต่อ</legend>
+          <label>เบอร์สายตรง (Direct Phone)
+            <input id="phone" placeholder="เช่น 042-245555">
+          </label>
+          <label>เบอร์โทรภายใน (Internal Ext.)
+            <input id="extension" placeholder="เช่น 1301 หรือ 2200">
+          </label>
+          <label>เบอร์มือถือ / สายด่วน (Mobile Hotline)
+            <input id="mobile" placeholder="เช่น 081-9998888">
+          </label>
+        </fieldset>
+
+        <!-- Staff Responsibilities Section -->
+        <fieldset class="contact-fieldset">
+          <legend>👨‍⚕️ ผู้รับผิดชอบประจำจุดบริการ</legend>
+          <label>หัวหน้าแผนก / หัวหน้างาน (Head Nurse / Doctor)
+            <input id="headOfDept" placeholder="เช่น พว.สมหญิง (หัวหน้าแผนก)">
+          </label>
+          <label>เจ้าหน้าที่ประจำจุด / พยาบาลเวร (Duty Staff)
+            <input id="dutyOfficer" placeholder="เช่น พว.รัตนา (พยาบาลประจำเวร)">
+          </label>
+          <label>เจ้าหน้าที่ความสะอาด & ฆ่าเชื้อ (Housekeeping Staff)
+            <input id="housekeeping" placeholder="เช่น นายสมชาย (แม่บ้านประจำจุด)">
+          </label>
+          <label>เวลาปฏิบัติงาน / เวร (Shift Info)
+            <input id="shiftText" placeholder="เช่น เวรเช้า (08:00 - 16:00 น.)">
+          </label>
+        </fieldset>
+
+        <!-- Facility Status & Cleanliness Section -->
+        <fieldset class="contact-fieldset">
+          <legend>🧼 สถานะสุขอนามัย & เวลาทำการ</legend>
+          <label>สถานะการทำความสะอาด & ฆ่าเชื้อ
+            <select id="cleaningStatus">
+              <option value="clean">🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว (Clean)</option>
+              <option value="cleaning_in_progress">🟡 กำลังทำความสะอาด (Cleaning In Progress)</option>
+              <option value="pending_sanitize">🔴 รอฆ่าเชื้อฉุกเฉิน (Pending Sanitization)</option>
+            </select>
+          </label>
+          <label>เวลาทำความสะอาดล่าสุด
+            <input id="lastCleanedTime" placeholder="เช่น 14:30 น.">
+          </label>
+          <label>เวลาเปิด-ปิดบริการ (Operating Hours)
+            <input id="openHours" placeholder="เช่น 08:00 - 16:30 น. หรือ 24 ชั่วโมง">
+          </label>
+        </fieldset>
+
+        <!-- Photo URL Section -->
+        <label>🖼️ ลิงก์ URL รูปภาพสถานที่ประกอบ
+          <input id="imageUrl" placeholder="https://... หรือ maps/photo.jpg">
+        </label>
+        <div id="photo-preview-container" class="photo-preview-box" style="display: none;">
+          <small>ตัวอย่างรูปภาพสถานที่:</small>
+          <img id="photo-preview-img" src="" alt="รูปสถานที่ประกอบ">
+        </div>
+
+        <label>ผูก ID ฮาร์ดแวร์ Beacon / Asset Tag
+          <input id="hardwareTag" placeholder="เช่น BC-OPD-F1-01 หรือ TAG-BLE-024">
+        </label>
+        
+        <div class="btn-group">
+          <button class="save-btn">💾 บันทึกรายละเอียด</button>
+          <button type="button" class="delete" id="delete">🗑️ ลบองค์ประกอบ</button>
+        </div>
+      </form>
+      <p class="hint">ข้อมูลทั้งหมดถูกซิงก์ใน LocalStorage และสามารถกด "ส่งออก JSON" เพื่อนำไปใช้จริงได้ทันที</p>
+    </aside>
+  </main>
+
+  <!-- Add Floor Modal Dialog -->
+  <dialog id="floor-modal" class="cms-dialog">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h3>🏢 เพิ่มชั้นใหม่ในอาคาร</h3>
+        <button id="close-floor-modal" class="close-x">×</button>
+      </div>
+      <form id="add-floor-form">
+        <label>อาคารเป้าหมาย
+          <input id="floor-modal-building-name" readonly style="background-color: #0f172a;">
+        </label>
+        <label>ชื่อชั้น (เช่น ชั้น 4 — หอผู้ป่วยพิเศษ)
+          <input id="floor-modal-name" required placeholder="เช่น ชั้น 4">
+        </label>
+        <label>ลำดับชั้น (Floor Level)
+          <input id="floor-modal-level" type="number" required value="4">
+        </label>
+        <label>ลิงก์ URL ไฟล์แปลนแผนที่ประจำชั้น (Optional)
+          <input id="floor-modal-mapurl" placeholder="เช่น maps/opd-f4.svg หรือ PNG">
+        </label>
+        <div class="modal-btn-row">
+          <button type="submit" class="save-btn">＋ ยืนยันเพิ่มชั้นใหม่</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <p id="toast" role="status"></p>
+  <script src="data-store.js"></script>
+  <script src="map-builder.js"></script>
+</body>
+</html>

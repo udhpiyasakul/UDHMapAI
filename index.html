@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH Navigator — ระบบนำทางผู้ป่วย โรงพยาบาลอุดรธานี</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-group">
+        <span class="hospital-badge">UDH</span>
+        <div class="title-meta">
+          <h1>UDH Navigator</h1>
+          <small>ระบบนำทางภายในอาคาร โรงพยาบาลอุดรธานี</small>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="check-in.html" class="icon-btn" title="ใบนัดหมาย / เช็กอิน QR">📋</a>
+        <a href="map-builder.html" class="icon-btn" title="Map Studio Admin">⚙️</a>
+      </div>
+    </header>
+
+    <!-- Start Location Bar -->
+    <section class="start-bar">
+      <div class="start-info">
+        <span class="start-icon">📍</span>
+        <div>
+          <small>จุดเริ่มต้นปัจจุบัน</small>
+          <strong id="start-location-label">ประตูทางเข้าหลัก · อาคารผู้ป่วยนอก ชั้น 1</strong>
+        </div>
+      </div>
+      <button id="change-start-btn" class="secondary-btn">สแกน QR / เปลี่ยน</button>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="query" type="search" placeholder="ค้นหาห้องตรวจ, แผนก, เบอร์ภายใน, ลิฟต์ หรือผู้รับผิดชอบ..." autocomplete="off">
+      </div>
+      <div id="results" class="search-results-list"></div>
+    </section>
+
+    <!-- Accessibility / Wheelchair Toggle -->
+    <section class="mode-toggle-section">
+      <div class="toggle-group">
+        <button id="mode-standard" class="toggle-btn active">🚶‍♂️ เดินปกติ</button>
+        <button id="mode-wheelchair" class="toggle-btn">♿ รถเข็น / ผู้สูงอายุ (เลี่ยงบันได)</button>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section">
+      <div class="map-toolbar">
+        <div class="select-group">
+          <select id="building-select" class="custom-select"></select>
+          <select id="floor-select" class="custom-select"></select>
+        </div>
+        <div class="map-legend">
+          <span class="legend-item"><i class="dot blue"></i> คุณอยู่ที่นี่</span>
+          <span class="legend-item"><i class="dot red"></i> ปลายทาง</span>
+        </div>
+      </div>
+
+      <div id="canvas" class="map-canvas">
+        <div class="hallway-bg"></div>
+        <svg id="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path id="route-path" d="" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,2" />
+        </svg>
+        <div id="you-marker" class="user-location-marker" style="display:none;">
+          <div class="pulse-ring"></div>
+          <span class="marker-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destination Detail & Contact Card Panel -->
+    <section class="route-detail-panel">
+      <div class="panel-handle"></div>
+      <div class="panel-content">
+        <!-- Photo Thumbnail Preview -->
+        <div id="place-photo-box" class="place-photo-header" style="display: none;">
+          <img id="place-photo-img" src="" alt="รูปถ่ายสถานที่จริง หน้าอาคารอำนวยการ">
+          <a id="streetview-btn-link" href="#" target="_blank" class="streetview-overlay-badge" style="display: none;">
+            📷 เปิด Google Street View 360° ↗
+          </a>
+        </div>
+
+        <div class="destination-header">
+          <span id="destination-category-badge" class="badge">เตรียมนำทาง</span>
+          <span id="destination-building-floor" class="meta-location">กรุณาเลือกจุดหมาย</span>
+        </div>
+        <h2 id="destination-title">ค้นหาหรือเลือกจุดหมาย</h2>
+
+        <!-- Cleanliness & Opening Hours Badge -->
+        <div id="facility-status-badge-box" class="cleanliness-status-card" style="display: none;">
+          <div class="status-left">
+            <span id="clean-status-text">🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว</span>
+            <small id="clean-time-text">เมื่อ 14:30 น.</small>
+          </div>
+          <span id="open-hours-tag" class="hours-tag">08:00 - 16:00 น.</span>
+        </div>
+
+        <!-- Contact Phone Numbers Box -->
+        <div id="place-contact-box" class="contact-info-card" style="display: none;">
+          <div class="contact-row" id="row-ext">
+            <span>☎️ เบอร์ภายใน: <b id="place-ext-val">1301</b></span>
+          </div>
+          <div class="contact-row" id="row-phone">
+            <span>📞 สายตรง: <a id="place-phone-val" href="tel:042245555">042-245555</a></span>
+          </div>
+          <div class="contact-row" id="row-mobile">
+            <span>📱 มือถือ/สายด่วน: <a id="place-mobile-val" href="tel:0819998888">081-9998888</a></span>
+          </div>
+        </div>
+
+        <!-- Staff Responsibilities Roster Box -->
+        <div id="place-staff-box" class="staff-roster-card" style="display: none;">
+          <h3>👷 เจ้าหน้าที่ผู้รับผิดชอบประจำจุดบริการ</h3>
+          <div class="staff-grid">
+            <div class="staff-item" id="staff-head-row">
+              <span class="role-icon">👨‍⚕️</span>
+              <div>
+                <small>หัวหน้าแผนก / หัวหน้าเวร</small>
+                <strong id="staff-head-name">-</strong>
+              </div>
+            </div>
+            <div class="staff-item" id="staff-duty-row">
+              <span class="role-icon">👩‍⚕️</span>
+              <div>
+                <small>เจ้าหน้าที่ / พยาบาลประจำจุด</small>
+                <strong id="staff-duty-name">-</strong>
+              </div>
+            </div>
+            <div class="staff-item" id="staff-house-row">
+              <span class="role-icon">🧹</span>
+              <div>
+                <small>เจ้าหน้าที่ทำความสะอาด & ฆ่าเชื้อ</small>
+                <strong id="staff-house-name">-</strong>
+              </div>
+            </div>
+          </div>
+          <div class="report-action-bar">
+            <button id="btn-report-cleaning" class="report-btn">🧹 แจ้งทำความสะอาดด่วน</button>
+            <button id="btn-report-maintenance" class="report-btn warning">🛠️ แจ้งซ่อมอุปกรณ์</button>
+          </div>
+        </div>
+
+        <div id="routing-summary" class="route-metrics" style="display: none;">
+          <div class="metric"><span class="icon">📏</span><b id="route-distance">0</b> <small>เมตร</small></div>
+          <div class="metric"><span class="icon">⏱️</span><b id="route-time">0</b> <small>นาที</small></div>
+          <div class="metric"><span class="icon">♿</span><small id="route-accessibility">ปกติ</small></div>
+        </div>
+
+        <ol id="step-by-step-instructions" class="step-list">
+          <li class="empty-hint">พิมพ์ชื่อห้องตรวจในช่องค้นหาด้านบนเพื่อดูเบอร์ติดต่อ ผู้รับผิดชอบ และเส้นทางนำทาง</li>
+        </ol>
+
+        <div class="action-row">
+          <button id="navigate-btn" class="primary-btn-large" disabled>🚀 เริ่มนำทางแบบ Turn-by-Turn</button>
+          <a href="asset-tracking.html" class="staff-link">เจ้าหน้าที่: ตรวจสอบพัสดุราคาสูง & Equip ➔</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a class="nav-item active" href="index.html">
+        <span class="nav-icon">🗺️</span>
+        <span>นำทางผู้ป่วย</span>
+      </a>
+      <a class="nav-item" href="building-select.html">
+        <span class="nav-icon">🏥</span>
+        <span>ผังอาคาร</span>
+      </a>
+      <a class="nav-item" href="check-in.html">
+        <span class="nav-icon">🎫</span>
+        <span>ใบนัดหมาย</span>
+      </a>
+      <a class="nav-item" href="asset-tracking.html">
+        <span class="nav-icon">📦</span>
+        <span>พัสดุราคาสูง</span>
+      </a>
+    </nav>
+
+    <!-- Toast Notification -->
+    <p id="toast" class="toast-popup" role="status"></p>
+  </main>
+
+  <script src="data-store.js"></script>
+  <script src="pathfinding.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

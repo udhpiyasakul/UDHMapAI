@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH Navigator — นำทาง Turn-by-Turn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="patient-screens.css">
+</head>
+<body>
+  <main class="mobile route">
+    <header class="nav-header">
+      <a href="index.html" class="back-btn">‹ กลับหน้าแผนที่</a>
+      <div class="nav-title-group">
+        <b id="nav-mode-indicator">กำลังนำทาง</b>
+        <small id="nav-target-name">กำลังโหลดข้อมูล...</small>
+      </div>
+      <button id="menu-btn" class="icon-menu-btn">⚙️</button>
+    </header>
+
+    <!-- Visual Interactive Map Area -->
+    <section class="route-map">
+      <span id="floor-chip" class="map-chip">อาคารผู้ป่วยนอก · ชั้น 1</span>
+      
+      <div class="map-container">
+        <svg id="nav-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path id="nav-path-line" d="" fill="none" stroke="#0284c7" stroke-width="3" stroke-dasharray="4,2" />
+        </svg>
+
+        <!-- Current User Position Marker -->
+        <div id="user-dot" class="dot current" style="left: 20%; top: 50%;">
+          <div class="pulse-ring"></div>
+        </div>
+
+        <!-- Target Destination Marker -->
+        <div id="target-pin" class="pin-target" style="left: 76%; top: 50%;">
+          <span class="pin-icon">📍</span>
+          <small id="target-pin-label">ลิฟต์ A</small>
+        </div>
+      </div>
+
+      <button id="recenter-btn" class="center-btn" title="จัดกึ่งกลาง">⌖</button>
+    </section>
+
+    <!-- Turn-by-Turn Step Card -->
+    <section class="direction">
+      <div class="progress-bar-container">
+        <div id="step-progress-bar" class="progress-fill" style="width: 25%;"></div>
+      </div>
+
+      <div class="metrics-row">
+        <span class="dist-time">เหลืออีก <b id="remaining-dist">0</b> เมตร · ประมาณ <b id="remaining-time">0</b> นาที</span>
+        <span id="accessibility-badge" class="mode-badge">🚶‍♂️ เดินปกติ</span>
+      </div>
+
+      <div class="turn-step-box">
+        <i id="turn-icon" class="turn-arrow">↑</i>
+        <div class="turn-info">
+          <small id="step-count-label">ขั้นตอนที่ 1 จาก 4</small>
+          <h1 id="step-instruction-text">เดินตรงไปที่โถงทางเดินหลัก</h1>
+        </div>
+      </div>
+
+      <div class="button-action-group">
+        <button id="next-step-btn" class="primary-btn-large">ถัดไป: ก้าวตามเส้นทาง ➔</button>
+        <button id="show-all-steps-btn" class="text-btn">📋 แสดงรายการขั้นตอนทั้งหมด</button>
+      </div>
+    </section>
+
+    <!-- Step List Dialog / Modal -->
+    <dialog id="steps-dialog">
+      <div class="dialog-content">
+        <header class="dialog-header">
+          <h3>เส้นทางทั้งหมด</h3>
+          <button id="close-dialog-btn" class="close-btn">×</button>
+        </header>
+        <ol id="dialog-steps-list" class="full-steps-list"></ol>
+      </div>
+    </dialog>
+
+    <p id="toast" class="toast-popup" role="status"></p>
+  </main>
+
+  <script src="data-store.js"></script>
+  <script src="pathfinding.js"></script>
+  <script>
+    let mapData = null;
+    let pathfinder = null;
+    let pathResult = null;
+    let currentStepIndex = 0;
+
+    const $ = id => document.getElementById(id);
+
+    async function initNavigation() {
+      try {
+        mapData = await UDHMapStore.load();
+        pathfinder = new UDHPathfinder(mapData);
+
+        const params = new URLSearchParams(location.search);
+        const startId = params.get('start') || 'entry';
+        const destNodeId = params.get('dest');
+        const placeId = params.get('placeId');
+        const isWheelchair = params.get('wheelchair') === 'true';
+
+        $('accessibility-badge').textContent = isWheelchair ? '♿ โหมดรถเข็น' : '🚶‍♂️ เดินปกติ';
+
+        // Find destination place info
+        let place = null;
+        if (placeId) {
+          mapData.buildings.forEach(b => {
+            b.floors.forEach(f => {
+              const found = f.items.find(i => i.id === placeId);
+              if (found) place = { ...found, building: b, floor: f };
+            });
+          });
+        }
+
+        if (place) {
+          $('nav-target-name').textContent = `ปลายทาง: ${place.name}`;
+          $('target-pin-label').textContent = place.name;
+        }
+
+        // Target node lookup
+        let targetId = destNodeId;
+        if (!targetId && place) {
+          const closest = pathfinder.findClosestNodeToItem(place, place.floor.id);
+          if (closest) targetId = closest.id;
+        }
+
+        if (!targetId) targetId = 'elevator-node-f3';
+
+        pathResult = pathfinder.findShortestPath(startId, targetId, { wheelchairOnly: isWheelchair });
+
+        if (!pathResult || pathResult.pathNodes.length === 0) {
+          $('step-instruction-text').textContent = 'ไม่พบข้อมูลเส้นทาง';
+          return;
+        }
+
+        renderStep(0);
+      } catch (err) {
+        console.error(err);
+        showToast('⚠️ ไม่สามารถโหลดข้อมูลนำทางได้');
+      }
+    }
+
+    function renderStep(index) {
+      if (!pathResult) return;
+      currentStepIndex = Math.max(0, Math.min(index, pathResult.steps.length - 1));
+
+      const nodes = pathResult.pathNodes;
+      const currNode = nodes[Math.min(currentStepIndex, nodes.length - 1)];
+
+      // Update UI Header & Floor Chip
+      $('floor-chip').textContent = `${currNode.buildingName || 'อาคารผู้ป่วยนอก'} · ${currNode.floorName || 'ชั้น 1'}`;
+
+      // Update metrics
+      const progressPct = Math.round(((currentStepIndex + 1) / pathResult.steps.length) * 100);
+      $('step-progress-bar').style.width = `${progressPct}%`;
+      $('remaining-dist').textContent = Math.max(0, pathResult.totalDistance - (currentStepIndex * 15));
+      $('remaining-time').textContent = Math.max(1, pathResult.estimatedMinutes - Math.floor(currentStepIndex / 2));
+
+      // Update Step card text
+      $('step-count-label').textContent = `ขั้นตอนที่ ${currentStepIndex + 1} จาก ${pathResult.steps.length}`;
+      $('step-instruction-text').innerHTML = pathResult.steps[currentStepIndex];
+
+      // Update Icon
+      const text = pathResult.steps[currentStepIndex];
+      if (text.includes('ลิฟต์')) $('turn-icon').textContent = '🛗';
+      else if (text.includes('บันได')) $('turn-icon').textContent = '🪜';
+      else if (text.includes('ถึงจุดหมาย')) $('turn-icon').textContent = '🎉';
+      else $('turn-icon').textContent = '↑';
+
+      // Move marker pin on map
+      $('user-dot').style.left = `${currNode.x}%`;
+      $('user-dot').style.top = `${currNode.y}%`;
+
+      // Update button text
+      const nextBtn = $('next-step-btn');
+      if (currentStepIndex === pathResult.steps.length - 1) {
+        nextBtn.textContent = '🎉 ถึงจุดหมายแล้ว (เสร็จสิ้น)';
+        nextBtn.onclick = () => location.href = 'index.html';
+      } else {
+        nextBtn.textContent = 'ถัดไป: เดินตามเส้นทาง ➔';
+        nextBtn.onclick = () => renderStep(currentStepIndex + 1);
+      }
+    }
+
+    function showToast(msg) {
+      const t = $('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    $('show-all-steps-btn').onclick = () => {
+      if (!pathResult) return;
+      $('dialog-steps-list').innerHTML = pathResult.steps.map((s, i) => `
+        <li class="${i === currentStepIndex ? 'active' : ''}">
+          <b>ขั้นที่ ${i + 1}:</b> <span>${s}</span>
+        </li>
+      `).join('');
+      $('steps-dialog').showModal();
+    };
+
+    $('close-dialog-btn').onclick = () => $('steps-dialog').close();
+    $('recenter-btn').onclick = () => showToast('📍 จัดกึ่งกลางตำแหน่งปัจจุบันแล้ว');
+
+    document.addEventListener('DOMContentLoaded', initNavigation);
+  </script>
+</body>
+</html>

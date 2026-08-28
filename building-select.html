@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UDH Navigator — ผังบริเวณและเลือกอาคาร</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="building-select.css">
+</head>
+<body>
+  <main class="phone">
+    <header class="app-header">
+      <a href="index.html" class="back-link">‹ หน้าแรก</a>
+      <div>
+        <small>UDH Navigator</small>
+        <b>ผังบริเวณและเลือกอาคาร</b>
+      </div>
+      <a href="map-builder.html" class="icon-link" title="Map Studio">✎ Studio</a>
+    </header>
+
+    <section class="intro">
+      <p>ผังบริเวณโรงพยาบาลอุดรธานี (แผนผังแม่บท 1:500 & Google Satellite)</p>
+      <h1>เลือกอาคารที่ต้องการนำทาง</h1>
+      <span>เลือกซ้อนภาพ Layer แผนผัง CAD (`Map.jpg`) ทับภาพถ่ายดาวเทียม Google Maps (หมุน 90° ขนานแนวผัง) ได้ทันที</span>
+    </section>
+
+    <!-- Layer Switcher Tabs -->
+    <section class="layer-switcher-section">
+      <div class="layer-mode-tabs">
+        <button id="layer-cad" class="layer-tab active">📐 แปลน CAD</button>
+        <button id="layer-sat" class="layer-tab">🛰️ ดาวเทียมจริง (90°)</button>
+        <button id="layer-overlay" class="layer-tab">🔀 ซ้อนทับ Layer</button>
+      </div>
+
+      <!-- Satellite Rotation Angle Switcher -->
+      <div id="rotation-selector-bar" class="rotation-bar" style="display: none;">
+        <span>มุมหมุนภาพดาวเทียม:</span>
+        <button id="rot-90" class="rot-tab active">📐 หมุน 90° (ขนานผัง CAD/หนองประจักษ์ลงล่าง)</button>
+        <button id="rot-0" class="rot-tab">🧭 0° (ทิศเหนือจริง)</button>
+      </div>
+
+      <!-- Opacity Slider for Overlay Mode -->
+      <div id="opacity-control-bar" class="opacity-bar" style="display: none;">
+        <label for="layer-opacity-range">
+          <span>ความโปร่งแสงแปลนอาคาร CAD:</span>
+          <b id="opacity-pct-label">70%</b>
+        </label>
+        <input id="layer-opacity-range" type="range" min="0" max="100" value="70" class="range-slider">
+      </div>
+    </section>
+
+    <!-- Master Plan Map Container with Dual Layers -->
+    <section class="site-plan">
+      <!-- Base Layer: Google Satellite Image (Rotated 90 deg by default) -->
+      <img id="satellite-bg-img" src="google-satellite-rotated90.jpg" alt="ภาพถ่ายดาวเทียม Google Maps หมุน 90°" class="map-layer sat-layer" style="display: none;">
+
+      <!-- Top Layer: CAD Map Image -->
+      <img id="site-map" src="Map.jpg" alt="ผังบริเวณโรงพยาบาลอุดรธานี" class="map-layer cad-layer">
+
+      <div class="map-action-row">
+        <button id="zoom" aria-label="ขยายผังบริเวณ">🔍 ขยายผังภาพฉบับเต็ม</button>
+        <a href="satellite-map.html" class="satellite-overlay-btn">🛰️ เปิดระบบ GIS บน Leaflet ➔</a>
+      </div>
+    </section>
+
+    <!-- Search Building Filter -->
+    <section class="search-building-box">
+      <div class="search-field">
+        <span>🔍</span>
+        <input id="building-search" type="search" placeholder="ค้นหาหมายเลขอาคาร (เช่น 21, 25, 57) หรือชื่ออาคาร...">
+      </div>
+    </section>
+
+    <!-- Building List -->
+    <section class="list">
+      <div class="list-head">
+        <h2>รายการอาคารในระบบ</h2>
+        <small id="count">20 อาคาร</small>
+      </div>
+      <div id="buildings" class="building-cards-container"></div>
+    </section>
+
+    <p class="note">หมายเหตุ: หมายเลขและชื่ออาคารอ้างอิงตรงตามตารางดรรชนีบนแผนผัง `Map.jpg` โรงพยาบาลอุดรธานี</p>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a class="nav-item" href="index.html">
+        <span class="nav-icon">🗺️</span>
+        <span>นำทางผู้ป่วย</span>
+      </a>
+      <a class="nav-item active" href="building-select.html">
+        <span class="nav-icon">🏥</span>
+        <span>ผังอาคาร</span>
+      </a>
+      <a class="nav-item" href="check-in.html">
+        <span class="nav-icon">🎫</span>
+        <span>ใบนัดหมาย</span>
+      </a>
+      <a class="nav-item" href="asset-tracking.html">
+        <span class="nav-icon">📦</span>
+        <span>พัสดุราคาสูง</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- Large Map Dialog -->
+  <dialog id="viewer" class="map-dialog">
+    <div class="dialog-content-map">
+      <header class="dialog-map-header">
+        <h3 id="modal-title">ผังบริเวณโรงพยาบาลอุดรธานี (Map.jpg)</h3>
+        <button id="close" class="close-btn">×</button>
+      </header>
+      <div class="modal-layer-toggle">
+        <button id="modal-show-cad" class="modal-tab active">📐 แปลน CAD</button>
+        <button id="modal-show-sat-90" class="modal-tab">🛰️ ดาวเทียม (หมุน 90° ขนานผัง)</button>
+        <button id="modal-show-sat-0" class="modal-tab">🧭 ดาวเทียม (0° ทิศเหนือ)</button>
+      </div>
+      <div class="zoom-scroll-area">
+        <img id="large-map" src="Map.jpg" alt="ผังบริเวณโรงพยาบาลอุดรธานี">
+      </div>
+    </div>
+  </dialog>
+
+  <script src="data-store.js"></script>
+  <script src="building-select.js"></script>
+</body>
+</html>

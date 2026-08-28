@@ -1,0 +1,866 @@
+{
+  "schemaVersion": "1.8.0",
+  "hospital": {
+    "id": "udh",
+    "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
+    "code": "UDH",
+    "address": "111 ถนนเพาะนิยม ตำบลหมากแข้ง อำเภอเมือง จังหวัดอุดรธานี 41000",
+    "phone": "042-245555",
+    "geoReference": {
+      "lat": 17.4162989,
+      "lng": 102.7806858,
+      "zoom": 17,
+      "bounds": [
+        [17.41320, 102.77800],
+        [17.41750, 102.78250]
+      ],
+      "googleMapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@17.4162989,102.7806858,462m"
+    }
+  },
+  "campusMap": {
+    "imageUrl": "Map.jpg",
+    "satelliteUrl": "google-satellite-rotated90.jpg",
+    "satelliteNorthUrl": "google-satellite.jpg",
+    "rotationAngle": 90,
+    "name": "ผังบริเวณโรงพยาบาลอุดรธานี",
+    "source": "Map.jpg อ้างอิงผังบริเวณ และ ภาพถ่ายดาวเทียม Google Maps หมุน 90° ขนานกับผัง CAD (หนองประจักษ์อยู่ด้านล่าง)"
+  },
+  "buildings": [
+    {
+      "id": "opd",
+      "code": "OPD-21",
+      "mapNumber": 21,
+      "name": "อาคาร 21 — อาคารอำนวยการและผู้ป่วยนอก (OPD)",
+      "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม และห้องยาหลัก",
+      "lat": 17.41510,
+      "lng": 102.78030,
+      "imageUrl": "opd-building-front.jpg",
+      "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
+      "floors": [
+        {
+          "id": "opd-f1",
+          "level": 1,
+          "name": "ชั้น 1 — บริการผู้ป่วยนอก & ห้องยา",
+          "shortName": "ชั้น 1",
+          "mapImageUrl": "",
+          "items": [
+            {
+              "id": "room-triage",
+              "kind": "room",
+              "name": "จุดคัดกรอง / ประชาสัมพันธ์",
+              "category": "บริการผู้ป่วย",
+              "x": 8,
+              "y": 12,
+              "w": 26,
+              "h": 22,
+              "description": "จุดคัดกรองวัดความดัน ยื่นบัตรนัด และสอบถามเส้นทาง ประตูหลักอาคาร 21",
+              "phone": "042-245555",
+              "extension": "1001",
+              "mobile": "081-9991111",
+              "imageUrl": "opd-building-front.jpg",
+              "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
+              "staffResponsibility": {
+                "headOfDept": "พว.สายสมร วงศ์ดี (หัวหน้าแผนกคัดกรอง)",
+                "dutyOfficer": "พว.สิรินธร รัตนอุบล (พยาบาลประจำจุด)",
+                "housekeeping": "นางทองสุข ดีเยี่ยม (แม่บ้านประจำจุด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "14:30 น.",
+                "openHours": "08:00 - 16:00 น. (จันทร์-ศุกร์)"
+              }
+            },
+            {
+              "id": "room-101",
+              "kind": "room",
+              "name": "ห้องตรวจ 101",
+              "category": "คลินิกทั่วไป",
+              "x": 38,
+              "y": 12,
+              "w": 18,
+              "h": 22,
+              "description": "คลินิกตรวจโรคทั่วไปและออกใบรับรองแพทย์ อาคารอำนวยการ 21",
+              "phone": "042-245555",
+              "extension": "1101",
+              "mobile": "081-9992222",
+              "imageUrl": "opd-building-front.jpg",
+              "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
+              "staffResponsibility": {
+                "headOfDept": "นพ.อนันต์ สุขสันต์ (แพทย์หัวหน้าคลินิก)",
+                "dutyOfficer": "พว.กัญญารัตน์ ชัยชนะ (พยาบาลประจำห้องตรวจ)",
+                "housekeeping": "นายสมพร มีสุข (พนักงานทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "13:15 น.",
+                "openHours": "08:30 - 16:00 น."
+              }
+            },
+            {
+              "id": "pharmacy",
+              "kind": "room",
+              "name": "ห้องยาหลัก",
+              "category": "เภสัชกรรม",
+              "x": 64,
+              "y": 12,
+              "w": 26,
+              "h": 22,
+              "description": "จุดรับยาและคำปรึกษาการใช้ยาโดยเภสัชกร อาคารอำนวยการ 21",
+              "phone": "042-245555",
+              "extension": "1200",
+              "mobile": "081-9993333",
+              "imageUrl": "opd-building-front.jpg",
+              "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
+              "staffResponsibility": {
+                "headOfDept": "ภก.สมชาย วงศ์สว่าง (หัวหน้าฝ่ายเภสัชกรรม)",
+                "dutyOfficer": "ภก.วิศรุต ปัญญาดี (เภสัชกรประจำช่องรับยา)",
+                "housekeeping": "นางมาลี อารีรอบ (เจ้าหน้าที่ทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "12:00 น.",
+                "openHours": "08:00 - 20:00 น. (เปิดบริการทุกวัน)"
+              }
+            },
+            {
+              "id": "restroom-f1",
+              "kind": "room",
+              "name": "ห้องน้ำผู้ป่วย (แยกชาย-หญิง/ผู้พิการ)",
+              "category": "สิ่งอำนวยความสะดวก",
+              "x": 8,
+              "y": 66,
+              "w": 26,
+              "h": 20,
+              "description": "รองรับผู้ใช้รถเข็นและมีราวจับความปลอดภัย",
+              "phone": "",
+              "extension": "",
+              "mobile": "",
+              "imageUrl": "",
+              "staffResponsibility": {
+                "headOfDept": "นายบุญส่ง มั่นคง (หัวหน้างานแม่บ้าน & โครงสร้าง)",
+                "dutyOfficer": "นายสมศักดิ์ ขยันดี (เจ้าหน้าที่ดูแลความสะอาด)",
+                "housekeeping": "นายสมศักดิ์ ขยันดี (ตรวจเช็กความสะอาดทุก 1 ชั่วโมง)",
+                "shiftText": "ประจำเวรตลอด 24 ชั่วโมง"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "cleaning_in_progress",
+                "cleaningStatusText": "🟡 กำลังทำความสะอาด & ตรวจเช็กระบบน้ำ",
+                "lastCleanedTime": "15:00 น.",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "finance",
+              "kind": "room",
+              "name": "การเงิน & สิทธิการรักษา",
+              "category": "บริการผู้ป่วย",
+              "x": 64,
+              "y": 66,
+              "w": 26,
+              "h": 20,
+              "description": "ชำระเงินและตรวจสอบสิทธิบัตรทอง/ประกันสังคม/ข้าราชการ",
+              "phone": "042-245555",
+              "extension": "1300",
+              "mobile": "081-9994444",
+              "imageUrl": "opd-building-front.jpg",
+              "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
+              "staffResponsibility": {
+                "headOfDept": "นางนภา พรหมมินทร์ (หัวหน้างานการเงิน)",
+                "dutyOfficer": "นายวิชัย รุ่งเรือง (เจ้าหน้าที่การเงิน)",
+                "housekeeping": "นางจิตรา เจริญสุข (พนักงานทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "11:30 น.",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            { "id": "elevator-a-f1", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 42 },
+            { "id": "stairs-a-f1", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 42 }
+          ],
+          "routeNodes": [
+            { "id": "entry", "name": "ประตูทางเข้าหลัก", "x": 20, "y": 50, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "node-triage", "name": "จุดคัดกรอง", "x": 21, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "junction-main-f1", "name": "โถงกลาง ชั้น 1", "x": 48, "y": 50, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "node-101", "name": "หน้าห้องตรวจ 101", "x": 47, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "node-pharmacy", "name": "จุดรับยา", "x": 76, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "node-finance", "name": "ช่องการเงิน", "x": 76, "y": 64, "buildingId": "opd", "floorId": "opd-f1" },
+            { "id": "elevator-node-f1", "name": "โถงลิฟต์ A (ชั้น 1)", "x": 76, "y": 50, "buildingId": "opd", "floorId": "opd-f1", "isElevator": true },
+            { "id": "stairs-node-f1", "name": "โถงบันได A (ชั้น 1)", "x": 88, "y": 50, "buildingId": "opd", "floorId": "opd-f1", "isStairs": true }
+          ],
+          "routeEdges": [
+            { "from": "entry", "to": "node-triage", "distance": 14, "accessibleWheelchair": true },
+            { "from": "entry", "to": "junction-main-f1", "distance": 28, "accessibleWheelchair": true },
+            { "from": "node-triage", "to": "node-101", "distance": 26, "accessibleWheelchair": true },
+            { "from": "junction-main-f1", "to": "node-101", "distance": 14, "accessibleWheelchair": true },
+            { "from": "junction-main-f1", "to": "elevator-node-f1", "distance": 28, "accessibleWheelchair": true },
+            { "from": "elevator-node-f1", "to": "node-pharmacy", "distance": 14, "accessibleWheelchair": true },
+            { "from": "elevator-node-f1", "to": "node-finance", "distance": 14, "accessibleWheelchair": true },
+            { "from": "elevator-node-f1", "to": "stairs-node-f1", "distance": 12, "accessibleWheelchair": false }
+          ]
+        },
+        {
+          "id": "opd-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ศูนย์จักษุ & คลินิกตา",
+          "shortName": "ชั้น 2",
+          "mapImageUrl": "",
+          "items": [
+            {
+              "id": "room-201",
+              "kind": "room",
+              "name": "ห้องตรวจ 201 (จักษุวิทยา)",
+              "category": "จักษุวิทยา",
+              "x": 10,
+              "y": 14,
+              "w": 28,
+              "h": 24,
+              "description": "วัดสายตา ตรวจโรคตาและต้อกระจก",
+              "phone": "042-245555",
+              "extension": "2101",
+              "mobile": "081-9995555",
+              "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "นพ.กิตติพงษ์ จักษุเมธา (แพทย์หัวหน้าศูนย์จักษุ)",
+                "dutyOfficer": "พว.วรรณา มีสุข (พยาบาลเฉพาะทางจักษุ)",
+                "housekeeping": "นางวิไล เจริญสุข (พนักงานทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "13:00 น.",
+                "openHours": "08:30 - 16:00 น."
+              }
+            },
+            {
+              "id": "room-lab",
+              "kind": "room",
+              "name": "จุดเจาะเลือด & เจาะสิ่งส่งตรวจ",
+              "category": "พยาธิวิทยา",
+              "x": 60,
+              "y": 14,
+              "w": 28,
+              "h": 24,
+              "description": "บริการเจาะเลือดส่งตรวจแล็บและตรวจปัสสาวะ",
+              "phone": "042-245555",
+              "extension": "2200",
+              "mobile": "081-9996666",
+              "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "ทนพ.สมศักดิ์ ชัยชนะ (หัวหน้าห้องปฏิบัติการแล็บ)",
+                "dutyOfficer": "ทนพญ.ศิรินภา สุขใส (เทคนิคการแพทย์ประจำจุด)",
+                "housekeeping": "นายยอดชาย ขยันดี (เจ้าหน้าที่ฆ่าเชื้อสิ่งส่งตรวจ)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "14:10 น.",
+                "openHours": "07:30 - 16:00 น."
+              }
+            },
+            { "id": "elevator-a-f2", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 42 },
+            { "id": "stairs-a-f2", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 42 }
+          ],
+          "routeNodes": [
+            { "id": "elevator-node-f2", "name": "โถงลิฟต์ A (ชั้น 2)", "x": 76, "y": 50, "buildingId": "opd", "floorId": "opd-f2", "isElevator": true },
+            { "id": "stairs-node-f2", "name": "โถงบันได A (ชั้น 2)", "x": 88, "y": 50, "buildingId": "opd", "floorId": "opd-f2", "isStairs": true },
+            { "id": "junction-f2", "name": "โถงทางเดิน ชั้น 2", "x": 48, "y": 50, "buildingId": "opd", "floorId": "opd-f2" },
+            { "id": "node-201", "name": "หน้าห้องตรวจ 201", "x": 24, "y": 40, "buildingId": "opd", "floorId": "opd-f2" },
+            { "id": "node-lab", "name": "หน้าจุดเจาะเลือด", "x": 74, "y": 40, "buildingId": "opd", "floorId": "opd-f2" }
+          ],
+          "routeEdges": [
+            { "from": "elevator-node-f2", "to": "junction-f2", "distance": 28, "accessibleWheelchair": true },
+            { "from": "stairs-node-f2", "to": "elevator-node-f2", "distance": 12, "accessibleWheelchair": false },
+            { "from": "junction-f2", "to": "node-201", "distance": 24, "accessibleWheelchair": true },
+            { "from": "junction-f2", "to": "node-lab", "distance": 26, "accessibleWheelchair": true }
+          ]
+        },
+        {
+          "id": "opd-f3",
+          "level": 3,
+          "name": "ชั้น 3 — ศูนย์อายุรกรรม & หัวใจ",
+          "shortName": "ชั้น 3",
+          "mapImageUrl": "",
+          "items": [
+            {
+              "id": "exam-301",
+              "kind": "room",
+              "name": "ห้องตรวจ 301 (อายุรกรรมทั่วไป)",
+              "category": "อายุรกรรม",
+              "x": 38,
+              "y": 24,
+              "w": 26,
+              "h": 22,
+              "description": "ตรวจรักษาโรคอายุรกรรมและโรคเรื้อรัง",
+              "phone": "042-245555",
+              "extension": "3301",
+              "mobile": "081-9997777",
+              "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "นพ.วิศรุต หัวใจดี (แพทย์หัวหน้าศูนย์อายุรกรรม)",
+                "dutyOfficer": "พว.รัตนา ใจดี (พยาบาลหัวหน้าเวร)",
+                "housekeeping": "นายกิตติ มานะ (เจ้าหน้าที่ทำความสะอาดห้องตรวจ)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "14:00 น.",
+                "openHours": "08:30 - 16:00 น."
+              }
+            },
+            {
+              "id": "exam-cardio",
+              "kind": "room",
+              "name": "ศูนย์หัวใจ & คลินิกความดัน",
+              "category": "อายุรกรรม",
+              "x": 8,
+              "y": 24,
+              "w": 26,
+              "h": 22,
+              "description": "คลินิกเฉพาะทางโรคหัวใจและหลอดเลือด",
+              "phone": "042-245555",
+              "extension": "3302",
+              "mobile": "081-9998888",
+              "imageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "นพ.วิศรุต หัวใจดี (หัวหน้าศูนย์หัวใจ)",
+                "dutyOfficer": "พว.อารียา ปรารถนา (พยาบาลผู้เชี่ยวชาญโรคหัวใจ)",
+                "housekeeping": "นายกิตติ มานะ (เจ้าหน้าที่ทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "13:30 น.",
+                "openHours": "08:30 - 16:00 น."
+              }
+            },
+            {
+              "id": "nurse-station-f3",
+              "kind": "room",
+              "name": "เคาน์เตอร์พยาบาล ชั้น 3",
+              "category": "บริการผู้ป่วย",
+              "x": 68,
+              "y": 24,
+              "w": 24,
+              "h": 22,
+              "description": "จุดซักประวัติและรับบัตรคิวตรวจอายุรกรรม",
+              "phone": "042-245555",
+              "extension": "3300",
+              "mobile": "081-9999999",
+              "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "พว.รัตนา ใจดี (หัวหน้าเคาน์เตอร์พยาบาล)",
+                "dutyOfficer": "พว.สิรินธร & ทีมพยาบาลประจำเวร",
+                "housekeeping": "นายกิตติ มานะ (พนักงานทำความสะอาด)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "14:20 น.",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            { "id": "elevator-a-f3", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 58 },
+            { "id": "stairs-a-f3", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 58 }
+          ],
+          "routeNodes": [
+            { "id": "elevator-node-f3", "name": "โถงลิฟต์ A (ชั้น 3)", "x": 76, "y": 60, "buildingId": "opd", "floorId": "opd-f3", "isElevator": true },
+            { "id": "stairs-node-f3", "name": "โถงบันได A (ชั้น 3)", "x": 88, "y": 60, "buildingId": "opd", "floorId": "opd-f3", "isStairs": true },
+            { "id": "junction-f3", "name": "โถงกลาง ชั้น 3", "x": 50, "y": 60, "buildingId": "opd", "floorId": "opd-f3" },
+            { "id": "node-cardio", "name": "หน้าศูนย์หัวใจ", "x": 21, "y": 48, "buildingId": "opd", "floorId": "opd-f3" },
+            { "id": "node-exam301", "name": "หน้าห้องตรวจ 301", "x": 51, "y": 48, "buildingId": "opd", "floorId": "opd-f3" },
+            { "id": "node-nurse-f3", "name": "หน้าเคาน์เตอร์พยาบาล", "x": 80, "y": 48, "buildingId": "opd", "floorId": "opd-f3" }
+          ],
+          "routeEdges": [
+            { "from": "elevator-node-f3", "to": "junction-f3", "distance": 26, "accessibleWheelchair": true },
+            { "from": "stairs-node-f3", "to": "elevator-node-f3", "distance": 12, "accessibleWheelchair": false },
+            { "from": "junction-f3", "to": "node-exam301", "distance": 12, "accessibleWheelchair": true },
+            { "from": "junction-f3", "to": "node-cardio", "distance": 29, "accessibleWheelchair": true },
+            { "from": "elevator-node-f3", "to": "node-nurse-f3", "distance": 14, "accessibleWheelchair": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "somdet",
+      "code": "SOMDET-25",
+      "mapNumber": 25,
+      "name": "อาคาร 25 — อาคารสมเด็จพระเทพรัตนราชสุดาฯ (200 ปี)",
+      "description": "หอผู้ป่วยพิเศษ ศูนย์ศัลยกรรม และหอผู้ป่วยวิกฤต (ICU)",
+      "lat": 17.41490,
+      "lng": 102.78010,
+      "floors": [
+        {
+          "id": "somdet-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ศูนย์ศัลยกรรม & หอผู้ป่วยพิเศษ",
+          "shortName": "ชั้น 1",
+          "mapImageUrl": "",
+          "items": [
+            {
+              "id": "room-somdet-lobby",
+              "kind": "room",
+              "name": "โถงรับรองอาคารสมเด็จฯ",
+              "category": "บริการผู้ป่วย",
+              "x": 10,
+              "y": 15,
+              "w": 35,
+              "h": 30,
+              "description": "จุดสอบถามและประชาสัมพันธ์",
+              "phone": "042-245555",
+              "extension": "2501",
+              "mobile": "081-8881111",
+              "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "พว.มยุรี ศิริพร (หัวหน้าตึกสมเด็จฯ)",
+                "dutyOfficer": "พว.สิริพร สุวรรณ (ประชาสัมพันธ์)",
+                "housekeeping": "นางสมใจ แจ่มใส (แม่บ้านประจำโถง)",
+                "shiftText": "เวรเช้า (08:00 - 16:00 น.)"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "14:15 น.",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            { "id": "elevator-b-f1", "kind": "poi", "name": "ลิฟต์ B (อาคารสมเด็จฯ)", "category": "ลิฟต์", "x": 78, "y": 62 }
+          ],
+          "routeNodes": [
+            { "id": "somdet-entry", "name": "ทางเข้าโถงหลัก อาคารสมเด็จฯ", "x": 27, "y": 65, "buildingId": "somdet", "floorId": "somdet-f1" },
+            { "id": "node-somdet-lobby", "name": "เคาน์เตอร์โถงหลัก", "x": 27, "y": 48, "buildingId": "somdet", "floorId": "somdet-f1" },
+            { "id": "elevator-node-somdet-f1", "name": "โถงลิฟต์ B (ชั้น 1)", "x": 78, "y": 75, "buildingId": "somdet", "floorId": "somdet-f1", "isElevator": true }
+          ],
+          "routeEdges": [
+            { "from": "somdet-entry", "to": "node-somdet-lobby", "distance": 17, "accessibleWheelchair": true },
+            { "from": "node-somdet-lobby", "to": "elevator-node-somdet-f1", "distance": 32, "accessibleWheelchair": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "er",
+      "code": "ER-57",
+      "mapNumber": 57,
+      "name": "อาคาร 57 — อาคารอุบัติเหตุและฉุกเฉิน (อาคารปราบขลา)",
+      "description": "รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง ศูนย์เอกซเรย์คอมพิวเตอร์ และ CT Scan",
+      "lat": 17.41440,
+      "lng": 102.78060,
+      "floors": [
+        {
+          "id": "er-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ห้องอุบัติเหตุฉุกเฉิน & CT Scan",
+          "shortName": "ชั้น 1 ER",
+          "mapImageUrl": "",
+          "items": [
+            {
+              "id": "room-er-dept",
+              "kind": "room",
+              "name": "ห้องอุบัติเหตุและฉุกเฉิน (ER)",
+              "category": "ฉุกเฉิน",
+              "x": 10,
+              "y": 15,
+              "w": 35,
+              "h": 30,
+              "description": "รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง",
+              "phone": "042-245555",
+              "extension": "1669",
+              "mobile": "081-1669000",
+              "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "นพ.เกรียงไกร กู้ชีพ (ผู้อำนวยการศูนย์อุบัติเหตุ ER)",
+                "dutyOfficer": "พว.เกศรินทร์ & ทีมกู้ชีพ ER 24 ชม.",
+                "housekeeping": "นายฉัตรชัย ฆ่าเชื้อเร่งด่วน (ทีมทำความสะอาดวิกฤต)",
+                "shiftText": "เวรด่วนพิเศษ 24 ชั่วโมง"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อระดับฆ่าเชื้อโรควิกฤต",
+                "lastCleanedTime": "14:45 น.",
+                "openHours": "24 ชั่วโมง ตลอด 365 วัน"
+              }
+            },
+            {
+              "id": "room-ctscan",
+              "kind": "room",
+              "name": "ศูนย์เอกซเรย์ & CT Scan",
+              "category": "รังสีวิทยา",
+              "x": 52,
+              "y": 15,
+              "w": 35,
+              "h": 30,
+              "description": "เอกซเรย์คอมพิวเตอร์และสแกนสมอง",
+              "phone": "042-245555",
+              "extension": "5702",
+              "mobile": "081-5702000",
+              "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
+              "staffResponsibility": {
+                "headOfDept": "พญ.วิลาวัลย์ รังสีเวช (หัวหน้าฝ่ายรังสีวิทยา)",
+                "dutyOfficer": "นายสิทธิชัย รังสีเทคนิค (นักรังสีการแพทย์)",
+                "housekeeping": "นายประเสริฐ ชัยชนะ (พนักงานทำความสะอาด)",
+                "shiftText": "ประจำเวร 24 ชั่วโมง"
+              },
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "13:40 น.",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [
+            { "id": "er-entry-node", "name": "ประตูเข้าฉุกเฉิน ER", "x": 27, "y": 65, "buildingId": "er", "floorId": "er-f1" }
+          ],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "mec",
+      "code": "MEC-8",
+      "mapNumber": 8,
+      "name": "อาคาร 8 — อาคารศูนย์แพทยศาสตร์ศึกษาชั้นคลินิก",
+      "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
+      "lat": 17.41580,
+      "lng": 102.77970,
+      "floors": [{ "id": "mec-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "kitti-sophon",
+      "code": "KITTI-19",
+      "mapNumber": 19,
+      "name": "อาคาร 19 — อาคารตึกสงฆ์กิตติโสภณ",
+      "description": "หอผู้ป่วยพระสงฆ์ และบริการผู้ป่วยใน",
+      "lat": 17.41470,
+      "lng": 102.78080,
+      "floors": [{ "id": "kitti-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "preecha",
+      "code": "PREECHA-23",
+      "mapNumber": 23,
+      "name": "อาคาร 23 — อาคารปรีชา-ศิริพรรณ",
+      "description": "หอผู้ป่วยในและบริการทางการแพทย์เฉพาะทาง",
+      "lat": 17.41460,
+      "lng": 102.78040,
+      "floors": [{ "id": "preecha-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "b-74y",
+      "code": "B74Y-24",
+      "mapNumber": 24,
+      "name": "อาคาร 24 — อาคาร 74 ปี คลองจินดา",
+      "description": "หอผู้ป่วยในและศูนย์คลินิกการรักษา",
+      "lat": 17.41430,
+      "lng": 102.78090,
+      "floors": [{ "id": "b74y-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "luangta-bua",
+      "code": "BUA-55",
+      "mapNumber": 55,
+      "name": "อาคาร 55 — อาคารหลวงตาบัว ญาณสัมปันโน",
+      "description": "อาคารหอผู้ป่วยและศูนย์บริการเฉพาะทาง",
+      "lat": 17.41540,
+      "lng": 102.78180,
+      "floors": [{ "id": "bua-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "dialysis",
+      "code": "DIALYSIS-16",
+      "mapNumber": 16,
+      "name": "อาคาร 16 — อาคารหน่วยไตเทียม",
+      "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม",
+      "lat": 17.41530,
+      "lng": 102.78010,
+      "floors": [{ "id": "dialysis-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "pathology",
+      "code": "PATH-18",
+      "mapNumber": 18,
+      "name": "อาคาร 18 — อาคารพยาธิวิทยา",
+      "description": "ห้องปฏิบัติการชันสูตรและพยาธิวิทยาคลินิก",
+      "lat": 17.41520,
+      "lng": 102.78070,
+      "floors": [{ "id": "path-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "special-ward",
+      "code": "WARD-20",
+      "mapNumber": 20,
+      "name": "อาคาร 20 — หอผู้ป่วยพิเศษ",
+      "description": "ห้องพักและหอผู้ป่วยพิเศษ",
+      "lat": 17.41560,
+      "lng": 102.78120,
+      "floors": [{ "id": "ward20-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "surgery",
+      "code": "SURGERY-22",
+      "mapNumber": 22,
+      "name": "อาคาร 22 — อาคารศัลยกรรม",
+      "description": "ห้องผ่าตัด หอผู้ป่วยศัลยกรรม และศูนย์ดูแลผู้ป่วยหลังผ่าตัด",
+      "lat": 17.41490,
+      "lng": 102.78050,
+      "floors": [{ "id": "surg-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "physical-therapy",
+      "code": "PT-30",
+      "mapNumber": 30,
+      "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
+      "description": "ศูนย์ฟื้นฟูสมรรถภาพทางกายและกายภาพบำบัด",
+      "lat": 17.41510,
+      "lng": 102.78130,
+      "floors": [{ "id": "pt-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "chalert-prakiat",
+      "code": "CHALERM-3",
+      "mapNumber": 3,
+      "name": "อาคาร 3 — อาคารเฉลิมพระเกียรติ",
+      "description": "บริการผู้ป่วยและห้องปฏิบัติการ",
+      "lat": 17.41610,
+      "lng": 102.77920,
+      "floors": [{ "id": "chalerm-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "malai-clinic",
+      "code": "MALAI-5",
+      "mapNumber": 5,
+      "name": "อาคาร 5 — มาลัยคลินิก",
+      "description": "คลินิกปฐมภูมิและคลินิกเฉพาะทาง",
+      "lat": 17.41590,
+      "lng": 102.77930,
+      "floors": [{ "id": "malai-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "medical-records",
+      "code": "REC-6",
+      "mapNumber": 6,
+      "name": "อาคาร 6 — อาคารเวชระเบียนและแพทย์แผนไทย",
+      "description": "บริการยื่นบัตร คลังเวชระเบียน และศูนย์นวดแพทย์แผนไทย",
+      "lat": 17.41580,
+      "lng": 102.77940,
+      "floors": [{ "id": "rec-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "cssd",
+      "code": "CSSD-26",
+      "mapNumber": 26,
+      "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
+      "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์",
+      "lat": 17.41460,
+      "lng": 102.78060,
+      "floors": [{ "id": "cssd-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "nutrition",
+      "code": "NUTRI-27",
+      "mapNumber": 27,
+      "name": "อาคาร 27 — อาคารโภชนาการและส่วนบริการ",
+      "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
+      "lat": 17.41440,
+      "lng": 102.78030,
+      "floors": [{ "id": "nutri-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "forensic",
+      "code": "FORENSIC-53",
+      "mapNumber": 53,
+      "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
+      "description": "กลุ่มงานนิติเวชศาสตร์ และงานชันสูตรพลิกศพ",
+      "lat": 17.41420,
+      "lng": 102.78140,
+      "floors": [{ "id": "forensic-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    },
+    {
+      "id": "multipurpose",
+      "code": "MULTI-59",
+      "mapNumber": 59,
+      "name": "อาคาร 59 — อาคารอเนกประสงค์และห้องประชุม",
+      "description": "ห้องประชุมใหญ่ ศูนย์การเรียนรู้ และงานสัมมนา",
+      "lat": 17.41550,
+      "lng": 102.78200,
+      "floors": [{ "id": "multi-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+    }
+  ],
+  "interFloorEdges": [
+    { "from": "elevator-node-f1", "to": "elevator-node-f2", "distance": 30, "accessibleWheelchair": true, "isElevator": true, "type": "elevator" },
+    { "from": "elevator-node-f2", "to": "elevator-node-f3", "distance": 30, "accessibleWheelchair": true, "isElevator": true, "type": "elevator" },
+    { "from": "stairs-node-f1", "to": "stairs-node-f2", "distance": 35, "accessibleWheelchair": false, "isStairs": true, "type": "stairs" },
+    { "from": "stairs-node-f2", "to": "stairs-node-f3", "distance": 35, "accessibleWheelchair": false, "isStairs": true, "type": "stairs" }
+  ],
+  "assets": [
+    {
+      "id": "ASSET-IP-024",
+      "code": "IP-024",
+      "name": "เครื่องปั๊มสารน้ำอัตโนมัติ (Infusion Pump #024)",
+      "category": "เครื่องมือแพทย์ราคาสูง",
+      "valueThb": 185000,
+      "serialNumber": "SN-IP-2026-024",
+      "status": "in-use",
+      "statusText": "กำลังใช้งานวิกฤต",
+      "buildingId": "opd",
+      "floorId": "opd-f3",
+      "roomId": "exam-301",
+      "roomName": "ห้องตรวจ 301 (อาคาร 21)",
+      "x": 51,
+      "y": 35,
+      "batteryPercent": 88,
+      "lastUpdate": "10 วินาทีที่แล้ว",
+      "beaconTagId": "TAG-BLE-IP024",
+      "assignedZone": "ศูนย์อายุรกรรม ชั้น 3",
+      "custody": {
+        "responsibleOfficer": "พว.รัตนา (พยาบาลหัวหน้าเวร)",
+        "department": "อายุรกรรมชั้น 3"
+      }
+    },
+    {
+      "id": "ASSET-VM-008",
+      "code": "VM-008",
+      "name": "เครื่องติดตามสัญญาณชีพวิกฤต (Vital Signs Monitor #008)",
+      "category": "เครื่องมือแพทย์ราคาสูง",
+      "valueThb": 340000,
+      "serialNumber": "SN-VM-2025-008",
+      "status": "alert_out_of_zone",
+      "statusText": "⚠️ เคลื่อนย้ายออกนอกโซน!",
+      "buildingId": "opd",
+      "floorId": "opd-f1",
+      "roomId": "elevator-a-f1",
+      "roomName": "บริเวณลิฟต์ A ชั้น 1 (อาคาร 21)",
+      "x": 76,
+      "y": 46,
+      "batteryPercent": 42,
+      "lastUpdate": "12 วินาทีที่แล้ว",
+      "beaconTagId": "TAG-BLE-VM008",
+      "assignedZone": "หอผู้ป่วยอายุรกรรม ชั้น 3",
+      "warningMessage": "แจ้งเตือน: อุปกรณ์ถูกเคลื่อนย้ายออกจากชั้น 3 ลงมาที่ชั้น 1 โดยไม่ได้กดลงทะเบียนย้าย",
+      "custody": {
+        "responsibleOfficer": "นพ.วิศรุต (แพทย์ประจำเวร)",
+        "department": "ศูนย์หัวใจ"
+      }
+    },
+    {
+      "id": "PARCEL-HCD-9901",
+      "code": "HCD-9901",
+      "name": "พัสดุยาราคาสูงเฉพาะราย (Targeted Cancer Therapy Parcel)",
+      "category": "พัสดุการแพทย์ราคาสูง",
+      "valueThb": 260000,
+      "serialNumber": "LOT-MED-2026-9901",
+      "status": "in-transit",
+      "statusText": "🚚 อยู่ระหว่างจัดส่งความควมอุณหภูมิ",
+      "buildingId": "opd",
+      "floorId": "opd-f1",
+      "roomId": "pharmacy",
+      "roomName": "โถงทางเดินส่งยา (กำลังไปลิฟต์ A)",
+      "x": 68,
+      "y": 34,
+      "batteryPercent": 96,
+      "lastUpdate": "5 วินาทีที่แล้ว",
+      "beaconTagId": "TAG-TEMP-9901",
+      "assignedZone": "คลังยา -> คลินิกเคมีบำบัด ชั้น 3",
+      "custody": {
+        "sender": "ภก.สมชาย (คลังยาหลัก ชั้น 1)",
+        "receiver": "พว.สิรินธร (คลินิกเคมีบำบัด ชั้น 3)",
+        "dispatchTime": "13:25 น.",
+        "tempControl": "2 - 8 °C (ปัจจุบัน 4.2 °C)"
+      }
+    },
+    {
+      "id": "PARCEL-BB-402",
+      "code": "BB-402",
+      "name": "กล่องบรรจุถุงเลือดฉุกเฉิน (Emergency Blood Transport Box)",
+      "category": "พัสดุการแพทย์วิกฤต",
+      "valueThb": 85000,
+      "serialNumber": "BLOOD-BOX-402",
+      "status": "in-transit",
+      "statusText": "🚨 ขนส่งเร่งด่วนสู่ ER",
+      "buildingId": "er",
+      "floorId": "er-f1",
+      "roomId": "room-er-dept",
+      "roomName": "ทางเข้า ER (อาคาร 57 อุบัติเหตุฉุกเฉิน)",
+      "x": 22,
+      "y": 55,
+      "batteryPercent": 99,
+      "lastUpdate": "1 วินาทีที่แล้ว",
+      "beaconTagId": "TAG-BLOOD-402",
+      "assignedZone": "ธนาคารเลือด -> ER ฉุกเฉิน",
+      "custody": {
+        "sender": "เจ้าหน้าที่ธนาคารเลือด",
+        "receiver": "ทีมกู้ชีพ ER อาคารปราบขลา",
+        "dispatchTime": "13:32 น.",
+        "tempControl": "1 - 6 °C"
+      }
+    },
+    {
+      "id": "ASSET-WC-011",
+      "code": "WC-011",
+      "name": "รถเข็นผู้ป่วยไฟฟ้าอัจฉริยะ (Smart Electric Wheelchair)",
+      "category": "พาหนะผู้ป่วย",
+      "valueThb": 78000,
+      "serialNumber": "SN-WC-2026-011",
+      "status": "available",
+      "statusText": "พร้อมใช้งาน",
+      "buildingId": "opd",
+      "floorId": "opd-f1",
+      "roomId": "room-triage",
+      "roomName": "จุดคัดกรอง ประตูหลัก (อาคาร 21)",
+      "x": 14,
+      "y": 28,
+      "batteryPercent": 92,
+      "lastUpdate": "3 นาทีที่แล้ว",
+      "beaconTagId": "TAG-BLE-WC011",
+      "assignedZone": "จุดคัดกรอง ชั้น 1",
+      "custody": {
+        "responsibleOfficer": "ศูนย์เปลโรงพยาบาลอุดรธานี",
+        "department": "เวชระเบียน"
+      }
+    },
+    {
+      "id": "ASSET-VENT-102",
+      "code": "VENT-102",
+      "name": "เครื่องช่วยหายใจชนิดเคลื่อนย้าย (Portable Ventilator #102)",
+      "category": "อุปกรณ์ช่วยชีวิตวิกฤต",
+      "valueThb": 690000,
+      "serialNumber": "SN-VENT-2025-102",
+      "status": "in-use",
+      "statusText": "กำลังใช้งานใน ER",
+      "buildingId": "er",
+      "floorId": "er-f1",
+      "roomId": "room-er-dept",
+      "roomName": "ห้อง ER เตียงวิกฤต 2 (อาคาร 57)",
+      "x": 28,
+      "y": 30,
+      "batteryPercent": 84,
+      "lastUpdate": "45 วินาทีที่แล้ว",
+      "beaconTagId": "TAG-UWB-VENT102",
+      "assignedZone": "ห้อง ER อาคาร 57",
+      "custody": {
+        "responsibleOfficer": "ทีมเวชศาสตร์ฉุกเฉิน ER",
+        "department": "ศูนย์อุบัติเหตุ"
+      }
+    }
+  ],
+  "beacons": [
+    { "id": "BC-OPD-F1-01", "name": "Beacon ทางเข้าประตูหลัก OPD", "buildingId": "opd", "floorId": "opd-f1", "x": 20, "y": 50, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 101, "minor": 1, "status": "active" },
+    { "id": "BC-OPD-F1-02", "name": "Beacon โถงห้องยา", "buildingId": "opd", "floorId": "opd-f1", "x": 76, "y": 36, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 101, "minor": 2, "status": "active" },
+    { "id": "BC-OPD-F3-01", "name": "Beacon เคาน์เตอร์พยาบาล ชั้น 3", "buildingId": "opd", "floorId": "opd-f3", "x": 76, "y": 48, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 103, "minor": 1, "status": "active" },
+    { "id": "BC-ER-F1-01", "name": "Beacon ประตู ER อาคารปราบขลา", "buildingId": "er", "floorId": "er-f1", "x": 27, "y": 65, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 201, "minor": 1, "status": "active" }
+  ]
+}
