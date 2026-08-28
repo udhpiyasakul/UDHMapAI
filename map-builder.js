@@ -51,6 +51,18 @@ function renderTree() {
     .join('');
 }
 
+function getPoiIcon(item) {
+  const cat = (item.category || '').toLowerCase();
+  const name = (item.name || '').toLowerCase();
+
+  if (cat.includes('ลิฟต์') || cat.includes('elevator') || name.includes('ลิฟต์')) return '🛗';
+  if (cat.includes('บันได') || cat.includes('stairs') || name.includes('บันได')) return '🪜';
+  if (cat.includes('ห้องน้ำ') || cat.includes('toilet') || cat.includes('สิ่งอำนวย') || name.includes('ห้องน้ำ')) return '🚽';
+  if (cat.includes('ยา') || name.includes('ยา')) return '💊';
+  if (cat.includes('ฉุกเฉิน') || name.includes('er')) return '🚨';
+  return '📍';
+}
+
 function renderCanvas() {
   canvas.querySelectorAll('.item, .route-node-item').forEach((node) => node.remove());
   $('#breadcrumb').textContent = `${building.name} / ${floor.name}`;
@@ -76,7 +88,8 @@ function renderCanvas() {
           <div class="resize-handle" title="ลากเพื่อย่อ/ขยายขนาดห้อง"></div>
         `;
       } else {
-        node.innerHTML = `📍<small>${item.name}</small>`;
+        const icon = getPoiIcon(item);
+        node.innerHTML = `${icon}<small>${item.name}</small>`;
       }
       canvas.append(node);
     });
@@ -90,7 +103,10 @@ function renderCanvas() {
       node.dataset.id = nodeItem.id;
       node.style.left = `${nodeItem.x}%`;
       node.style.top = `${nodeItem.y}%`;
-      node.innerHTML = `🛣️<small>${nodeItem.name}</small>`;
+      let nodeIcon = '🛣️';
+      if (nodeItem.isElevator) nodeIcon = '🛗';
+      else if (nodeItem.isStairs) nodeIcon = '🪜';
+      node.innerHTML = `${nodeIcon}<small>${nodeItem.name}</small>`;
       canvas.append(node);
     });
   }
@@ -182,7 +198,7 @@ function setupEvents() {
     $('#tip').innerHTML =
       tool === 'select'
         ? '💡 <b>คำแนะนำ:</b> สามารถคลิกค้างที่ห้อง/หมุดแล้ว <b>ลากขยับตำแหน่ง (Drag & Drop)</b> หรือย่อ/ขยายขนาดห้องได้ทันที!'
-        : `คลิกบนแผนที่เพื่อ ${tool === 'room' ? 'วาดห้อง' : tool === 'poi' ? 'ปัก POI' : 'ปักจุดเดิน Route Node'}`;
+        : `คลิกบนแผนที่เพื่อ ${tool === 'room' ? 'วาดห้อง' : tool === 'poi' ? 'ปักหมุด POI (ลิฟต์/บันได/ห้องน้ำ)' : 'ปักจุดเดิน Route Node'}`;
   });
 
   // Mouse Down: Start Dragging / Resizing
@@ -244,11 +260,12 @@ function setupEvents() {
         floor.routeNodes.push(nodeItem);
         choose(nodeItem);
       } else {
+        const defaultName = kind === 'room' ? 'ห้องใหม่' : 'หมุดใหม่ (ลิฟต์/บันได/จุดบริการ)';
         const item = {
           id: `${kind}-${Date.now()}-${sequence++}`,
           kind,
-          name: kind === 'room' ? 'ห้องใหม่' : 'จุดสนใจใหม่',
-          category: '',
+          name: defaultName,
+          category: kind === 'poi' ? 'ลิฟต์' : '',
           phone: '',
           extension: '',
           mobile: '',
@@ -358,6 +375,13 @@ function setupEvents() {
     selected.imageUrl = $('#imageUrl').value.trim();
     selected.hardwareTag = $('#hardwareTag').value.trim();
 
+    // If POI category is elevator or stairs, check isElevator / isStairs
+    if (selected.kind === 'routeNode') {
+      const cat = (selected.category || selected.name || '').toLowerCase();
+      selected.isElevator = cat.includes('ลิฟต์') || cat.includes('elevator');
+      selected.isStairs = cat.includes('บันได') || cat.includes('stairs');
+    }
+
     // Save Staff Responsibilities
     selected.staffResponsibility = {
       headOfDept: $('#headOfDept').value.trim(),
@@ -381,7 +405,7 @@ function setupEvents() {
 
     persist();
     render();
-    toast('💾 บันทึกข้อมูลผู้รับผิดชอบ & สถานะสุขอนามัยเรียบร้อยแล้ว');
+    toast('💾 บันทึกรายละเอียดองค์ประกอบเรียบร้อยแล้ว');
   });
 
   $('#delete').onclick = () => {
