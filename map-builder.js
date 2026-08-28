@@ -1,4 +1,12 @@
 let data, building, floor, selected, tool = 'select', sequence = 1, timer;
+
+// Dragging state
+let isDragging = false;
+let isResizing = false;
+let dragTarget = null;
+let startX = 0, startY = 0;
+let initX = 0, initY = 0, initW = 0, initH = 0;
+
 const $ = (id) => document.querySelector(id);
 const canvas = $('#canvas');
 
@@ -51,7 +59,7 @@ function renderCanvas() {
   // 1. Render items (rooms & pois)
   if (Array.isArray(floor.items)) {
     floor.items.forEach((item) => {
-      const node = document.createElement('button');
+      const node = document.createElement('div');
       node.className = `item ${item.kind} ${selected && selected.id === item.id ? 'selected' : ''}`;
       node.dataset.id = item.id;
       node.style.left = `${item.x}%`;
@@ -62,7 +70,11 @@ function renderCanvas() {
         node.style.height = `${item.h || 15}%`;
         const phoneBadge = item.extension ? ` <span class="ext-badge">☎️${item.extension}</span>` : '';
         const cleanStatus = item.facilityStatus?.cleaningStatus === 'cleaning_in_progress' ? ' 🟡' : item.facilityStatus?.cleaningStatus === 'pending_sanitize' ? ' 🔴' : '';
-        node.innerHTML = `<b>${item.name}${phoneBadge}${cleanStatus}</b><small>${item.category || 'ยังไม่กำหนด'}</small>`;
+        node.innerHTML = `
+          <b>${item.name}${phoneBadge}${cleanStatus}</b>
+          <small>${item.category || 'ยังไม่กำหนด'}</small>
+          <div class="resize-handle" title="ลากเพื่อย่อ/ขยายขนาดห้อง"></div>
+        `;
       } else {
         node.innerHTML = `📍<small>${item.name}</small>`;
       }
@@ -73,7 +85,7 @@ function renderCanvas() {
   // 2. Render routeNodes
   if (Array.isArray(floor.routeNodes)) {
     floor.routeNodes.forEach((nodeItem) => {
-      const node = document.createElement('button');
+      const node = document.createElement('div');
       node.className = `route-node-item ${selected && selected.id === nodeItem.id ? 'selected' : ''}`;
       node.dataset.id = nodeItem.id;
       node.style.left = `${nodeItem.x}%`;
@@ -98,6 +110,14 @@ function render() {
     $('#mobile').value = selected.mobile || '';
     $('#imageUrl').value = selected.imageUrl || '';
     $('#hardwareTag').value = selected.hardwareTag || selected.beaconTagId || '';
+
+    // Position & Size Inputs
+    $('#posX').value = Math.round(selected.x || 0);
+    $('#posY').value = Math.round(selected.y || 0);
+    $('#posW').value = Math.round(selected.w || 18);
+    $('#posH').value = Math.round(selected.h || 15);
+    $('#posW').disabled = selected.kind !== 'room';
+    $('#posH').disabled = selected.kind !== 'room';
 
     // Staff Responsibilities
     const sResp = selected.staffResponsibility || {};
@@ -159,59 +179,165 @@ function setupEvents() {
     tool = button.dataset.tool;
     canvas.dataset.tool = tool;
     document.querySelectorAll('.tools button').forEach((node) => node.classList.toggle('active', node === button));
-    $('#tip').textContent =
+    $('#tip').innerHTML =
       tool === 'select'
-        ? 'เลือกองค์ประกอบเพื่อแก้ไข'
+        ? '💡 <b>คำแนะนำ:</b> สามารถคลิกค้างที่ห้อง/หมุดแล้ว <b>ลากขยับตำแหน่ง (Drag & Drop)</b> หรือย่อ/ขยายขนาดห้องได้ทันที!'
         : `คลิกบนแผนที่เพื่อ ${tool === 'room' ? 'วาดห้อง' : tool === 'poi' ? 'ปัก POI' : 'ปักจุดเดิน Route Node'}`;
   });
 
-  canvas.addEventListener('click', (event) => {
-    const hit = event.target.closest('.item, .route-node-item');
-    if (hit) {
+  // Mouse Down: Start Dragging / Resizing
+  canvas.addEventListener('mousedown', (e) => {
+    const resizeHandle = e.target.closest('.resize-handle');
+    const hitEl = e.target.closest('.item, .route-node-item');
+
+    if (resizeHandle && hitEl) {
       const allItems = [...(floor.items || []), ...(floor.routeNodes || [])];
-      return choose(allItems.find((item) => item.id === hit.dataset.id));
+      const targetItem = allItems.find((i) => i.id === hitEl.dataset.id);
+      if (targetItem && targetItem.kind === 'room') {
+        isResizing = true;
+        dragTarget = targetItem;
+        startX = e.clientX;
+        startY = e.clientY;
+        initW = targetItem.w || 18;
+        initH = targetItem.h || 15;
+        choose(targetItem);
+        e.stopPropagation();
+        e.preventDefault();
+        return;
+      }
     }
-    if (tool === 'select') return;
+
+    if (hitEl) {
+      const allItems = [...(floor.items || []), ...(floor.routeNodes || [])];
+      const targetItem = allItems.find((i) => i.id === hitEl.dataset.id);
+      if (targetItem) {
+        isDragging = true;
+        dragTarget = targetItem;
+        startX = e.clientX;
+        startY = e.clientY;
+        initX = targetItem.x;
+        initY = targetItem.y;
+        hitEl.classList.add('dragging');
+        choose(targetItem);
+        e.stopPropagation();
+        e.preventDefault();
+        return;
+      }
+    }
+
+    if (tool !== 'select') {
+      const rect = canvas.getBoundingClientRect();
+      const kind = tool;
+      const x = Math.max(2, Math.min(95, ((e.clientX - rect.left) / rect.width) * 100));
+      const y = Math.max(3, Math.min(95, ((e.clientY - rect.top) / rect.height) * 100));
+
+      if (kind === 'routeNode') {
+        const nodeItem = {
+          id: `node-${Date.now()}-${sequence++}`,
+          name: `จุดเดิน ${floor.routeNodes ? floor.routeNodes.length + 1 : 1}`,
+          x: Math.round(x),
+          y: Math.round(y),
+          buildingId: building.id,
+          floorId: floor.id
+        };
+        if (!Array.isArray(floor.routeNodes)) floor.routeNodes = [];
+        floor.routeNodes.push(nodeItem);
+        choose(nodeItem);
+      } else {
+        const item = {
+          id: `${kind}-${Date.now()}-${sequence++}`,
+          kind,
+          name: kind === 'room' ? 'ห้องใหม่' : 'จุดสนใจใหม่',
+          category: '',
+          phone: '',
+          extension: '',
+          mobile: '',
+          imageUrl: '',
+          x: Math.round(x - (kind === 'room' ? 9 : 2)),
+          y: Math.round(y - (kind === 'room' ? 6 : 2)),
+          ...(kind === 'room' ? { w: 18, h: 15 } : {})
+        };
+        if (!Array.isArray(floor.items)) floor.items = [];
+        floor.items.push(item);
+        choose(item);
+      }
+
+      persist();
+      toast('เพิ่มองค์ประกอบแล้ว');
+    }
+  });
+
+  // Global Mouse Move: Perform Dragging or Resizing
+  window.addEventListener('mousemove', (e) => {
+    if (!dragTarget) return;
 
     const rect = canvas.getBoundingClientRect();
-    const kind = tool;
-    const x = Math.max(2, Math.min(95, ((event.clientX - rect.left) / rect.width) * 100));
-    const y = Math.max(3, Math.min(95, ((event.clientY - rect.top) / rect.height) * 100));
+    const deltaXPct = ((e.clientX - startX) / rect.width) * 100;
+    const deltaYPct = ((e.clientY - startY) / rect.height) * 100;
 
-    if (kind === 'routeNode') {
-      const nodeItem = {
-        id: `node-${Date.now()}-${sequence++}`,
-        name: `จุดเดิน ${floor.routeNodes ? floor.routeNodes.length + 1 : 1}`,
-        x: Math.round(x),
-        y: Math.round(y),
-        buildingId: building.id,
-        floorId: floor.id
-      };
-      if (!Array.isArray(floor.routeNodes)) floor.routeNodes = [];
-      floor.routeNodes.push(nodeItem);
-      choose(nodeItem);
-    } else {
-      const item = {
-        id: `${kind}-${Date.now()}-${sequence++}`,
-        kind,
-        name: kind === 'room' ? 'ห้องใหม่' : 'จุดสนใจใหม่',
-        category: '',
-        phone: '',
-        extension: '',
-        mobile: '',
-        imageUrl: '',
-        x: Math.round(x - (kind === 'room' ? 9 : 2)),
-        y: Math.round(y - (kind === 'room' ? 6 : 2)),
-        ...(kind === 'room' ? { w: 18, h: 15 } : {})
-      };
-      if (!Array.isArray(floor.items)) floor.items = [];
-      floor.items.push(item);
-      choose(item);
+    if (isDragging) {
+      dragTarget.x = Math.max(2, Math.min(98, Math.round(initX + deltaXPct)));
+      dragTarget.y = Math.max(2, Math.min(98, Math.round(initY + deltaYPct)));
+
+      const el = canvas.querySelector(`[data-id="${dragTarget.id}"]`);
+      if (el) {
+        el.style.left = `${dragTarget.x}%`;
+        el.style.top = `${dragTarget.y}%`;
+      }
+      $('#posX').value = dragTarget.x;
+      $('#posY').value = dragTarget.y;
+    } else if (isResizing) {
+      dragTarget.w = Math.max(4, Math.min(80, Math.round(initW + deltaXPct)));
+      dragTarget.h = Math.max(4, Math.min(80, Math.round(initH + deltaYPct)));
+
+      const el = canvas.querySelector(`[data-id="${dragTarget.id}"]`);
+      if (el) {
+        el.style.width = `${dragTarget.w}%`;
+        el.style.height = `${dragTarget.h}%`;
+      }
+      $('#posW').value = dragTarget.w;
+      $('#posH').value = dragTarget.h;
     }
-
-    persist();
-    toast('เพิ่มองค์ประกอบแล้ว');
   });
+
+  // Mouse Up: End Dragging or Resizing
+  window.addEventListener('mouseup', () => {
+    if (isDragging || isResizing) {
+      if (dragTarget) {
+        persist(`📍 ขยับตำแหน่ง/ขนาด ${dragTarget.name} เรียบร้อยแล้ว`);
+      }
+      isDragging = false;
+      isResizing = false;
+      dragTarget = null;
+      renderCanvas();
+    }
+  });
+
+  // Numeric Input Change Bindings
+  $('#posX').oninput = () => {
+    if (!selected) return;
+    selected.x = parseInt($('#posX').value, 10) || 0;
+    persist();
+    renderCanvas();
+  };
+  $('#posY').oninput = () => {
+    if (!selected) return;
+    selected.y = parseInt($('#posY').value, 10) || 0;
+    persist();
+    renderCanvas();
+  };
+  $('#posW').oninput = () => {
+    if (!selected || selected.kind !== 'room') return;
+    selected.w = parseInt($('#posW').value, 10) || 18;
+    persist();
+    renderCanvas();
+  };
+  $('#posH').oninput = () => {
+    if (!selected || selected.kind !== 'room') return;
+    selected.h = parseInt($('#posH').value, 10) || 15;
+    persist();
+    renderCanvas();
+  };
 
   $('#imageUrl').oninput = () => {
     updatePhotoPreview($('#imageUrl').value.trim());

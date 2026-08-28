@@ -238,6 +238,7 @@ main {
                     linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
   background-size: 20px 20px;
   overflow: auto;
+  user-select: none;
 }
 
 .item {
@@ -248,10 +249,17 @@ main {
   border-radius: 6px;
   padding: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  cursor: grab;
   z-index: 10;
   text-align: center;
   color: #0f172a;
+  user-select: none;
+  touch-action: none;
+}
+
+.item:active, .item.dragging {
+  cursor: grabbing;
+  opacity: 0.85;
 }
 
 .item.selected {
@@ -264,12 +272,32 @@ main {
   display: block;
   font-size: 11px;
   color: #0284c7;
+  pointer-events: none;
 }
 
 .item small {
   display: block;
   font-size: 9px;
   color: #64748b;
+  pointer-events: none;
+}
+
+.resize-handle {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 12px;
+  height: 12px;
+  background-color: #0284c7;
+  border: 1.5px solid #ffffff;
+  border-radius: 3px;
+  cursor: se-resize;
+  z-index: 30;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.item.selected .resize-handle {
+  background-color: #ef4444;
 }
 
 .ext-badge {
@@ -284,11 +312,17 @@ main {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 20px;
-  padding: 2px 6px;
+  padding: 2px 8px;
   font-size: 10px;
-  cursor: pointer;
+  cursor: grab;
   z-index: 15;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  touch-action: none;
+}
+
+.route-node-item:active, .route-node-item.dragging {
+  cursor: grabbing;
 }
 
 .route-node-item.selected {
@@ -366,6 +400,12 @@ footer {
   color: #38bdf8;
   padding: 0 6px;
   font-weight: 600;
+}
+
+.pos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
 .photo-preview-box {

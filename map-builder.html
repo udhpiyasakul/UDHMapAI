@@ -37,7 +37,7 @@
           <h1 id="title">Map Studio Canvas</h1>
         </div>
         <div class="tools">
-          <button class="active" data-tool="select">↖ เลือก / แก้ไข</button>
+          <button class="active" data-tool="select">↖ เลือก / ลากขยับ / ปรับขนาด</button>
           <button data-tool="room">▱ วาดห้อง/แผนก</button>
           <button data-tool="poi">📍 ปักหมุด POI</button>
           <button data-tool="routeNode">🛣️ ปักจุดเดิน (Route Node)</button>
@@ -49,7 +49,7 @@
           <svg id="builder-route-svg" style="position: absolute; width: 100%; height: 100%; pointer-events: none;"></svg>
         </div>
         <footer>
-          <span id="tip">เลือกองค์ประกอบบนแผนที่เพื่อดูหรือแก้ไขรายละเอียด</span>
+          <span id="tip">💡 <b>คำแนะนำ:</b> สามารถคลิกค้างที่ห้อง/หมุดแล้ว <b>ลากขยับตำแหน่ง (Drag & Drop)</b> หรือย่อ/ขยายขนาดห้องได้ทันที!</span>
           <span id="saved">บันทึกใน Browser แล้ว</span>
         </footer>
       </div>
@@ -75,6 +75,25 @@
         <label>รายละเอียดเพิ่มเติม
           <input id="description" placeholder="คำอธิบายบริการสำหรับผู้ป่วย">
         </label>
+
+        <!-- Position & Size Section -->
+        <fieldset class="contact-fieldset">
+          <legend>📐 พิกัดตำแหน่ง & ขนาดองค์ประกอบ</legend>
+          <div class="pos-grid">
+            <label>ตำแหน่ง X (%)
+              <input id="posX" type="number" min="0" max="100" step="1">
+            </label>
+            <label>ตำแหน่ง Y (%)
+              <input id="posY" type="number" min="0" max="100" step="1">
+            </label>
+            <label>ความกว้าง W (%)
+              <input id="posW" type="number" min="4" max="95" step="1">
+            </label>
+            <label>ความสูง H (%)
+              <input id="posH" type="number" min="4" max="95" step="1">
+            </label>
+          </div>
+        </fieldset>
 
         <!-- Phone Contacts Section -->
         <fieldset class="contact-fieldset">
