@@ -140,26 +140,6 @@
               }
             },
             {
-              "id": "b1-f1-er-triage",
-              "kind": "room",
-              "name": "อุบัติเหตุ-ฉุกเฉิน ER (ทำบัตร & Screen ER)",
-              "category": "ฉุกเฉินวิกฤต",
-              "description": "ทำบัตร ER คัดกรองฉุกเฉิน Observe/Yellow/Pink/Red Zone",
-              "extension": "3148, 3149, 3150",
-              "phone": "042-245555 ต่อ 3148, 3149, 3150",
-              "mobile": "1669",
-              "x": 56,
-              "y": 39,
-              "w": 16,
-              "h": 20,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "24 ชั่วโมง"
-              }
-            },
-            {
               "id": "b1-f1-refer",
               "kind": "room",
               "name": "ศูนย์รับ-ส่งต่อ REFER & กู้ชีพ 1669",
@@ -228,7 +208,7 @@
             {
               "id": "b1-f1-er",
               "kind": "room",
-              "name": "ห้องอุบัติเหตุ-ฉุกเฉิน ER (ทำบัตร 3148/3149)",
+              "name": "ห้องอุบัติเหตุ-ฉุกเฉิน ER",
               "category": "ฉุกเฉินวิกฤต",
               "description": "ทำบัตร ER คัดกรอง Screen ER Observe Yellow/Pink/Red Zone",
               "extension": "3148, 3149, 3150",
@@ -243,6 +223,14 @@
                 "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "24 ชั่วโมง"
+              },
+              "imageUrl": "",
+              "hardwareTag": "",
+              "staffResponsibility": {
+                "headOfDept": "",
+                "dutyOfficer": "",
+                "housekeeping": "",
+                "shiftText": ""
               }
             }
           ],
