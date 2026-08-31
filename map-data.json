@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.3.0",
+  "schemaVersion": "2.4.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -24,7 +24,9 @@
     },
     "officialDocImportDate": "2568-02-28 (สมุดโทรศัพท์ ก.พ. 68 & ร่างป้ายบอกทาง 2569)",
     "allFloorsPopulated": true,
-    "building1ExactImport": true
+    "building1ExactImport": true,
+    "fullExcelPhonebookImported": true,
+    "phonebookDate": "2568-02-28 (สมุดโทรศัพท์อัปเดต กุมภาพันธ์ 2568)"
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -158,7 +160,7 @@
               "kind": "room",
               "name": "ศูนย์รับ-ส่งต่อ REFER & กู้ชีพ 1669",
               "category": "ส่งต่อ/refer",
-              "description": "ศูนย์ประสานงานส่งต่อผู้ป่วยและรับแจ้งเหตุ 1669",
+              "description": "ประสานงานส่งต่อผู้ป่วยและรับแจ้งเหตุฉุกเฉิน 1669",
               "extension": "3115, 3128, 3124",
               "phone": "042-245555 ต่อ 3115, 3128, 3124",
               "mobile": "",
@@ -179,7 +181,7 @@
               "name": "การเงิน & สิทธิประโยชน์ (UC/ประกันสังคม)",
               "category": "การเงิน/สิทธิ",
               "description": "ชำระเงิน ตรวจสอบสิทธิบัตรทอง ประกันสังคม ข้าราชการ",
-              "extension": "1226, 3125, 3127",
+              "extension": "1226, 1227, 1228, 1229",
               "phone": "042-245555 ต่อ 1226, 3125, 3127",
               "mobile": "",
               "x": 68,
@@ -218,6 +220,26 @@
               "description": "ห้องน้ำผู้ป่วยและญาติ",
               "x": 10,
               "y": 75
+            },
+            {
+              "id": "b1-f1-er",
+              "kind": "room",
+              "name": "ห้องอุบัติเหตุ-ฉุกเฉิน ER (ทำบัตร 3148/3149)",
+              "category": "ฉุกเฉินวิกฤต",
+              "description": "ทำบัตร ER คัดกรอง Screen ER Observe Yellow/Pink/Red Zone",
+              "extension": "3148, 3149, 3150",
+              "phone": "042-245555 ต่อ 3148, 3149, 3150",
+              "mobile": "1669",
+              "x": 10,
+              "y": 12,
+              "w": 28,
+              "h": 18,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
             }
           ],
           "routeNodes": [
@@ -393,7 +415,7 @@
               "category": "เภสัชกรรม",
               "description": "ห้องจ่ายยาชั้น 2 และศูนย์เฝ้าระวังแพ้ยา ADR",
               "extension": "3232, 3233, 3240",
-              "phone": "042-245555 ต่อ 3232, 3233, 3240",
+              "phone": "3232",
               "mobile": "",
               "x": 72,
               "y": 15,
@@ -1145,7 +1167,7 @@
               "kind": "room",
               "name": "ห้องผลิตเอกสาร (Copy Print)",
               "category": "ผลิตเอกสาร",
-              "description": "ศูนย์ผลิตและอัดสำเนาเอกสารทางการแพทย์",
+              "description": "ศูนย์ผลิตเอกสารและอัดสำเนา",
               "extension": "3704",
               "phone": "042-245555 ต่อ 3704",
               "mobile": "",
@@ -1331,6 +1353,46 @@
               "y": 15,
               "w": 24,
               "h": 22
+            },
+            {
+              "id": "b11-f1-ivr",
+              "kind": "room",
+              "name": "จุดยื่นบัตร & หัตถการ IVR 1-2",
+              "category": "รังสีร่วมรักษา",
+              "description": "ยื่นบัตร และหัตถการรังสีร่วมรักษาหลอดเลือด",
+              "extension": "4113, 4111, 4112, 4110",
+              "phone": "042-245555 ต่อ 4113, 4111, 4112, 4110",
+              "mobile": "",
+              "x": 15,
+              "y": 15,
+              "w": 32,
+              "h": 20,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b11-f1-mri",
+              "kind": "room",
+              "name": "ศูนย์เอกซเรย์ MRI & CT SCAN & อัลตราซาวด์",
+              "category": "เอกซเรย์/MRI",
+              "description": "ตรวจเอกซเรย์คอมพิวเตอร์ คลื่นแม่เหล็กไฟฟ้า อัลตราซาวด์",
+              "extension": "4107, 4108, 4100, 4101",
+              "phone": "042-245555 ต่อ 4107, 4108, 4100, 4101",
+              "mobile": "",
+              "x": 52,
+              "y": 15,
+              "w": 38,
+              "h": 20,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [
@@ -1385,9 +1447,9 @@
               "id": "room-icu-cvt",
               "kind": "room",
               "name": "หอผู้ป่วยวิกฤตศัลยกรรมหัวใจ CVT ICU",
-              "category": "ICU/วิกฤต",
-              "description": "ดูแลผู้ป่วยหลังผ่าตัดหัวใจและหลอดเลือด",
-              "extension": "4302",
+              "category": "ICU หัวใจ",
+              "description": "ดูแลผู้ป่วยวิกฤตหลังผ่าตัดหัวใจและหลอดเลือด",
+              "extension": "4300, 4301, 4302, 4303",
               "phone": "042-245555 ต่อ 4302",
               "mobile": "",
               "x": 20,
@@ -1418,6 +1480,56 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b11-f4-or",
+              "kind": "room",
+              "name": "ศูนย์ห้องผ่าตัด OR 401 - 403 & PRE-OP",
+              "category": "ห้องผ่าตัด",
+              "description": "ห้องผ่าตัดหัวใจ หลอดเลือด และหัตถการขั้นสูง",
+              "extension": "4401, 4402, 4403, 4405",
+              "phone": "042-245555 ต่อ 4401, 4402, 4403, 4405",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "somdet-f5",
+          "level": 5,
+          "name": "ชั้น 5 — ศูนย์ห้องผ่าตัด OR 501 - 512",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "b11-f5-or500",
+              "kind": "room",
+              "name": "ศูนย์ห้องผ่าตัด OR 501 - 512 (ตึกศูนย์เชี่ยวชาญ)",
+              "category": "ห้องผ่าตัด",
+              "description": "ห้องผ่าตัดรวม 12 ห้อง และห้องเตรียมผ่าตัด",
+              "extension": "4500, 4502, 4503, 4515",
+              "phone": "042-245555 ต่อ 4500, 4502, 4503, 4515",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1442,6 +1554,26 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b11-f6-cath",
+              "kind": "room",
+              "name": "ห้องฉีดสีหัวใจ CATH LAB & CVT ICU",
+              "category": "CATH LAB",
+              "description": "ตรวจสวนหัวใจ ฉีดสีหลอดเลือดหัวใจ และวิกฤต CVT",
+              "extension": "4605, 4606, 4607, 4608",
+              "phone": "042-245555 ต่อ 4605, 4606, 4607, 4608",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
             }
           ],
           "routeNodes": [],
@@ -1466,6 +1598,26 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b11-f7-ccu",
+              "kind": "room",
+              "name": "หอผู้ป่วยหนักโรคหัวใจ CCU & ICU NEURO",
+              "category": "CCU/วิกฤต",
+              "description": "ดูแลผู้ป่วยวิกฤตโรคหัวใจและวิกฤตระบบประสาท",
+              "extension": "4701, 4702, 4703, 4705",
+              "phone": "042-245555 ต่อ 4701, 4702, 4703, 4705",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
             }
           ],
           "routeNodes": [],
@@ -1630,7 +1782,7 @@
         {
           "id": "b74y-f1",
           "level": 1,
-          "name": "ชั้น 1",
+          "name": "ชั้น 1 — คลินิกอายุรกรรม 69 & ห้อง ACUTE & ทำบัตร",
           "shortName": "ชั้น 1",
           "items": [
             {
@@ -1646,6 +1798,56 @@
               "y": 20,
               "w": 30,
               "h": 22
+            },
+            {
+              "id": "b13-f1-opd",
+              "kind": "room",
+              "name": "ทำบัตร 5110 & คลินิกอายุรกรรม 69 & ห้อง ACUTE",
+              "category": "อายุรกรรม",
+              "description": "ยื่นบัตร คลินิกอายุรกรรม และห้องรักษาผู้ป่วย ACUTE",
+              "extension": "5110, 5105, 5106, 5104",
+              "phone": "042-245555 ต่อ 5110, 5105, 5106, 5104",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยศัลยกรรมชาย & หญิง",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "b13-f2-surg",
+              "kind": "room",
+              "name": "หอผู้ป่วยศัลยกรรมชาย & ศัลยกรรมหญิง (ตึก 69)",
+              "category": "ศัลยกรรม",
+              "description": "ดูแลผู้ป่วยในศัลยกรรมชายและหญิง",
+              "extension": "5211, 5216, 5204",
+              "phone": "042-245555 ต่อ 5211, 5216, 5204",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1670,6 +1872,26 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b13-f3-spinal",
+              "kind": "room",
+              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT & ออร์โธปิดิกส์ 1",
+              "category": "ออร์โธปิดิกส์",
+              "description": "รักษาผู้ป่วยบาดเจ็บกระดูกสันหลัง ไขสันหลัง และกระดูก",
+              "extension": "5318, 5320, 5308",
+              "phone": "042-245555 ต่อ 5318, 5320, 5308",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1694,6 +1916,56 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b13-f4-joint",
+              "kind": "room",
+              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT & ออร์โธปิดิกส์หญิง",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ผ่าตัดเปลี่ยนข้อเข่า ข้อสะโพกเทียม และออร์โธปิดิกส์หญิง",
+              "extension": "5417, 5418, 5402",
+              "phone": "042-245555 ต่อ 5417, 5418, 5402",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f5",
+          "level": 5,
+          "name": "ชั้น 5 — หอผู้ป่วยออร์โธปิดิกส์ 2",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "b13-f5-ortho2",
+              "kind": "room",
+              "name": "หอผู้ป่วยออร์โธปิดิกส์ 2",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผู้ป่วยในออร์โธปิดิกส์ 2",
+              "extension": "5502, 5532, 5533",
+              "phone": "042-245555 ต่อ 5502, 5532, 5533",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1718,6 +1990,26 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b13-f6-picu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU & กุมารเวชกรรม 2",
+              "category": "ICU เด็ก",
+              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤตและกุมารเวชกรรม",
+              "extension": "5624, 5626, 5601",
+              "phone": "042-245555 ต่อ 5624, 5626, 5601",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
             }
           ],
           "routeNodes": [],
@@ -1742,6 +2034,56 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b13-f7-nicu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU & ROP Clinic",
+              "category": "ICU ทารก",
+              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อย วิกฤต และตรวจจอตา ROP",
+              "extension": "5722, 5727, 5725",
+              "phone": "042-245555 ต่อ 5722, 5727, 5725",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f8",
+          "level": 8,
+          "name": "ชั้น 8 — หอผู้ป่วยทารกแรกเกิด NS & กุมารเวช 3",
+          "shortName": "ชั้น 8",
+          "items": [
+            {
+              "id": "b13-f8-ns",
+              "kind": "room",
+              "name": "หอผู้ป่วยทารกแรกเกิด NS & กุมารเวชกรรม 3",
+              "category": "ทารกแรกเกิด",
+              "description": "ดูแลทารกแรกเกิดป่วยและกุมารเวชกรรม 3",
+              "extension": "5822, 5823, 5806",
+              "phone": "042-245555 ต่อ 5822, 5823, 5806",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1761,7 +2103,7 @@
         {
           "id": "bua-f1",
           "level": 1,
-          "name": "ชั้น 1",
+          "name": "ชั้น 1 — ประชาสัมพันธ์ & ตรวจโรค",
           "shortName": "ชั้น 1",
           "items": [
             {
@@ -1777,6 +2119,146 @@
               "y": 20,
               "w": 30,
               "h": 22
+            },
+            {
+              "id": "b12-f1-info",
+              "kind": "room",
+              "name": "ประชาสัมพันธ์ 2101 & ห้องตรวจ 2102-2103",
+              "category": "บริการผู้ป่วย",
+              "description": "ต้อนรับ ประชาสัมพันธ์ และยื่นบัตรตึก 96 ปี",
+              "extension": "2101, 2102, 2103, 2107",
+              "phone": "042-245555 ต่อ 2101, 2102, 2103, 2107",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยพิเศษ 2",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "b12-f2-sp2",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 2",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 2",
+              "extension": "2211, 2213, 2205",
+              "phone": "042-245555 ต่อ 2211, 2213, 2205",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f3",
+          "level": 3,
+          "name": "ชั้น 3 — หอผู้ป่วยพิเศษ 3",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "b12-f3-sp3",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 3",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 3",
+              "extension": "2310, 2311, 2305",
+              "phone": "042-245555 ต่อ 2310, 2311, 2305",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f6",
+          "level": 6,
+          "name": "ชั้น 6 — หอผู้ป่วย Semi ICU",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "b12-f6-semi",
+              "kind": "room",
+              "name": "หอผู้ป่วย Semi ICU ชั้น 6",
+              "category": "Semi ICU",
+              "description": "ดูแลผู้ป่วยในระดับกึ่งวิกฤต Semi ICU",
+              "extension": "2610, 2611, 2605",
+              "phone": "042-245555 ต่อ 2610, 2611, 2605",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f7",
+          "level": 7,
+          "name": "ชั้น 7 — หอผู้ป่วยพิเศษ 7 & ห้องประชุม",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "b12-f7-sp7",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 7 & ห้องประชุมภาณุพันธุ",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องประชุมใหญ่ภาณุพันธุ",
+              "extension": "2708, 2710, 2714",
+              "phone": "042-245555 ต่อ 2708, 2710, 2714",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
@@ -1801,6 +2283,56 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "b12-f9-monk",
+              "kind": "room",
+              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์ 9",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธและวิกฤต",
+              "extension": "2913, 2914, 2912",
+              "phone": "042-245555 ต่อ 2913, 2914, 2912",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f10",
+          "level": 10,
+          "name": "ชั้น 10 — ห้องพักพิเศษ VIP 1001-1010",
+          "shortName": "ชั้น 10",
+          "items": [
+            {
+              "id": "b12-f10-vip",
+              "kind": "room",
+              "name": "ห้องพักพิเศษ VIP 1001 - 1010",
+              "category": "ห้องพิเศษ VIP",
+              "description": "ห้องพักพิเศษ VIP สำหรับผู้ป่วยและครอบครัว",
+              "extension": "2002, 2003, 2012, 2016",
+              "phone": "042-245555 ต่อ 2002, 2003, 2012, 2016",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
             }
           ],
           "routeNodes": [],
