@@ -68,9 +68,9 @@
               "extension": "3110, 3114, 3126",
               "phone": "042-245555 ต่อ 3110, 3114, 3126",
               "mobile": "",
-              "x": 10,
-              "y": 15,
-              "w": 25,
+              "x": 82,
+              "y": 84,
+              "w": 14,
               "h": 18,
               "facilityStatus": {
                 "cleaningStatus": "clean",
@@ -88,8 +88,8 @@
               "extension": "3104",
               "phone": "042-245555 ต่อ 3104",
               "mobile": "",
-              "x": 38,
-              "y": 15,
+              "x": 89,
+              "y": 13,
               "w": 18,
               "h": 15,
               "facilityStatus": {
@@ -108,8 +108,8 @@
               "extension": "3105, 3106",
               "phone": "042-245555 ต่อ 3105, 3106",
               "mobile": "",
-              "x": 58,
-              "y": 15,
+              "x": 89,
+              "y": 31,
               "w": 18,
               "h": 15,
               "facilityStatus": {
@@ -128,10 +128,10 @@
               "extension": "1200, 1156",
               "phone": "042-245555 ต่อ 1200, 1156",
               "mobile": "",
-              "x": 78,
-              "y": 15,
-              "w": 18,
-              "h": 18,
+              "x": 7,
+              "y": 37,
+              "w": 11,
+              "h": 19,
               "facilityStatus": {
                 "cleaningStatus": "clean",
                 "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
@@ -148,9 +148,9 @@
               "extension": "3148, 3149, 3150",
               "phone": "042-245555 ต่อ 3148, 3149, 3150",
               "mobile": "1669",
-              "x": 10,
-              "y": 70,
-              "w": 28,
+              "x": 55,
+              "y": 32,
+              "w": 13,
               "h": 18,
               "facilityStatus": {
                 "cleaningStatus": "clean",
@@ -168,8 +168,8 @@
               "extension": "3115, 3128, 3124",
               "phone": "042-245555 ต่อ 3115, 3128, 3124",
               "mobile": "",
-              "x": 42,
-              "y": 70,
+              "x": 34,
+              "y": 67,
               "w": 22,
               "h": 18,
               "facilityStatus": {
@@ -188,10 +188,10 @@
               "extension": "1226, 1227, 1228, 1229",
               "phone": "042-245555 ต่อ 1226, 3125, 3127",
               "mobile": "",
-              "x": 68,
-              "y": 70,
-              "w": 28,
-              "h": 18,
+              "x": 71,
+              "y": 13,
+              "w": 16,
+              "h": 16,
               "facilityStatus": {
                 "cleaningStatus": "clean",
                 "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
@@ -204,8 +204,8 @@
               "kind": "poi",
               "name": "บันได A",
               "category": "บันได",
-              "x": 42,
-              "y": 46
+              "x": 91,
+              "y": 45
             },
             {
               "id": "opd-f1-lift-a",
@@ -213,7 +213,7 @@
               "name": "ลิฟต์ A",
               "category": "ลิฟต์โดยสาร",
               "description": "ลิฟต์โดยสารประจำอาคาร",
-              "x": 82,
+              "x": 96,
               "y": 45
             },
             {
@@ -222,8 +222,8 @@
               "name": "ห้องน้ำ",
               "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
               "description": "ห้องน้ำผู้ป่วยและญาติ",
-              "x": 10,
-              "y": 75
+              "x": 33,
+              "y": 45
             },
             {
               "id": "b1-f1-er",
@@ -234,10 +234,10 @@
               "extension": "3148, 3149, 3150",
               "phone": "042-245555 ต่อ 3148, 3149, 3150",
               "mobile": "1669",
-              "x": 10,
-              "y": 12,
-              "w": 28,
-              "h": 18,
+              "x": 38,
+              "y": 13,
+              "w": 49,
+              "h": 16,
               "facilityStatus": {
                 "cleaningStatus": "clean",
                 "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
@@ -250,7 +250,7 @@
             {
               "id": "entry",
               "name": "ประตูทางเข้าหลัก",
-              "x": 93,
+              "x": 94,
               "y": 88,
               "buildingId": "opd",
               "floorId": "opd-f1"
@@ -258,48 +258,48 @@
             {
               "id": "node-triage",
               "name": "จุดคัดกรอง",
-              "x": 80,
-              "y": 73,
+              "x": 83,
+              "y": 67,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
             {
               "id": "junction-main-f1",
               "name": "โถงกลาง ชั้น 1",
-              "x": 84,
-              "y": 56,
+              "x": 72,
+              "y": 38,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
             {
               "id": "node-101",
               "name": "หน้าห้องตรวจ 101",
-              "x": 88,
-              "y": 30,
+              "x": 72,
+              "y": 29,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
             {
               "id": "node-pharmacy",
               "name": "จุดรับยา",
-              "x": 15,
-              "y": 74,
+              "x": 18,
+              "y": 36,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
             {
               "id": "node-finance",
               "name": "ช่องการเงิน",
-              "x": 74,
-              "y": 33,
+              "x": 68,
+              "y": 76,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
             {
               "id": "elevator-node-f1",
               "name": "โถงลิฟต์ A (ชั้น 1)",
-              "x": 59,
-              "y": 50,
+              "x": 42,
+              "y": 49,
               "buildingId": "opd",
               "floorId": "opd-f1",
               "isElevator": true
@@ -307,8 +307,8 @@
             {
               "id": "stairs-node-f1",
               "name": "โถงบันได A (ชั้น 1)",
-              "x": 59,
-              "y": 43,
+              "x": 42,
+              "y": 42,
               "buildingId": "opd",
               "floorId": "opd-f1",
               "isStairs": true
