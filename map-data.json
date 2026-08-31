@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.8.0",
+  "schemaVersion": "1.9.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -11,11 +11,18 @@
       "lng": 102.7806858,
       "zoom": 17,
       "bounds": [
-        [17.41320, 102.77800],
-        [17.41750, 102.78250]
+        [
+          17.4132,
+          102.778
+        ],
+        [
+          17.4175,
+          102.7825
+        ]
       ],
       "googleMapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@17.4162989,102.7806858,462m"
-    }
+    },
+    "officialDocReference": "สมุดโทรศัพท์โรงพยาบาลอุดรธานี ฉบับอัปเดต กุมภาพันธ์ 2568 & ร่างป้ายบอกทาง 2569"
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -31,9 +38,9 @@
       "code": "OPD-21",
       "mapNumber": 21,
       "name": "อาคาร 21 — อาคารอำนวยการและผู้ป่วยนอก (OPD)",
-      "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม และห้องยาหลัก",
-      "lat": 17.41510,
-      "lng": 102.78030,
+      "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม ER และห้องยาหลัก",
+      "lat": 17.4151,
+      "lng": 102.7803,
       "imageUrl": "opd-building-front.jpg",
       "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
       "floors": [
@@ -53,9 +60,9 @@
               "y": 12,
               "w": 26,
               "h": 22,
-              "description": "จุดคัดกรองวัดความดัน ยื่นบัตรนัด และสอบถามเส้นทาง ประตูหลักอาคาร 21",
-              "phone": "042-245555",
-              "extension": "1001",
+              "description": "จุดคัดกรอง ยื่นบัตรนัด ประชาสัมพันธ์ และสิทธิประโยชน์หลัก",
+              "phone": "042-245555 ต่อ 3110",
+              "extension": "3110",
               "mobile": "081-9991111",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -81,9 +88,9 @@
               "y": 12,
               "w": 18,
               "h": 22,
-              "description": "คลินิกตรวจโรคทั่วไปและออกใบรับรองแพทย์ อาคารอำนวยการ 21",
-              "phone": "042-245555",
-              "extension": "1101",
+              "description": "คลินิกตรวจโรคทั่วไปและออกใบรับรองแพทย์ (เบอร์ภายใน 3104 / 1101)",
+              "phone": "042-245555 ต่อ 3104",
+              "extension": "3104",
               "mobile": "081-9992222",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -109,8 +116,8 @@
               "y": 12,
               "w": 26,
               "h": 22,
-              "description": "จุดรับยาและคำปรึกษาการใช้ยาโดยเภสัชกร อาคารอำนวยการ 21",
-              "phone": "042-245555",
+              "description": "จุดรับยาและคำปรึกษาการใช้ยาโดยเภสัชกร (เบอร์ภายใน 1200 / 1156)",
+              "phone": "042-245555 ต่อ 1200",
               "extension": "1200",
               "mobile": "081-9993333",
               "imageUrl": "opd-building-front.jpg",
@@ -164,9 +171,9 @@
               "y": 66,
               "w": 26,
               "h": 20,
-              "description": "ชำระเงินและตรวจสอบสิทธิบัตรทอง/ประกันสังคม/ข้าราชการ",
-              "phone": "042-245555",
-              "extension": "1300",
+              "description": "ชำระเงิน ตรวจสอบสิทธิบัตรทอง ประกันสังคม ข้าราชการ (เบอร์ภายใน 1226-1229)",
+              "phone": "042-245555 ต่อ 1226",
+              "extension": "1226",
               "mobile": "081-9994444",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -183,28 +190,140 @@
                 "openHours": "08:00 - 16:30 น."
               }
             },
-            { "id": "elevator-a-f1", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 42 },
-            { "id": "stairs-a-f1", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 42 }
+            {
+              "id": "elevator-a-f1",
+              "kind": "poi",
+              "name": "ลิฟต์ A (โซนผู้ป่วย)",
+              "category": "ลิฟต์",
+              "x": 76,
+              "y": 42
+            },
+            {
+              "id": "stairs-a-f1",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันได",
+              "x": 88,
+              "y": 42
+            }
           ],
           "routeNodes": [
-            { "id": "entry", "name": "ประตูทางเข้าหลัก", "x": 20, "y": 50, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "node-triage", "name": "จุดคัดกรอง", "x": 21, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "junction-main-f1", "name": "โถงกลาง ชั้น 1", "x": 48, "y": 50, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "node-101", "name": "หน้าห้องตรวจ 101", "x": 47, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "node-pharmacy", "name": "จุดรับยา", "x": 76, "y": 36, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "node-finance", "name": "ช่องการเงิน", "x": 76, "y": 64, "buildingId": "opd", "floorId": "opd-f1" },
-            { "id": "elevator-node-f1", "name": "โถงลิฟต์ A (ชั้น 1)", "x": 76, "y": 50, "buildingId": "opd", "floorId": "opd-f1", "isElevator": true },
-            { "id": "stairs-node-f1", "name": "โถงบันได A (ชั้น 1)", "x": 88, "y": 50, "buildingId": "opd", "floorId": "opd-f1", "isStairs": true }
+            {
+              "id": "entry",
+              "name": "ประตูทางเข้าหลัก",
+              "x": 20,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "node-triage",
+              "name": "จุดคัดกรอง",
+              "x": 21,
+              "y": 36,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "junction-main-f1",
+              "name": "โถงกลาง ชั้น 1",
+              "x": 48,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "node-101",
+              "name": "หน้าห้องตรวจ 101",
+              "x": 47,
+              "y": 36,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "node-pharmacy",
+              "name": "จุดรับยา",
+              "x": 76,
+              "y": 36,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "node-finance",
+              "name": "ช่องการเงิน",
+              "x": 76,
+              "y": 64,
+              "buildingId": "opd",
+              "floorId": "opd-f1"
+            },
+            {
+              "id": "elevator-node-f1",
+              "name": "โถงลิฟต์ A (ชั้น 1)",
+              "x": 76,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f1",
+              "isElevator": true
+            },
+            {
+              "id": "stairs-node-f1",
+              "name": "โถงบันได A (ชั้น 1)",
+              "x": 88,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f1",
+              "isStairs": true
+            }
           ],
           "routeEdges": [
-            { "from": "entry", "to": "node-triage", "distance": 14, "accessibleWheelchair": true },
-            { "from": "entry", "to": "junction-main-f1", "distance": 28, "accessibleWheelchair": true },
-            { "from": "node-triage", "to": "node-101", "distance": 26, "accessibleWheelchair": true },
-            { "from": "junction-main-f1", "to": "node-101", "distance": 14, "accessibleWheelchair": true },
-            { "from": "junction-main-f1", "to": "elevator-node-f1", "distance": 28, "accessibleWheelchair": true },
-            { "from": "elevator-node-f1", "to": "node-pharmacy", "distance": 14, "accessibleWheelchair": true },
-            { "from": "elevator-node-f1", "to": "node-finance", "distance": 14, "accessibleWheelchair": true },
-            { "from": "elevator-node-f1", "to": "stairs-node-f1", "distance": 12, "accessibleWheelchair": false }
+            {
+              "from": "entry",
+              "to": "node-triage",
+              "distance": 14,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "entry",
+              "to": "junction-main-f1",
+              "distance": 28,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "node-triage",
+              "to": "node-101",
+              "distance": 26,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "junction-main-f1",
+              "to": "node-101",
+              "distance": 14,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "junction-main-f1",
+              "to": "elevator-node-f1",
+              "distance": 28,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "elevator-node-f1",
+              "to": "node-pharmacy",
+              "distance": 14,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "elevator-node-f1",
+              "to": "node-finance",
+              "distance": 14,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "elevator-node-f1",
+              "to": "stairs-node-f1",
+              "distance": 12,
+              "accessibleWheelchair": false
+            }
           ]
         },
         {
@@ -223,9 +342,9 @@
               "y": 14,
               "w": 28,
               "h": 24,
-              "description": "วัดสายตา ตรวจโรคตาและต้อกระจก",
-              "phone": "042-245555",
-              "extension": "2101",
+              "description": "ศูนย์จักษุวิทยา ตรวจวัดสายตาและต้อกระจก (เบอร์ภายใน 3201-3208)",
+              "phone": "042-245555 ต่อ 3201",
+              "extension": "3201",
               "mobile": "081-9995555",
               "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -250,9 +369,9 @@
               "y": 14,
               "w": 28,
               "h": 24,
-              "description": "บริการเจาะเลือดส่งตรวจแล็บและตรวจปัสสาวะ",
-              "phone": "042-245555",
-              "extension": "2200",
+              "description": "จุดเจาะเลือดและเก็บสิ่งส่งตรวจ (เบอร์ภายใน 3230 / 2200)",
+              "phone": "042-245555 ต่อ 3230",
+              "extension": "3230",
               "mobile": "081-9996666",
               "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -268,21 +387,92 @@
                 "openHours": "07:30 - 16:00 น."
               }
             },
-            { "id": "elevator-a-f2", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 42 },
-            { "id": "stairs-a-f2", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 42 }
+            {
+              "id": "elevator-a-f2",
+              "kind": "poi",
+              "name": "ลิฟต์ A (โซนผู้ป่วย)",
+              "category": "ลิฟต์",
+              "x": 76,
+              "y": 42
+            },
+            {
+              "id": "stairs-a-f2",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันได",
+              "x": 88,
+              "y": 42
+            }
           ],
           "routeNodes": [
-            { "id": "elevator-node-f2", "name": "โถงลิฟต์ A (ชั้น 2)", "x": 76, "y": 50, "buildingId": "opd", "floorId": "opd-f2", "isElevator": true },
-            { "id": "stairs-node-f2", "name": "โถงบันได A (ชั้น 2)", "x": 88, "y": 50, "buildingId": "opd", "floorId": "opd-f2", "isStairs": true },
-            { "id": "junction-f2", "name": "โถงทางเดิน ชั้น 2", "x": 48, "y": 50, "buildingId": "opd", "floorId": "opd-f2" },
-            { "id": "node-201", "name": "หน้าห้องตรวจ 201", "x": 24, "y": 40, "buildingId": "opd", "floorId": "opd-f2" },
-            { "id": "node-lab", "name": "หน้าจุดเจาะเลือด", "x": 74, "y": 40, "buildingId": "opd", "floorId": "opd-f2" }
+            {
+              "id": "elevator-node-f2",
+              "name": "โถงลิฟต์ A (ชั้น 2)",
+              "x": 76,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f2",
+              "isElevator": true
+            },
+            {
+              "id": "stairs-node-f2",
+              "name": "โถงบันได A (ชั้น 2)",
+              "x": 88,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f2",
+              "isStairs": true
+            },
+            {
+              "id": "junction-f2",
+              "name": "โถงทางเดิน ชั้น 2",
+              "x": 48,
+              "y": 50,
+              "buildingId": "opd",
+              "floorId": "opd-f2"
+            },
+            {
+              "id": "node-201",
+              "name": "หน้าห้องตรวจ 201",
+              "x": 24,
+              "y": 40,
+              "buildingId": "opd",
+              "floorId": "opd-f2"
+            },
+            {
+              "id": "node-lab",
+              "name": "หน้าจุดเจาะเลือด",
+              "x": 74,
+              "y": 40,
+              "buildingId": "opd",
+              "floorId": "opd-f2"
+            }
           ],
           "routeEdges": [
-            { "from": "elevator-node-f2", "to": "junction-f2", "distance": 28, "accessibleWheelchair": true },
-            { "from": "stairs-node-f2", "to": "elevator-node-f2", "distance": 12, "accessibleWheelchair": false },
-            { "from": "junction-f2", "to": "node-201", "distance": 24, "accessibleWheelchair": true },
-            { "from": "junction-f2", "to": "node-lab", "distance": 26, "accessibleWheelchair": true }
+            {
+              "from": "elevator-node-f2",
+              "to": "junction-f2",
+              "distance": 28,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "stairs-node-f2",
+              "to": "elevator-node-f2",
+              "distance": 12,
+              "accessibleWheelchair": false
+            },
+            {
+              "from": "junction-f2",
+              "to": "node-201",
+              "distance": 24,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "junction-f2",
+              "to": "node-lab",
+              "distance": 26,
+              "accessibleWheelchair": true
+            }
           ]
         },
         {
@@ -302,7 +492,7 @@
               "w": 26,
               "h": 22,
               "description": "ตรวจรักษาโรคอายุรกรรมและโรคเรื้อรัง",
-              "phone": "042-245555",
+              "phone": "042-245555 ต่อ 3301",
               "extension": "3301",
               "mobile": "081-9997777",
               "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop",
@@ -329,8 +519,8 @@
               "w": 26,
               "h": 22,
               "description": "คลินิกเฉพาะทางโรคหัวใจและหลอดเลือด",
-              "phone": "042-245555",
-              "extension": "3302",
+              "phone": "042-245555 ต่อ 3310",
+              "extension": "3310",
               "mobile": "081-9998888",
               "imageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -373,26 +563,110 @@
                 "openHours": "08:00 - 16:30 น."
               }
             },
-            { "id": "elevator-a-f3", "kind": "poi", "name": "ลิฟต์ A (โซนผู้ป่วย)", "category": "ลิฟต์", "x": 76, "y": 58 },
-            { "id": "stairs-a-f3", "kind": "poi", "name": "บันได A", "category": "บันได", "x": 88, "y": 58 }
+            {
+              "id": "elevator-a-f3",
+              "kind": "poi",
+              "name": "ลิฟต์ A (โซนผู้ป่วย)",
+              "category": "ลิฟต์",
+              "x": 76,
+              "y": 58
+            },
+            {
+              "id": "stairs-a-f3",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันได",
+              "x": 88,
+              "y": 58
+            }
           ],
           "routeNodes": [
-            { "id": "elevator-node-f3", "name": "โถงลิฟต์ A (ชั้น 3)", "x": 76, "y": 60, "buildingId": "opd", "floorId": "opd-f3", "isElevator": true },
-            { "id": "stairs-node-f3", "name": "โถงบันได A (ชั้น 3)", "x": 88, "y": 60, "buildingId": "opd", "floorId": "opd-f3", "isStairs": true },
-            { "id": "junction-f3", "name": "โถงกลาง ชั้น 3", "x": 50, "y": 60, "buildingId": "opd", "floorId": "opd-f3" },
-            { "id": "node-cardio", "name": "หน้าศูนย์หัวใจ", "x": 21, "y": 48, "buildingId": "opd", "floorId": "opd-f3" },
-            { "id": "node-exam301", "name": "หน้าห้องตรวจ 301", "x": 51, "y": 48, "buildingId": "opd", "floorId": "opd-f3" },
-            { "id": "node-nurse-f3", "name": "หน้าเคาน์เตอร์พยาบาล", "x": 80, "y": 48, "buildingId": "opd", "floorId": "opd-f3" }
+            {
+              "id": "elevator-node-f3",
+              "name": "โถงลิฟต์ A (ชั้น 3)",
+              "x": 76,
+              "y": 60,
+              "buildingId": "opd",
+              "floorId": "opd-f3",
+              "isElevator": true
+            },
+            {
+              "id": "stairs-node-f3",
+              "name": "โถงบันได A (ชั้น 3)",
+              "x": 88,
+              "y": 60,
+              "buildingId": "opd",
+              "floorId": "opd-f3",
+              "isStairs": true
+            },
+            {
+              "id": "junction-f3",
+              "name": "โถงกลาง ชั้น 3",
+              "x": 50,
+              "y": 60,
+              "buildingId": "opd",
+              "floorId": "opd-f3"
+            },
+            {
+              "id": "node-cardio",
+              "name": "หน้าศูนย์หัวใจ",
+              "x": 21,
+              "y": 48,
+              "buildingId": "opd",
+              "floorId": "opd-f3"
+            },
+            {
+              "id": "node-exam301",
+              "name": "หน้าห้องตรวจ 301",
+              "x": 51,
+              "y": 48,
+              "buildingId": "opd",
+              "floorId": "opd-f3"
+            },
+            {
+              "id": "node-nurse-f3",
+              "name": "หน้าเคาน์เตอร์พยาบาล",
+              "x": 80,
+              "y": 48,
+              "buildingId": "opd",
+              "floorId": "opd-f3"
+            }
           ],
           "routeEdges": [
-            { "from": "elevator-node-f3", "to": "junction-f3", "distance": 26, "accessibleWheelchair": true },
-            { "from": "stairs-node-f3", "to": "elevator-node-f3", "distance": 12, "accessibleWheelchair": false },
-            { "from": "junction-f3", "to": "node-exam301", "distance": 12, "accessibleWheelchair": true },
-            { "from": "junction-f3", "to": "node-cardio", "distance": 29, "accessibleWheelchair": true },
-            { "from": "elevator-node-f3", "to": "node-nurse-f3", "distance": 14, "accessibleWheelchair": true }
+            {
+              "from": "elevator-node-f3",
+              "to": "junction-f3",
+              "distance": 26,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "stairs-node-f3",
+              "to": "elevator-node-f3",
+              "distance": 12,
+              "accessibleWheelchair": false
+            },
+            {
+              "from": "junction-f3",
+              "to": "node-exam301",
+              "distance": 12,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "junction-f3",
+              "to": "node-cardio",
+              "distance": 29,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "elevator-node-f3",
+              "to": "node-nurse-f3",
+              "distance": 14,
+              "accessibleWheelchair": true
+            }
           ]
         }
-      ]
+      ],
+      "officialPhone": "042-245555"
     },
     {
       "id": "somdet",
@@ -400,8 +674,8 @@
       "mapNumber": 25,
       "name": "อาคาร 25 — อาคารสมเด็จพระเทพรัตนราชสุดาฯ (200 ปี)",
       "description": "หอผู้ป่วยพิเศษ ศูนย์ศัลยกรรม และหอผู้ป่วยวิกฤต (ICU)",
-      "lat": 17.41490,
-      "lng": 102.78010,
+      "lat": 17.4149,
+      "lng": 102.7801,
       "floors": [
         {
           "id": "somdet-f1",
@@ -419,9 +693,9 @@
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "จุดสอบถามและประชาสัมพันธ์",
-              "phone": "042-245555",
-              "extension": "2501",
+              "description": "ศูนย์ประสานงานรับรอง อาคารสมเด็จพระเทพฯ 200 ปี / EXCELLENT CENTER (เบอร์ภายใน 4102, 4113)",
+              "phone": "042-245555 ต่อ 4102",
+              "extension": "4102",
               "mobile": "081-8881111",
               "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -437,16 +711,55 @@
                 "openHours": "24 ชั่วโมง"
               }
             },
-            { "id": "elevator-b-f1", "kind": "poi", "name": "ลิฟต์ B (อาคารสมเด็จฯ)", "category": "ลิฟต์", "x": 78, "y": 62 }
+            {
+              "id": "elevator-b-f1",
+              "kind": "poi",
+              "name": "ลิฟต์ B (อาคารสมเด็จฯ)",
+              "category": "ลิฟต์",
+              "x": 78,
+              "y": 62
+            }
           ],
           "routeNodes": [
-            { "id": "somdet-entry", "name": "ทางเข้าโถงหลัก อาคารสมเด็จฯ", "x": 27, "y": 65, "buildingId": "somdet", "floorId": "somdet-f1" },
-            { "id": "node-somdet-lobby", "name": "เคาน์เตอร์โถงหลัก", "x": 27, "y": 48, "buildingId": "somdet", "floorId": "somdet-f1" },
-            { "id": "elevator-node-somdet-f1", "name": "โถงลิฟต์ B (ชั้น 1)", "x": 78, "y": 75, "buildingId": "somdet", "floorId": "somdet-f1", "isElevator": true }
+            {
+              "id": "somdet-entry",
+              "name": "ทางเข้าโถงหลัก อาคารสมเด็จฯ",
+              "x": 27,
+              "y": 65,
+              "buildingId": "somdet",
+              "floorId": "somdet-f1"
+            },
+            {
+              "id": "node-somdet-lobby",
+              "name": "เคาน์เตอร์โถงหลัก",
+              "x": 27,
+              "y": 48,
+              "buildingId": "somdet",
+              "floorId": "somdet-f1"
+            },
+            {
+              "id": "elevator-node-somdet-f1",
+              "name": "โถงลิฟต์ B (ชั้น 1)",
+              "x": 78,
+              "y": 75,
+              "buildingId": "somdet",
+              "floorId": "somdet-f1",
+              "isElevator": true
+            }
           ],
           "routeEdges": [
-            { "from": "somdet-entry", "to": "node-somdet-lobby", "distance": 17, "accessibleWheelchair": true },
-            { "from": "node-somdet-lobby", "to": "elevator-node-somdet-f1", "distance": 32, "accessibleWheelchair": true }
+            {
+              "from": "somdet-entry",
+              "to": "node-somdet-lobby",
+              "distance": 17,
+              "accessibleWheelchair": true
+            },
+            {
+              "from": "node-somdet-lobby",
+              "to": "elevator-node-somdet-f1",
+              "distance": 32,
+              "accessibleWheelchair": true
+            }
           ]
         }
       ]
@@ -457,8 +770,8 @@
       "mapNumber": 57,
       "name": "อาคาร 57 — อาคารอุบัติเหตุและฉุกเฉิน (อาคารปราบขลา)",
       "description": "รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง ศูนย์เอกซเรย์คอมพิวเตอร์ และ CT Scan",
-      "lat": 17.41440,
-      "lng": 102.78060,
+      "lat": 17.4144,
+      "lng": 102.7806,
       "floors": [
         {
           "id": "er-f1",
@@ -476,8 +789,8 @@
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง",
-              "phone": "042-245555",
+              "description": "รับผู้ป่วยฉุกเฉินวิกฤต 24 ชั่วโมง ศูนย์กู้ชีพ 1669 (เบอร์ภายใน 3148, 3149, 3150)",
+              "phone": "042-245555 ต่อ 3148",
               "extension": "1669",
               "mobile": "081-1669000",
               "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
@@ -503,9 +816,9 @@
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "เอกซเรย์คอมพิวเตอร์และสแกนสมอง",
-              "phone": "042-245555",
-              "extension": "5702",
+              "description": "ศูนย์เอกซเรย์คอมพิวเตอร์ CT ER และสแกนสมอง (เบอร์ภายใน 1188 / 5702)",
+              "phone": "042-245555 ต่อ 1188",
+              "extension": "1188",
               "mobile": "081-5702000",
               "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -523,7 +836,14 @@
             }
           ],
           "routeNodes": [
-            { "id": "er-entry-node", "name": "ประตูเข้าฉุกเฉิน ER", "x": 27, "y": 65, "buildingId": "er", "floorId": "er-f1" }
+            {
+              "id": "er-entry-node",
+              "name": "ประตูเข้าฉุกเฉิน ER",
+              "x": 27,
+              "y": 65,
+              "buildingId": "er",
+              "floorId": "er-f1"
+            }
           ],
           "routeEdges": []
         }
@@ -535,19 +855,39 @@
       "mapNumber": 8,
       "name": "อาคาร 8 — อาคารศูนย์แพทยศาสตร์ศึกษาชั้นคลินิก",
       "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
-      "lat": 17.41580,
-      "lng": 102.77970,
-      "floors": [{ "id": "mec-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4158,
+      "lng": 102.7797,
+      "floors": [
+        {
+          "id": "mec-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "kitti-sophon",
       "code": "KITTI-19",
       "mapNumber": 19,
       "name": "อาคาร 19 — อาคารตึกสงฆ์กิตติโสภณ",
-      "description": "หอผู้ป่วยพระสงฆ์ และบริการผู้ป่วยใน",
-      "lat": 17.41470,
-      "lng": 102.78080,
-      "floors": [{ "id": "kitti-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "description": "อาคารตึกสงฆ์กิตติโสภณ และหน่วยล้างไตทางหน้าท้อง CAPD (เบอร์ภายใน 1234, 1124)",
+      "lat": 17.4147,
+      "lng": 102.7808,
+      "floors": [
+        {
+          "id": "kitti-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "preecha",
@@ -555,29 +895,59 @@
       "mapNumber": 23,
       "name": "อาคาร 23 — อาคารปรีชา-ศิริพรรณ",
       "description": "หอผู้ป่วยในและบริการทางการแพทย์เฉพาะทาง",
-      "lat": 17.41460,
-      "lng": 102.78040,
-      "floors": [{ "id": "preecha-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4146,
+      "lng": 102.7804,
+      "floors": [
+        {
+          "id": "preecha-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "b-74y",
       "code": "B74Y-24",
       "mapNumber": 24,
       "name": "อาคาร 24 — อาคาร 74 ปี คลองจินดา",
-      "description": "หอผู้ป่วยในและศูนย์คลินิกการรักษา",
-      "lat": 17.41430,
-      "lng": 102.78090,
-      "floors": [{ "id": "b74y-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "description": "อาคาร 74 ปี คลองจินดา (69 ปี) ศูนย์ออร์โธปิดิกส์ & SPINAL UNIT (เบอร์ภายใน 5110, 5318)",
+      "lat": 17.4143,
+      "lng": 102.7809,
+      "floors": [
+        {
+          "id": "b74y-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "luangta-bua",
       "code": "BUA-55",
       "mapNumber": 55,
       "name": "อาคาร 55 — อาคารหลวงตาบัว ญาณสัมปันโน",
-      "description": "อาคารหอผู้ป่วยและศูนย์บริการเฉพาะทาง",
-      "lat": 17.41540,
-      "lng": 102.78180,
-      "floors": [{ "id": "bua-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "description": "อาคารเฉลิมพระเกียรติ 96 พรรษา และหอผู้ป่วยพิเศษ (เบอร์ภายใน 2101-2107)",
+      "lat": 17.4154,
+      "lng": 102.7818,
+      "floors": [
+        {
+          "id": "bua-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "dialysis",
@@ -585,19 +955,39 @@
       "mapNumber": 16,
       "name": "อาคาร 16 — อาคารหน่วยไตเทียม",
       "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม",
-      "lat": 17.41530,
-      "lng": 102.78010,
-      "floors": [{ "id": "dialysis-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4153,
+      "lng": 102.7801,
+      "floors": [
+        {
+          "id": "dialysis-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "pathology",
       "code": "PATH-18",
       "mapNumber": 18,
       "name": "อาคาร 18 — อาคารพยาธิวิทยา",
-      "description": "ห้องปฏิบัติการชันสูตรและพยาธิวิทยาคลินิก",
-      "lat": 17.41520,
-      "lng": 102.78070,
-      "floors": [{ "id": "path-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "description": "อาคารพยาธิวิทยาคลินิก ห้อง LAB เจาะเลือด IPD และตรวจ CBC/Chem (เบอร์ภายใน 1254, 1258)",
+      "lat": 17.4152,
+      "lng": 102.7807,
+      "floors": [
+        {
+          "id": "path-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "special-ward",
@@ -605,9 +995,19 @@
       "mapNumber": 20,
       "name": "อาคาร 20 — หอผู้ป่วยพิเศษ",
       "description": "ห้องพักและหอผู้ป่วยพิเศษ",
-      "lat": 17.41560,
-      "lng": 102.78120,
-      "floors": [{ "id": "ward20-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4156,
+      "lng": 102.7812,
+      "floors": [
+        {
+          "id": "ward20-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "surgery",
@@ -615,19 +1015,39 @@
       "mapNumber": 22,
       "name": "อาคาร 22 — อาคารศัลยกรรม",
       "description": "ห้องผ่าตัด หอผู้ป่วยศัลยกรรม และศูนย์ดูแลผู้ป่วยหลังผ่าตัด",
-      "lat": 17.41490,
-      "lng": 102.78050,
-      "floors": [{ "id": "surg-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4149,
+      "lng": 102.7805,
+      "floors": [
+        {
+          "id": "surg-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "physical-therapy",
       "code": "PT-30",
       "mapNumber": 30,
       "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
-      "description": "ศูนย์ฟื้นฟูสมรรถภาพทางกายและกายภาพบำบัด",
-      "lat": 17.41510,
-      "lng": 102.78130,
-      "floors": [{ "id": "pt-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "description": "หน่วยกายภาพบำบัด กระตุ้นพัฒนาการ และกิจกรรมบำบัด (เบอร์ภายใน 1192-1198)",
+      "lat": 17.4151,
+      "lng": 102.7813,
+      "floors": [
+        {
+          "id": "pt-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "chalert-prakiat",
@@ -635,9 +1055,19 @@
       "mapNumber": 3,
       "name": "อาคาร 3 — อาคารเฉลิมพระเกียรติ",
       "description": "บริการผู้ป่วยและห้องปฏิบัติการ",
-      "lat": 17.41610,
-      "lng": 102.77920,
-      "floors": [{ "id": "chalerm-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4161,
+      "lng": 102.7792,
+      "floors": [
+        {
+          "id": "chalerm-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "malai-clinic",
@@ -645,9 +1075,19 @@
       "mapNumber": 5,
       "name": "อาคาร 5 — มาลัยคลินิก",
       "description": "คลินิกปฐมภูมิและคลินิกเฉพาะทาง",
-      "lat": 17.41590,
-      "lng": 102.77930,
-      "floors": [{ "id": "malai-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4159,
+      "lng": 102.7793,
+      "floors": [
+        {
+          "id": "malai-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "medical-records",
@@ -655,9 +1095,19 @@
       "mapNumber": 6,
       "name": "อาคาร 6 — อาคารเวชระเบียนและแพทย์แผนไทย",
       "description": "บริการยื่นบัตร คลังเวชระเบียน และศูนย์นวดแพทย์แผนไทย",
-      "lat": 17.41580,
-      "lng": 102.77940,
-      "floors": [{ "id": "rec-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4158,
+      "lng": 102.7794,
+      "floors": [
+        {
+          "id": "rec-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "cssd",
@@ -665,9 +1115,19 @@
       "mapNumber": 26,
       "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
       "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์",
-      "lat": 17.41460,
-      "lng": 102.78060,
-      "floors": [{ "id": "cssd-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4146,
+      "lng": 102.7806,
+      "floors": [
+        {
+          "id": "cssd-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "nutrition",
@@ -675,9 +1135,19 @@
       "mapNumber": 27,
       "name": "อาคาร 27 — อาคารโภชนาการและส่วนบริการ",
       "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
-      "lat": 17.41440,
-      "lng": 102.78030,
-      "floors": [{ "id": "nutri-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4144,
+      "lng": 102.7803,
+      "floors": [
+        {
+          "id": "nutri-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "forensic",
@@ -685,9 +1155,19 @@
       "mapNumber": 53,
       "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
       "description": "กลุ่มงานนิติเวชศาสตร์ และงานชันสูตรพลิกศพ",
-      "lat": 17.41420,
-      "lng": 102.78140,
-      "floors": [{ "id": "forensic-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4142,
+      "lng": 102.7814,
+      "floors": [
+        {
+          "id": "forensic-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     },
     {
       "id": "multipurpose",
@@ -695,16 +1175,54 @@
       "mapNumber": 59,
       "name": "อาคาร 59 — อาคารอเนกประสงค์และห้องประชุม",
       "description": "ห้องประชุมใหญ่ ศูนย์การเรียนรู้ และงานสัมมนา",
-      "lat": 17.41550,
-      "lng": 102.78200,
-      "floors": [{ "id": "multi-f1", "level": 1, "name": "ชั้น 1", "shortName": "ชั้น 1", "items": [], "routeNodes": [], "routeEdges": [] }]
+      "lat": 17.4155,
+      "lng": 102.782,
+      "floors": [
+        {
+          "id": "multi-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
     }
   ],
   "interFloorEdges": [
-    { "from": "elevator-node-f1", "to": "elevator-node-f2", "distance": 30, "accessibleWheelchair": true, "isElevator": true, "type": "elevator" },
-    { "from": "elevator-node-f2", "to": "elevator-node-f3", "distance": 30, "accessibleWheelchair": true, "isElevator": true, "type": "elevator" },
-    { "from": "stairs-node-f1", "to": "stairs-node-f2", "distance": 35, "accessibleWheelchair": false, "isStairs": true, "type": "stairs" },
-    { "from": "stairs-node-f2", "to": "stairs-node-f3", "distance": 35, "accessibleWheelchair": false, "isStairs": true, "type": "stairs" }
+    {
+      "from": "elevator-node-f1",
+      "to": "elevator-node-f2",
+      "distance": 30,
+      "accessibleWheelchair": true,
+      "isElevator": true,
+      "type": "elevator"
+    },
+    {
+      "from": "elevator-node-f2",
+      "to": "elevator-node-f3",
+      "distance": 30,
+      "accessibleWheelchair": true,
+      "isElevator": true,
+      "type": "elevator"
+    },
+    {
+      "from": "stairs-node-f1",
+      "to": "stairs-node-f2",
+      "distance": 35,
+      "accessibleWheelchair": false,
+      "isStairs": true,
+      "type": "stairs"
+    },
+    {
+      "from": "stairs-node-f2",
+      "to": "stairs-node-f3",
+      "distance": 35,
+      "accessibleWheelchair": false,
+      "isStairs": true,
+      "type": "stairs"
+    }
   ],
   "assets": [
     {
@@ -858,9 +1376,53 @@
     }
   ],
   "beacons": [
-    { "id": "BC-OPD-F1-01", "name": "Beacon ทางเข้าประตูหลัก OPD", "buildingId": "opd", "floorId": "opd-f1", "x": 20, "y": 50, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 101, "minor": 1, "status": "active" },
-    { "id": "BC-OPD-F1-02", "name": "Beacon โถงห้องยา", "buildingId": "opd", "floorId": "opd-f1", "x": 76, "y": 36, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 101, "minor": 2, "status": "active" },
-    { "id": "BC-OPD-F3-01", "name": "Beacon เคาน์เตอร์พยาบาล ชั้น 3", "buildingId": "opd", "floorId": "opd-f3", "x": 76, "y": 48, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 103, "minor": 1, "status": "active" },
-    { "id": "BC-ER-F1-01", "name": "Beacon ประตู ER อาคารปราบขลา", "buildingId": "er", "floorId": "er-f1", "x": 27, "y": 65, "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825", "major": 201, "minor": 1, "status": "active" }
+    {
+      "id": "BC-OPD-F1-01",
+      "name": "Beacon ทางเข้าประตูหลัก OPD",
+      "buildingId": "opd",
+      "floorId": "opd-f1",
+      "x": 20,
+      "y": 50,
+      "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825",
+      "major": 101,
+      "minor": 1,
+      "status": "active"
+    },
+    {
+      "id": "BC-OPD-F1-02",
+      "name": "Beacon โถงห้องยา",
+      "buildingId": "opd",
+      "floorId": "opd-f1",
+      "x": 76,
+      "y": 36,
+      "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825",
+      "major": 101,
+      "minor": 2,
+      "status": "active"
+    },
+    {
+      "id": "BC-OPD-F3-01",
+      "name": "Beacon เคาน์เตอร์พยาบาล ชั้น 3",
+      "buildingId": "opd",
+      "floorId": "opd-f3",
+      "x": 76,
+      "y": 48,
+      "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825",
+      "major": 103,
+      "minor": 1,
+      "status": "active"
+    },
+    {
+      "id": "BC-ER-F1-01",
+      "name": "Beacon ประตู ER อาคารปราบขลา",
+      "buildingId": "er",
+      "floorId": "er-f1",
+      "x": 27,
+      "y": 65,
+      "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825",
+      "major": 201,
+      "minor": 1,
+      "status": "active"
+    }
   ]
 }
