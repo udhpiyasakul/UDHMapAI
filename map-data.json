@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.1.0",
+  "schemaVersion": "2.2.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -22,7 +22,8 @@
       ],
       "googleMapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@17.4162989,102.7806858,462m"
     },
-    "officialDocImportDate": "2568-02-28 (สมุดโทรศัพท์ ก.พ. 68 & ร่างป้ายบอกทาง 2569)"
+    "officialDocImportDate": "2568-02-28 (สมุดโทรศัพท์ ก.พ. 68 & ร่างป้ายบอกทาง 2569)",
+    "allFloorsPopulated": true
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -47,7 +48,7 @@
         {
           "id": "opd-f1",
           "level": 1,
-          "name": "ชั้น 1 — บริการผู้ป่วยนอก & ห้องยา",
+          "name": "ชั้น 1 — บริการผู้ป่วยนอก & ห้องยาหลัก",
           "shortName": "ชั้น 1",
           "mapImageUrl": "",
           "items": [
@@ -336,6 +337,24 @@
               "y": 70,
               "w": 25,
               "h": 18
+            },
+            {
+              "id": "opd-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [
@@ -460,7 +479,7 @@
         {
           "id": "opd-f2",
           "level": 2,
-          "name": "ชั้น 2 — ศูนย์จักษุ & คลินิกตา",
+          "name": "ชั้น 2 — ศูนย์จักษุวิทยา & ศอ นาสิก",
           "shortName": "ชั้น 2",
           "mapImageUrl": "",
           "items": [
@@ -561,6 +580,24 @@
               "y": 20,
               "w": 20,
               "h": 20
+            },
+            {
+              "id": "opd-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [
@@ -637,7 +674,7 @@
         {
           "id": "opd-f3",
           "level": 3,
-          "name": "ชั้น 3 — ศูนย์อายุรกรรม & หัวใจ",
+          "name": "ชั้น 3 — ศูนย์อายุรกรรม & ศูนย์หัวใจ",
           "shortName": "ชั้น 3",
           "mapImageUrl": "",
           "items": [
@@ -737,6 +774,24 @@
               "category": "บันได",
               "x": 88,
               "y": 58
+            },
+            {
+              "id": "opd-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [
@@ -823,6 +878,306 @@
               "accessibleWheelchair": true
             }
           ]
+        },
+        {
+          "id": "opd-f4",
+          "level": 4,
+          "name": "ชั้น 4 — งานบริหารทั่วไป & กลุ่มงานพยาบาล",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "room-opd-f4-admin",
+              "kind": "room",
+              "name": "สำนักงานผู้อำนวยการ & งานบริหารทั่วไป",
+              "category": "บริหารจัดการ",
+              "description": "งานสารบรรณ พัฒนาองค์กร และประสานงานบริหาร",
+              "extension": "3401",
+              "phone": "042-245555 ต่อ 3401",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "room-nursing-dept",
+              "kind": "room",
+              "name": "กลุ่มงานการพยาบาล",
+              "category": "ฝ่ายการพยาบาล",
+              "description": "สำนักงานหัวหน้าพยาบาล และพัฒนาคุณภาพการพยาบาล",
+              "extension": "3402",
+              "phone": "042-245555 ต่อ 3402",
+              "x": 55,
+              "y": 20,
+              "w": 30,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "opd-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "opd-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "opd-f5",
+          "level": 5,
+          "name": "ชั้น 5 — ฝ่ายยุทธศาสตร์ & ศูนย์สารสนเทศ (IT)",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "room-strategy",
+              "kind": "room",
+              "name": "ฝ่ายยุทธศาสตร์และแผนงาน",
+              "category": "ยุทธศาสตร์",
+              "description": "จัดทำแผนยุทธศาสตร์และพัฒนาคุณภาพโรงพยาบาล (HA)",
+              "extension": "3501",
+              "phone": "042-245555 ต่อ 3501",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "room-it-center",
+              "kind": "room",
+              "name": "ศูนย์สารสนเทศทางการแพทย์ (IT Center)",
+              "category": "สารสนเทศ/IT",
+              "description": "ดูแลระบบคอมพิวเตอร์ เครือข่าย และซอฟต์แวร์โรงพยาบาล",
+              "extension": "3502",
+              "phone": "042-245555 ต่อ 3502",
+              "x": 55,
+              "y": 20,
+              "w": 30,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "opd-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "opd-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "opd-f6",
+          "level": 6,
+          "name": "ชั้น 6 — ศูนย์วิจัย & ฝ่ายการเงินคลัง",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "room-research",
+              "kind": "room",
+              "name": "ศูนย์วิจัยและนวัตกรรมทางการแพทย์",
+              "category": "วิจัยการแพทย์",
+              "description": "สนับสนุนงานวิจัย และนวัตกรรมเทคโนโลยีสุขภาพ",
+              "extension": "3601",
+              "phone": "042-245555 ต่อ 3601",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "room-finance-dept",
+              "kind": "room",
+              "name": "ฝ่ายการเงินคลังและัญชี",
+              "category": "การเงินบัญชี",
+              "description": "เบิกจ่ายงบประมาณ คลังและงานบัญชีโรงพยาบาล",
+              "extension": "3602",
+              "phone": "042-245555 ต่อ 3602",
+              "x": 55,
+              "y": 20,
+              "w": 30,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "opd-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "opd-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "opd-f7",
+          "level": 7,
+          "name": "ชั้น 7 — ห้องประชุมใหญ่ชั้น 7 & สำนักประธาน",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "room-hall-f7",
+              "kind": "room",
+              "name": "ห้องประชุมใหญ่ชั้น 7 (ห้องทองกวาว)",
+              "category": "ห้องประชุม",
+              "description": "จัดประชุมวิชาการ งานอบรม และกิจกรรมใหญ่โรงพยาบาล",
+              "extension": "3701",
+              "phone": "042-245555 ต่อ 3701",
+              "x": 15,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "room-board-room",
+              "kind": "room",
+              "name": "ห้องประชุมคณะกรรมการบริหาร (Board Room)",
+              "category": "ห้องประชุม executive",
+              "description": "ประชุมคณะกรรมการบริหารโรงพยาบาลอุดรธานี",
+              "extension": "3702",
+              "phone": "042-245555 ต่อ 3702",
+              "x": 60,
+              "y": 20,
+              "w": 28,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "opd-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "opd-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "opd-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำผู้ป่วยและญาติ",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
         }
       ]
     },
