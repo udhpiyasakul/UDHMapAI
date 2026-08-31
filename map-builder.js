@@ -15,7 +15,7 @@ function toast(text) {
   t.innerHTML = text;
   t.classList.add('show');
   clearTimeout(timer);
-  timer = setTimeout(() => t.classList.remove('show'), 3000);
+  timer = setTimeout(() => t.classList.remove('show'), 4000);
 }
 
 function persist(text = 'บันทึกใน Browser แล้ว') {
@@ -489,18 +489,21 @@ function setupEvents() {
 
   $('#github-sync-form').onsubmit = async (e) => {
     e.preventDefault();
-    const token = tokenInput.value.trim();
+    
+    // Sanitize token: remove all non-ASCII / non-printable / Unicode characters (like non-breaking spaces or Thai chars)
+    const rawToken = tokenInput.value || '';
+    const cleanToken = rawToken.replace(/[^\x20-\x7E]/g, '').trim();
     const commitMsg = $('#gh-commit-msg').value.trim() || 'Update map-data.json from UDH Map Studio CMS';
 
-    if (!token) return toast('⚠️ กรุณาระบุ GitHub Personal Access Token');
+    if (!cleanToken) return toast('⚠️ กรุณาระบุ GitHub Personal Access Token (รหัส ghp_...)');
 
     const submitBtn = $('#gh-submit-btn');
     submitBtn.disabled = true;
     submitBtn.textContent = '⏳ กำลังซิงก์ข้อมูลขึ้น GitHub...';
 
     try {
-      // Store token locally for convenience
-      localStorage.setItem('udh_gh_token', token);
+      // Store cleaned token locally for convenience
+      localStorage.setItem('udh_gh_token', cleanToken);
 
       const repoOwner = 'udhpiyasakul';
       const repoName = 'UDHMapAI';
@@ -510,19 +513,22 @@ function setupEvents() {
       // 1. Get current SHA of map-data.json
       const getRes = await fetch(apiUrl, {
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${cleanToken}`,
           'Accept': 'application/vnd.github.v3+json'
         }
       });
 
       if (!getRes.ok) {
-        throw new Error(`ไม่สามารถเชื่อมต่อ GitHub API ได้ (${getRes.status} ${getRes.statusText}) — กรุณาตรวจสอบ Token`);
+        if (getRes.status === 401 || getRes.status === 403) {
+          throw new Error('Token ไม่ถูกต้อง หรือไม่มีสิทธิ์อ่าน/เขียน (Unauthorized 401/403) — กรุณาตรวจสอบรหัส Token ghp_...');
+        }
+        throw new Error(`ไม่สามารถเชื่อมต่อ GitHub API ได้ (${getRes.status} ${getRes.statusText})`);
       }
 
       const fileInfo = await getRes.json();
       const currentSha = fileInfo.sha;
 
-      // 2. Base64 encode JSON data (UTF-8 safe)
+      // 2. Base64 encode JSON data safely
       const jsonString = JSON.stringify(data, null, 2);
       const utf8Bytes = new TextEncoder().encode(jsonString);
       let binaryStr = '';
@@ -533,7 +539,7 @@ function setupEvents() {
       const putRes = await fetch(apiUrl, {
         method: 'PUT',
         headers: {
-          'Authorization': `Bearer ${token}`,
+          'Authorization': `Bearer ${cleanToken}`,
           'Content-Type': 'application/json',
           'Accept': 'application/vnd.github.v3+json'
         },
@@ -551,7 +557,7 @@ function setupEvents() {
 
       const resultData = await putRes.json();
       githubModal.close();
-      toast(`☁️ <b>อัปเดตข้อมูลขึ้น GitHub สำเร็จแล้ว!</b><br><small>Commit: ${resultData.commit.sha.substring(0, 7)} — เว็บไซต์ออนไลน์จะอัปเดตอัตโนมัติ</small>`);
+      toast(`☁️ <b>อัปเดตข้อมูลขึ้น GitHub สำเร็จแล้ว!</b><br><small>Commit SHA: ${resultData.commit.sha.substring(0, 7)} — เว็บไซต์ออนไลน์จะอัปเดตอัตโนมัติ</small>`);
     } catch (err) {
       console.error('GitHub Sync Error:', err);
       toast(`❌ <b>ซิงก์ GitHub ล้มเหลว:</b> ${err.message}`);
