@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.8.0",
+  "schemaVersion": "2.1.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -21,7 +21,8 @@
         ]
       ],
       "googleMapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@17.4162989,102.7806858,462m"
-    }
+    },
+    "officialDocImportDate": "2568-02-28 (สมุดโทรศัพท์ ก.พ. 68 & ร่างป้ายบอกทาง 2569)"
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -53,15 +54,15 @@
             {
               "id": "room-triage",
               "kind": "room",
-              "name": "จุดคัดกรอง / ประชาสัมพันธ์",
+              "name": "จุดคัดกรอง / ยื่นบัตร / ประชาสัมพันธ์ OPD",
               "category": "บริการผู้ป่วย",
               "x": 80,
               "y": 86,
               "w": 17,
               "h": 17,
-              "description": "จุดคัดกรองวัดความดัน ยื่นบัตรนัด และสอบถามเส้นทาง ประตูหลักอาคาร 21",
-              "phone": "042-245555",
-              "extension": "1001",
+              "description": "ยื่นบัตรนัด ประชาสัมพันธ์ ลงทะเบียนห้องตรวจ",
+              "phone": "042-245555 ต่อ 3110",
+              "extension": "3110",
               "mobile": "081-9991111",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -81,15 +82,15 @@
             {
               "id": "room-101",
               "kind": "room",
-              "name": "ห้องตรวจ 101",
+              "name": "ห้องตรวจ 101 (คลินิกทั่วไป)",
               "category": "คลินิกทั่วไป",
               "x": 88,
               "y": 13,
               "w": 18,
               "h": 22,
-              "description": "คลินิกตรวจโรคทั่วไปและออกใบรับรองแพทย์ อาคารอำนวยการ 21",
-              "phone": "042-245555",
-              "extension": "1101",
+              "description": "ตรวจโรคทั่วไปและออกใบรับรองแพทย์",
+              "phone": "042-245555 ต่อ 3104",
+              "extension": "3104",
               "mobile": "081-9992222",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -110,14 +111,14 @@
             {
               "id": "pharmacy",
               "kind": "room",
-              "name": "ห้องยาหลัก",
+              "name": "ห้องยาหลัก (เกสัชกรรม)",
               "category": "เภสัชกรรม",
               "x": 6,
               "y": 73,
               "w": 9,
               "h": 20,
-              "description": "จุดรับยาและคำปรึกษาการใช้ยาโดยเภสัชกร อาคารอำนวยการ 21",
-              "phone": "042-245555",
+              "description": "จุดรับยาและคำปรึกษาการใช้ยาโดยเภสัชกร",
+              "phone": "042-245555 ต่อ 1200",
               "extension": "1200",
               "mobile": "081-9993333",
               "imageUrl": "opd-building-front.jpg",
@@ -171,9 +172,9 @@
               "y": 84,
               "w": 12,
               "h": 13,
-              "description": "ชำระเงินและตรวจสอบสิทธิบัตรทอง/ประกันสังคม/ข้าราชการ",
-              "phone": "042-245555",
-              "extension": "1300",
+              "description": "ชำระเงิน ตรวจสอบสิทธิบัตรทอง ประกันสังคม ข้าราชการ",
+              "phone": "042-245555 ต่อ 1226",
+              "extension": "1226",
               "mobile": "081-9994444",
               "imageUrl": "opd-building-front.jpg",
               "streetViewUrl": "https://www.google.com/maps/@17.4148566,102.7808088,3a,75y,296.52h,100.87t/data=!3m7!1e1!3m5!1sOEcnHmbnXh_WVxdo2Kdskw!2e0",
@@ -307,6 +308,34 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "24 ชั่วโมง"
               }
+            },
+            {
+              "id": "room-105",
+              "kind": "room",
+              "name": "ห้องตรวจนัด 1 & 2",
+              "category": "คลินิกทั่วไป",
+              "description": "ห้องตรวจผู้ป่วยนัดติดตามอาการ 1 และ 2",
+              "extension": "3105",
+              "phone": "042-245555 ต่อ 3105",
+              "mobile": "",
+              "x": 56,
+              "y": 15,
+              "w": 18,
+              "h": 15
+            },
+            {
+              "id": "room-er-opd",
+              "kind": "room",
+              "name": "จุดรับผู้ป่วยฉุกเฉิน ER (ทำบัตร & คัดกรอง)",
+              "category": "ฉุกเฉิน",
+              "description": "ทำบัตร ER คัดกรองฉุกเฉิน Yellow/Pink/Red Zone",
+              "extension": "3148",
+              "phone": "042-245555 ต่อ 3148",
+              "mobile": "1669",
+              "x": 10,
+              "y": 70,
+              "w": 25,
+              "h": 18
             }
           ],
           "routeNodes": [
@@ -438,15 +467,15 @@
             {
               "id": "room-201",
               "kind": "room",
-              "name": "ห้องตรวจ 201 (จักษุวิทยา)",
+              "name": "ศูนย์จักษุวิทยา (คลินิกตา)",
               "category": "จักษุวิทยา",
               "x": 10,
               "y": 14,
               "w": 28,
               "h": 24,
-              "description": "วัดสายตา ตรวจโรคตาและต้อกระจก",
-              "phone": "042-245555",
-              "extension": "2101",
+              "description": "ตรวจวัดสายตา โรคตา ต้อกระจก และหัตถการตา",
+              "phone": "042-245555 ต่อ 3201",
+              "extension": "3201",
               "mobile": "081-9995555",
               "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -504,6 +533,34 @@
               "category": "บันได",
               "x": 88,
               "y": 42
+            },
+            {
+              "id": "room-ent",
+              "kind": "room",
+              "name": "คลินิกโสต ศอ นาสิก (หู คอ จมูก)",
+              "category": "โสต ศอ นาสิก",
+              "description": "ตรวจโรคหู คอ จมูก และการส่องกล้อง",
+              "extension": "3220",
+              "phone": "042-245555 ต่อ 3220",
+              "mobile": "",
+              "x": 45,
+              "y": 20,
+              "w": 25,
+              "h": 20
+            },
+            {
+              "id": "room-opd-lab",
+              "kind": "room",
+              "name": "จุดเจาะเลือด & พยาธิวิทยาชั้น 2",
+              "category": "เจาะเลือด/LAB",
+              "description": "จุดเจาะเลือดผู้ป่วยนอก OPD",
+              "extension": "3230",
+              "phone": "042-245555 ต่อ 3230",
+              "mobile": "",
+              "x": 75,
+              "y": 20,
+              "w": 20,
+              "h": 20
             }
           ],
           "routeNodes": [
@@ -587,14 +644,14 @@
             {
               "id": "exam-301",
               "kind": "room",
-              "name": "ห้องตรวจ 301 (อายุรกรรมทั่วไป)",
+              "name": "ศูนย์อายุรกรรม (MED)",
               "category": "อายุรกรรม",
               "x": 38,
               "y": 24,
               "w": 26,
               "h": 22,
-              "description": "ตรวจรักษาโรคอายุรกรรมและโรคเรื้อรัง",
-              "phone": "042-245555",
+              "description": "ตรวจรักษาโรคทางอายุรกรรมทั่วไปและเฉพาะทาง",
+              "phone": "042-245555 ต่อ 3301",
               "extension": "3301",
               "mobile": "081-9997777",
               "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop",
@@ -614,15 +671,15 @@
             {
               "id": "exam-cardio",
               "kind": "room",
-              "name": "ศูนย์หัวใจ & คลินิกความดัน",
-              "category": "อายุรกรรม",
+              "name": "ศูนย์หัวใจ & หลอดเลือด (Cardio)",
+              "category": "โรคหัวใจ",
               "x": 8,
               "y": 24,
               "w": 26,
               "h": 22,
-              "description": "คลินิกเฉพาะทางโรคหัวใจและหลอดเลือด",
-              "phone": "042-245555",
-              "extension": "3302",
+              "description": "ตรวจคลื่นไฟฟ้าหัวใจ EKG อัลตราซาวด์หัวใจ",
+              "phone": "042-245555 ต่อ 3310",
+              "extension": "3310",
               "mobile": "081-9998888",
               "imageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -788,15 +845,15 @@
             {
               "id": "room-somdet-lobby",
               "kind": "room",
-              "name": "โถงรับรองอาคารสมเด็จฯ",
+              "name": "จุดยื่นบัตร & ประชาสัมพันธ์ IVR",
               "category": "บริการผู้ป่วย",
               "x": 10,
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "จุดสอบถามและประชาสัมพันธ์",
-              "phone": "042-245555",
-              "extension": "2501",
+              "description": "ประชาสัมพันธ์และยื่นบัตรศูนย์เชี่ยวชาญ",
+              "phone": "042-245555 ต่อ 4113",
+              "extension": "4113",
               "mobile": "081-8881111",
               "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -819,6 +876,34 @@
               "category": "ลิฟต์",
               "x": 78,
               "y": 62
+            },
+            {
+              "id": "room-ivr1",
+              "kind": "room",
+              "name": "ห้องหัตถการ IVR 1 & 2",
+              "category": "รังสีร่วมรักษา",
+              "description": "ห้องหัตถการรังสีร่วมรักษาหลอดเลือด",
+              "extension": "4111",
+              "phone": "042-245555 ต่อ 4111",
+              "mobile": "",
+              "x": 45,
+              "y": 15,
+              "w": 22,
+              "h": 20
+            },
+            {
+              "id": "room-mri",
+              "kind": "room",
+              "name": "ศูนย์เอกซเรย์ MRI & CT SCAN",
+              "category": "เอกซเรย์/MRI",
+              "description": "ตรวจเอกซเรย์คอมพิวเตอร์และคลื่นแม่เหล็กไฟฟ้า",
+              "extension": "4107",
+              "phone": "042-245555 ต่อ 4107",
+              "mobile": "",
+              "x": 72,
+              "y": 15,
+              "w": 24,
+              "h": 22
             }
           ],
           "routeNodes": [
@@ -862,6 +947,102 @@
               "accessibleWheelchair": true
             }
           ]
+        },
+        {
+          "id": "somdet-f3",
+          "level": 3,
+          "name": "ชั้น 3 — หอผู้ป่วยวิกฤต ICU & ศัลยกรรมหัวใจ CVT",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "room-icu-cvt",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตศัลยกรรมหัวใจ CVT ICU",
+              "category": "ICU/วิกฤต",
+              "description": "ดูแลผู้ป่วยหลังผ่าตัดหัวใจและหลอดเลือด",
+              "extension": "4302",
+              "phone": "042-245555 ต่อ 4302",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "somdet-f4",
+          "level": 4,
+          "name": "ชั้น 4 — ศูนย์ผ่าตัด OR 401-403",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "room-or-401",
+              "kind": "room",
+              "name": "ห้องผ่าตัด OR 401 - 403 & PRE-OP",
+              "category": "ห้องผ่าตัด",
+              "description": "ห้องผ่าตัดหัวใจและหลอดเลือดขั้นสูง",
+              "extension": "4401",
+              "phone": "042-245555 ต่อ 4401",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "somdet-f6",
+          "level": 6,
+          "name": "ชั้น 6 — ห้องฉีดสีหัวใจ CATH LAB",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "room-cathlab",
+              "kind": "room",
+              "name": "ห้องฉีดสีหัวใจ CATH LAB",
+              "category": "CATH LAB",
+              "description": "ตรวจสวนหัวใจและฉีดสีหลอดเลือดหัวใจ",
+              "extension": "4605",
+              "phone": "042-245555 ต่อ 4605",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "somdet-f7",
+          "level": 7,
+          "name": "ชั้น 7 — หอผู้ป่วยหนักโรคหัวใจ CCU & ICU NEURO",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "room-ccu",
+              "kind": "room",
+              "name": "หอผู้ป่วยหนักโรคหัวใจ CCU",
+              "category": "CCU/วิกฤต",
+              "description": "ดูแลผู้ป่วยภาวะกล้ามเนื้อหัวใจขาดเลือดวิกฤต",
+              "extension": "4701",
+              "phone": "042-245555 ต่อ 4701",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
         }
       ]
     },
@@ -884,14 +1065,14 @@
             {
               "id": "room-er-dept",
               "kind": "room",
-              "name": "ห้องอุบัติเหตุและฉุกเฉิน (ER)",
-              "category": "ฉุกเฉิน",
+              "name": "ห้องอุบัติเหตุและฉุกเฉิน (ER 24 ชม.)",
+              "category": "ฉุกเฉินวิกฤต",
               "x": 10,
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง",
-              "phone": "042-245555",
+              "description": "ศูนย์กู้ชีพ 1669 รับผู้ป่วยฉุกเฉินวิกฤตตลอด 24 ชั่วโมง",
+              "phone": "042-245555 ต่อ 3148",
               "extension": "1669",
               "mobile": "081-1669000",
               "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
@@ -911,15 +1092,15 @@
             {
               "id": "room-ctscan",
               "kind": "room",
-              "name": "ศูนย์เอกซเรย์ & CT Scan",
-              "category": "รังสีวิทยา",
+              "name": "ศูนย์เอกซเรย์คอมพิวเตอร์ CT ER",
+              "category": "เอกซเรย์ ER",
               "x": 52,
               "y": 15,
               "w": 35,
               "h": 30,
-              "description": "เอกซเรย์คอมพิวเตอร์และสแกนสมอง",
-              "phone": "042-245555",
-              "extension": "5702",
+              "description": "สแกนสมองและอุบัติเหตุฉุกเฉินเร่งด่วน",
+              "phone": "042-245555 ต่อ 1188",
+              "extension": "1188",
               "mobile": "081-5702000",
               "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop",
               "staffResponsibility": {
@@ -1024,7 +1205,118 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-69-opd",
+              "kind": "room",
+              "name": "คลินิกอายุรกรรม 69 & ห้อง ACUTE",
+              "category": "อายุรกรรม",
+              "description": "ตรวจรักษาผู้ป่วยในและห้อง ACUTE",
+              "extension": "5105",
+              "phone": "042-245555 ต่อ 5105",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f3",
+          "level": 3,
+          "name": "ชั้น 3 — ศูนย์โรคกระดูกสันหลัง SPINAL UNIT",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "room-spinal-unit",
+              "kind": "room",
+              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผู้ป่วยบาดเจ็บกระดูกสันหลังและไขสันหลัง",
+              "extension": "5318",
+              "phone": "042-245555 ต่อ 5318",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f4",
+          "level": 4,
+          "name": "ชั้น 4 — ศูนย์ข้อต่อ JOINT UNIT",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "room-joint-unit",
+              "kind": "room",
+              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผ่าตัดเปลี่ยนข้อเข่าและข้อสะโพกเทียม",
+              "extension": "5417",
+              "phone": "042-245555 ต่อ 5417",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f6",
+          "level": 6,
+          "name": "ชั้น 6 — หอผู้ป่วยวิกฤตเด็ก P ICU",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "room-picu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU",
+              "category": "ICU เด็ก",
+              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤต",
+              "extension": "5624",
+              "phone": "042-245555 ต่อ 5624",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f7",
+          "level": 7,
+          "name": "ชั้น 7 — หอผู้ป่วยวิกฤตทารก N ICU & ROP",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "room-nicu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU",
+              "category": "ICU ทารก",
+              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อยและวิกฤต",
+              "extension": "5722",
+              "phone": "042-245555 ต่อ 5722",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
@@ -1044,7 +1336,46 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-bua-f1",
+              "kind": "room",
+              "name": "เคาน์เตอร์ประชาสัมพันธ์ อาคาร 96 ปี",
+              "category": "บริการผู้ป่วย",
+              "description": "ต้อนรับและยื่นบัตรอาคาร 96 ปี",
+              "extension": "2101",
+              "phone": "042-245555 ต่อ 2101",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f9",
+          "level": 9,
+          "name": "ชั้น 9 — หอผู้ป่วยสงฆ์ 9 & ICU สงฆ์",
+          "shortName": "ชั้น 9",
+          "items": [
+            {
+              "id": "room-monk-icu",
+              "kind": "room",
+              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธวิกฤต",
+              "extension": "2912",
+              "phone": "042-245555 ต่อ 2912",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
@@ -1084,7 +1415,22 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-path-main",
+              "kind": "room",
+              "name": "ห้อง LAB ชันสูตร & เจาะเลือด IPD",
+              "category": "LAB ชันสูตร",
+              "description": "ตรวจ CBC, Chem, Immuno, Blood Gas",
+              "extension": "1254",
+              "phone": "042-245555 ต่อ 1254",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
@@ -1104,7 +1450,46 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-delivery",
+              "kind": "room",
+              "name": "ห้องคลอด & ผ่าตัดทำหมัน",
+              "category": "ห้องคลอด",
+              "description": "บริการทำคลอด ผ่าตัดสูตินรีเวช และทำหมัน",
+              "extension": "1331",
+              "phone": "042-245555 ต่อ 1331",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "special-ward-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยหลังคลอด PP 1",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "room-pp1",
+              "kind": "room",
+              "name": "หอผู้ป่วยหลังคลอด PP 1",
+              "category": "หลังคลอด",
+              "description": "ดูแลมารดาและทารกหลังคลอด",
+              "extension": "1335",
+              "phone": "042-245555 ต่อ 1335",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
@@ -1124,7 +1509,84 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-surg-icu",
+              "kind": "room",
+              "name": "ICU S.1 (หอผู้ป่วยวิกฤตศัลยกรรม 1)",
+              "category": "ICU ศัลยกรรม",
+              "description": "ดูแลผู้ป่วยวิกฤตหลังผ่าตัดศัลยกรรม",
+              "extension": "1261",
+              "phone": "042-245555 ต่อ 1261",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            },
+            {
+              "id": "room-organ-transplant",
+              "kind": "room",
+              "name": "ศูนย์ปลูกถ่าย & บริจาคอวัยวะ",
+              "category": "ปลูกถ่ายอวัยวะ",
+              "description": "ประสานงานปลูกถ่ายและบริจาคอวัยวะ",
+              "extension": "1301",
+              "phone": "042-245555 ต่อ 1301",
+              "mobile": "",
+              "x": 50,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ศูนย์ดูแลแผล WOUND CARE",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "room-wound-care",
+              "kind": "room",
+              "name": "ศูนย์ดูแลแผล WOUND CARE",
+              "category": "ดูแลแผล",
+              "description": "รักษาและดูแลแผลเรื้อรัง แผลกดทับ",
+              "extension": "1276",
+              "phone": "042-245555 ต่อ 1276",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f5",
+          "level": 5,
+          "name": "ชั้น 5 — หอผู้ป่วยไฟไหม้ BURN UNIT",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "room-burn-unit",
+              "kind": "room",
+              "name": "หอผู้ป่วยไฟไหม้ BURN UNIT",
+              "category": "BURN UNIT",
+              "description": "ดูแลรักษาผู้ป่วยแผลไฟไหม้และน้ำร้อนลวก",
+              "extension": "1274",
+              "phone": "042-245555 ต่อ 1274",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
@@ -1144,7 +1606,22 @@
           "level": 1,
           "name": "ชั้น 1",
           "shortName": "ชั้น 1",
-          "items": [],
+          "items": [
+            {
+              "id": "room-pt-main",
+              "kind": "room",
+              "name": "ศูนย์กายภาพบำบัด & กิจกรรมบำบัด",
+              "category": "กายภาพบำบัด",
+              "description": "ฟื้นฟูสมรรถภาพ กระตุ้นพัฒนาการ และไฟฟ้าบำบัด",
+              "extension": "1192",
+              "phone": "042-245555 ต่อ 1192",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            }
+          ],
           "routeNodes": [],
           "routeEdges": []
         }
