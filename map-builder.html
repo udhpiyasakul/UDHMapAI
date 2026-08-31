@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="map-builder.css?v=2.0">
+  <link rel="stylesheet" href="map-builder.css?v=2.1">
 </head>
 <body>
   <header>
@@ -17,6 +17,7 @@
       <a href="asset-tracking.html" class="btn-link">📦 Asset Tracking Dashboard</a>
       <label class="file">นำเข้า JSON<input type="file" id="import" accept="application/json"></label>
       <button id="export">💾 ส่งออก JSON</button>
+      <button id="github-sync-btn" class="github-sync-header-btn">☁️ บันทึกขึ้น GitHub</button>
     </div>
   </header>
 
@@ -60,7 +61,7 @@
       <h2>คุณสมบัติองค์ประกอบ</h2>
       <form id="form">
         <label>ชื่อองค์ประกอบ / ห้อง
-          <input id="name" required placeholder="เช่น ห้องตรวจ 301">
+          <input id="name" required placeholder="เช่น ห้องตรวจ 101">
         </label>
         <label>ประเภท
           <select id="kind">
@@ -99,10 +100,10 @@
         <fieldset class="contact-fieldset">
           <legend>📞 เบอร์โทรศัพท์ติดต่อ</legend>
           <label>เบอร์สายตรง (Direct Phone)
-            <input id="phone" placeholder="เช่น 042-245555">
+            <input id="phone" placeholder="เช่น 042-245555 ต่อ 3110">
           </label>
           <label>เบอร์โทรภายใน (Internal Ext.)
-            <input id="extension" placeholder="เช่น 1301 หรือ 2200">
+            <input id="extension" placeholder="เช่น 3110 หรือ 1200">
           </label>
           <label>เบอร์มือถือ / สายด่วน (Mobile Hotline)
             <input id="mobile" placeholder="เช่น 081-9998888">
@@ -146,7 +147,7 @@
 
         <!-- Photo URL Section -->
         <label>🖼️ ลิงก์ URL รูปภาพสถานที่ประกอบ
-          <input id="imageUrl" placeholder="https://... หรือ maps/photo.jpg">
+          <input id="imageUrl" placeholder="https://... หรือ opd-building-front.jpg">
         </label>
         <div id="photo-preview-container" class="photo-preview-box" style="display: none;">
           <small>ตัวอย่างรูปภาพสถานที่:</small>
@@ -162,7 +163,7 @@
           <button type="button" class="delete" id="delete">🗑️ ลบองค์ประกอบ</button>
         </div>
       </form>
-      <p class="hint">ข้อมูลทั้งหมดถูกซิงก์ใน LocalStorage และสามารถกด "ส่งออก JSON" เพื่อนำไปใช้จริงได้ทันที</p>
+      <p class="hint">ข้อมูลทั้งหมดถูกซิงก์ใน LocalStorage และสามารถกด "บันทึกขึ้น GitHub" เพื่ออัปเดต repository ได้ทันที</p>
     </aside>
   </main>
 
@@ -193,8 +194,38 @@
     </div>
   </dialog>
 
+  <!-- GitHub Direct Sync Modal Dialog -->
+  <dialog id="github-modal" class="cms-dialog">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h3>☁️ ซิงก์และอัปเดต map-data.json ขึ้น GitHub</h3>
+        <button id="close-github-modal" class="close-x">×</button>
+      </div>
+      <form id="github-sync-form">
+        <label>GitHub Repository Target
+          <input value="udhpiyasakul/UDHMapAI" readonly style="background-color: #0f172a; color: #38bdf8;">
+        </label>
+        <label>ไฟล์เป้าหมายที่จะอัปเดต
+          <input value="map-data.json" readonly style="background-color: #0f172a; color: #10b981;">
+        </label>
+        <label>GitHub Personal Access Token (PAT)
+          <input id="gh-token-input" type="password" required placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+          <small style="color: #94a3b8; font-size: 10px; margin-top: 2px;">
+            สร้าง Token ได้ที่ GitHub: Settings ➔ Developer settings ➔ Personal access tokens (Fine-grained หรือ Classic ให้สิทธิ์ Contents: Read & Write)
+          </small>
+        </label>
+        <label>ข้อความ Commit Message
+          <input id="gh-commit-msg" value="Update map-data.json from UDH Map Studio CMS">
+        </label>
+        <div class="modal-btn-row" style="margin-top: 10px;">
+          <button type="submit" id="gh-submit-btn" class="github-commit-btn">🚀 ยืนยัน Commit & Push ขึ้น GitHub</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
   <p id="toast" role="status"></p>
   <script src="data-store.js"></script>
-  <script src="map-builder.js?v=2.0"></script>
+  <script src="map-builder.js?v=2.1"></script>
 </body>
 </html>

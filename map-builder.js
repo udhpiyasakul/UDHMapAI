@@ -12,10 +12,10 @@ const canvas = $('#canvas');
 
 function toast(text) {
   const t = $('#toast');
-  t.textContent = text;
+  t.innerHTML = text;
   t.classList.add('show');
   clearTimeout(timer);
-  timer = setTimeout(() => t.classList.remove('show'), 2200);
+  timer = setTimeout(() => t.classList.remove('show'), 3000);
 }
 
 function persist(text = 'บันทึกใน Browser แล้ว') {
@@ -473,6 +473,92 @@ function setupEvents() {
     render();
     $('#floor-modal').close();
     toast(`🏢 เพิ่ม ${fName} ใน ${building.name} สำเร็จแล้ว!`);
+  };
+
+  // GitHub Direct Sync Modal Handlers
+  const githubModal = $('#github-modal');
+  const tokenInput = $('#gh-token-input');
+  
+  $('#github-sync-btn').onclick = () => {
+    const savedToken = localStorage.getItem('udh_gh_token') || '';
+    tokenInput.value = savedToken;
+    githubModal.showModal();
+  };
+
+  $('#close-github-modal').onclick = () => githubModal.close();
+
+  $('#github-sync-form').onsubmit = async (e) => {
+    e.preventDefault();
+    const token = tokenInput.value.trim();
+    const commitMsg = $('#gh-commit-msg').value.trim() || 'Update map-data.json from UDH Map Studio CMS';
+
+    if (!token) return toast('⚠️ กรุณาระบุ GitHub Personal Access Token');
+
+    const submitBtn = $('#gh-submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '⏳ กำลังซิงก์ข้อมูลขึ้น GitHub...';
+
+    try {
+      // Store token locally for convenience
+      localStorage.setItem('udh_gh_token', token);
+
+      const repoOwner = 'udhpiyasakul';
+      const repoName = 'UDHMapAI';
+      const filePath = 'map-data.json';
+      const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+
+      // 1. Get current SHA of map-data.json
+      const getRes = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (!getRes.ok) {
+        throw new Error(`ไม่สามารถเชื่อมต่อ GitHub API ได้ (${getRes.status} ${getRes.statusText}) — กรุณาตรวจสอบ Token`);
+      }
+
+      const fileInfo = await getRes.json();
+      const currentSha = fileInfo.sha;
+
+      // 2. Base64 encode JSON data (UTF-8 safe)
+      const jsonString = JSON.stringify(data, null, 2);
+      const utf8Bytes = new TextEncoder().encode(jsonString);
+      let binaryStr = '';
+      utf8Bytes.forEach((b) => binaryStr += String.fromCharCode(b));
+      const contentBase64 = btoa(binaryStr);
+
+      // 3. PUT update request to GitHub
+      const putRes = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/vnd.github.v3+json'
+        },
+        body: JSON.stringify({
+          message: commitMsg,
+          content: contentBase64,
+          sha: currentSha
+        })
+      });
+
+      if (!putRes.ok) {
+        const errJson = await putRes.json();
+        throw new Error(errJson.message || 'การอัปเดตไฟล์ขึ้น GitHub ล้มเหลว');
+      }
+
+      const resultData = await putRes.json();
+      githubModal.close();
+      toast(`☁️ <b>อัปเดตข้อมูลขึ้น GitHub สำเร็จแล้ว!</b><br><small>Commit: ${resultData.commit.sha.substring(0, 7)} — เว็บไซต์ออนไลน์จะอัปเดตอัตโนมัติ</small>`);
+    } catch (err) {
+      console.error('GitHub Sync Error:', err);
+      toast(`❌ <b>ซิงก์ GitHub ล้มเหลว:</b> ${err.message}`);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '🚀 ยืนยัน Commit & Push ขึ้น GitHub';
+    }
   };
 
   $('#export').onclick = () => {

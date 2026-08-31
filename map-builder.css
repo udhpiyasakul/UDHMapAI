@@ -49,7 +49,7 @@ header b span {
 .header-tools {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .btn-link {
@@ -84,6 +84,25 @@ header button {
   font-family: var(--font-main);
   font-size: 12px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.github-sync-header-btn {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.github-commit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -500,13 +519,13 @@ footer {
   cursor: pointer;
 }
 
-#add-floor-form {
+#add-floor-form, #github-sync-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-#add-floor-form label {
+#add-floor-form label, #github-sync-form label {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -514,7 +533,7 @@ footer {
   color: #cbd5e1;
 }
 
-#add-floor-form input {
+#add-floor-form input, #github-sync-form input {
   background-color: #0f172a;
   border: 1px solid #475569;
   color: #fff;
