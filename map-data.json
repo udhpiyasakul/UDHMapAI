@@ -258,8 +258,8 @@
             {
               "id": "node-triage",
               "name": "จุดคัดกรอง",
-              "x": 83,
-              "y": 67,
+              "x": 82,
+              "y": 71,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
@@ -291,7 +291,7 @@
               "id": "node-finance",
               "name": "ช่องการเงิน",
               "x": 68,
-              "y": 76,
+              "y": 17,
               "buildingId": "opd",
               "floorId": "opd-f1"
             },
