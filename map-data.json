@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.4.0",
+  "schemaVersion": "2.5.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -26,7 +26,9 @@
     "allFloorsPopulated": true,
     "building1ExactImport": true,
     "fullExcelPhonebookImported": true,
-    "phonebookDate": "2568-02-28 (สมุดโทรศัพท์อัปเดต กุมภาพันธ์ 2568)"
+    "phonebookDate": "2568-02-28 (สมุดโทรศัพท์อัปเดต กุมภาพันธ์ 2568)",
+    "all23BuildingsFloorsComplete": true,
+    "all23BuildingsComplete": true
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -39,10 +41,10 @@
   "buildings": [
     {
       "id": "opd",
-      "code": "OPD-21",
-      "mapNumber": 21,
-      "name": "อาคาร 21 — อาคารอำนวยการและผู้ป่วยนอก (OPD)",
-      "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม และห้องยาหลัก",
+      "code": "OPD-1",
+      "mapNumber": 1,
+      "name": "อาคาร 1 — อาคารอำนวยการและผู้ป่วยนอก (7 ชั้น)",
+      "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม ER และห้องยาหลัก",
       "lat": 17.4151,
       "lng": 102.7803,
       "imageUrl": "opd-building-front.jpg",
@@ -51,7 +53,7 @@
         {
           "id": "opd-f1",
           "level": 1,
-          "name": "ชั้น 1 — ผู้ป่วยนอก OPD & อุบัติเหตุ-ฉุกเฉิน ER",
+          "name": "ชั้น 1 — อาคาร 1",
           "shortName": "ชั้น 1",
           "mapImageUrl": "",
           "items": [
@@ -364,7 +366,7 @@
         {
           "id": "opd-f2",
           "level": 2,
-          "name": "ชั้น 2 — คลินิกอายุรกรรม 2 / ออร์โธปิดิกส์ / SMC",
+          "name": "ชั้น 2 — อาคาร 1",
           "shortName": "ชั้น 2",
           "mapImageUrl": "",
           "items": [
@@ -569,7 +571,7 @@
         {
           "id": "opd-f3",
           "level": 3,
-          "name": "ชั้น 3 — สูตินรีเวช / ทันตกรรม / กุมารเวช / จิตเวช / หัวใจ",
+          "name": "ชั้น 3 — อาคาร 1",
           "shortName": "ชั้น 3",
           "mapImageUrl": "",
           "items": [
@@ -808,7 +810,7 @@
         {
           "id": "opd-f4",
           "level": 4,
-          "name": "ชั้น 4 — คลินิกโรคหัวใจ & คลินิกเฉพาะทาง",
+          "name": "ชั้น 4 — อาคาร 1",
           "shortName": "ชั้น 4",
           "items": [
             {
@@ -885,7 +887,7 @@
         {
           "id": "opd-f5",
           "level": 5,
-          "name": "ชั้น 5 — คลินิกประกันสังคม / ตรวจสุขภาพ Wellness / ทรัพยากรบุคคล",
+          "name": "ชั้น 5 — อาคาร 1",
           "shortName": "ชั้น 5",
           "items": [
             {
@@ -1002,7 +1004,7 @@
         {
           "id": "opd-f6",
           "level": 6,
-          "name": "ชั้น 6 — เลขานุการ / สารบรรณ / บริหารทั่วไป / การพยาบาล / การเงิน",
+          "name": "ชั้น 6 — อาคาร 1",
           "shortName": "ชั้น 6",
           "items": [
             {
@@ -1159,7 +1161,7 @@
         {
           "id": "opd-f7",
           "level": 7,
-          "name": "ชั้น 7 — ห้องประชุมใหญ่ / ผลิตเอกสาร / ซักประวัติตรวจตา / ห้องประชุมรักษ์ธรรม",
+          "name": "ชั้น 7 — อาคาร 1",
           "shortName": "ชั้น 7",
           "items": [
             {
@@ -1276,18 +1278,2147 @@
       ]
     },
     {
+      "id": "malai-clinic",
+      "code": "OPD-OLD-2",
+      "mapNumber": 2,
+      "name": "อาคาร 2 — อาคารผู้ป่วยนอก (เดิม) (2 ชั้น)",
+      "description": "อาคารผู้ป่วยนอกเดิม คลินิกปฐมภูมิ และคลินิกเฉพาะทางผู้ป่วยนอก",
+      "lat": 17.4159,
+      "lng": 102.7793,
+      "floors": [
+        {
+          "id": "malai-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารผู้ป่วยนอกเดิม",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "malai-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 2 — อาคารผู้ป่วยนอก (เดิม) (2 ชั้น)",
+              "extension": "201",
+              "phone": "042-245555 ต่อ 201",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "malai-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "malai-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "malai-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "malai-clinic-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคารผู้ป่วยนอกเดิม",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "malai-clinic-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 2 — อาคารผู้ป่วยนอก (เดิม) (2 ชั้น)",
+              "extension": "202",
+              "phone": "042-245555 ต่อ 202",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "malai-clinic-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "malai-clinic-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "malai-clinic-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "chalert-prakiat",
+      "code": "OR-XRAY-3",
+      "mapNumber": 3,
+      "name": "อาคาร 3 — อาคารผ่าตัด / X-RAY (เก่า) (2 ชั้น)",
+      "description": "อาคารเฉลิมพระเกียรติ บริการห้องผ่าตัดเดิมและงานรังสีวิทยา X-RAY",
+      "lat": 17.4161,
+      "lng": 102.7792,
+      "floors": [
+        {
+          "id": "chalerm-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารผ่าตัดเดิม/X-RAY",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "chalerm-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 3 — อาคารผ่าตัด / X-RAY (เก่า) (2 ชั้น)",
+              "extension": "301",
+              "phone": "042-245555 ต่อ 301",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "chalerm-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "chalerm-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "chalerm-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "chalert-prakiat-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคารผ่าตัดเดิม/X-RAY",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "chalert-prakiat-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 3 — อาคารผ่าตัด / X-RAY (เก่า) (2 ชั้น)",
+              "extension": "302",
+              "phone": "042-245555 ต่อ 302",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "chalert-prakiat-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "chalert-prakiat-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "chalert-prakiat-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "special-ward",
+      "code": "OBGYN-4",
+      "mapNumber": 4,
+      "name": "อาคาร 4 — อาคารสูตินรีเวช (5 ชั้น)",
+      "description": "อาคารหอผู้ป่วยสูตินรีเวช ห้องคลอด หอผู้ป่วยพิเศษ และฝากครรภ์",
+      "lat": 17.4156,
+      "lng": 102.7812,
+      "floors": [
+        {
+          "id": "ward20-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ห้องคลอด & ผ่าตัดสูติ",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-delivery",
+              "kind": "room",
+              "name": "ห้องคลอด & ผ่าตัดทำหมัน",
+              "category": "ห้องคลอด",
+              "description": "บริการทำคลอด ผ่าตัดสูตินรีเวช และทำหมัน",
+              "extension": "1331",
+              "phone": "042-245555 ต่อ 1331",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "ward20-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "ward20-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "ward20-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b4-f1-delivery",
+              "kind": "room",
+              "name": "ห้องคลอด & ผ่าตัดสูตินรีเวช",
+              "category": "ห้องคลอด",
+              "description": "บริการทำคลอด ผ่าตัดสูตินรีเวช และทำหมัน",
+              "extension": "1331, 1329",
+              "phone": "042-245555 ต่อ 1331, 1329",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "special-ward-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยหลังคลอด PP 1",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "room-pp1",
+              "kind": "room",
+              "name": "หอผู้ป่วยหลังคลอด PP 1",
+              "category": "หลังคลอด",
+              "description": "ดูแลมารดาและทารกหลังคลอด",
+              "extension": "1335",
+              "phone": "042-245555 ต่อ 1335",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "special-ward-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b4-f2-pp1",
+              "kind": "room",
+              "name": "หอผู้ป่วยหลังคลอด PP 1 & หอผู้ป่วย 2",
+              "category": "หลังคลอด",
+              "description": "ดูแลมารดาและทารกหลังคลอด PP 1",
+              "extension": "1335, 1214",
+              "phone": "042-245555 ต่อ 1335, 1214",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "special-ward-f3",
+          "level": 3,
+          "name": "ชั้น 3 — หอผู้ป่วยหลังคลอด PP 2 & คลินิกนมแม่",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "special-ward-f3-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 3",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 3 อาคาร 4 — อาคารสูตินรีเวช (5 ชั้น)",
+              "extension": "403",
+              "phone": "042-245555 ต่อ 403",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "special-ward-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b4-f3-pp2",
+              "kind": "room",
+              "name": "หอผู้ป่วยหลังคลอด PP 2 & คลินิกนมแม่",
+              "category": "หลังคลอด/นมแม่",
+              "description": "ดูแลหลังคลอด PP 2 คลินิกนมแม่ และฝึกทักษะการให้นม",
+              "extension": "1340, 1342, 1348",
+              "phone": "042-245555 ต่อ 1340, 1342, 1348",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "special-ward-f4",
+          "level": 4,
+          "name": "ชั้น 4 — หอผู้ป่วยสูติ-นรีเวช 4",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "special-ward-f4-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 4",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 4 อาคาร 4 — อาคารสูตินรีเวช (5 ชั้น)",
+              "extension": "404",
+              "phone": "042-245555 ต่อ 404",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "special-ward-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b4-f4-ward",
+              "kind": "room",
+              "name": "หอผู้ป่วยสูติ-นรีเวช 4",
+              "category": "สูตินรีเวช",
+              "description": "หอผู้ป่วยในสูตินรีเวช ชั้น 4",
+              "extension": "1354, 1351, 1352",
+              "phone": "042-245555 ต่อ 1354, 1351, 1352",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "special-ward-f5",
+          "level": 5,
+          "name": "ชั้น 5 — หอผู้ป่วยสูติ-นรีเวช 5 (พิเศษ)",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "special-ward-f5-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 5",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 5 อาคาร 4 — อาคารสูตินรีเวช (5 ชั้น)",
+              "extension": "405",
+              "phone": "042-245555 ต่อ 405",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "special-ward-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "special-ward-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b4-f5-ward",
+              "kind": "room",
+              "name": "หอผู้ป่วยสูติ-นรีเวช 5 & ห้องพิเศษ",
+              "category": "สูตินรีเวชพิเศษ",
+              "description": "หอผู้ป่วยในสูตินรีเวช ชั้น 5 และห้องพักพิเศษ",
+              "extension": "1462, 1464, 1465",
+              "phone": "042-245555 ต่อ 1462, 1464, 1465",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "dialysis",
+      "code": "DIALYSIS-5",
+      "mapNumber": 5,
+      "name": "อาคาร 5 — อาคารไตเทียม (1 ชั้น)",
+      "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม และล้างไตทางหน้าท้อง CAPD",
+      "lat": 17.4153,
+      "lng": 102.7801,
+      "floors": [
+        {
+          "id": "dialysis-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ศูนย์ไตเทียม",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "dialysis-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 5 — อาคารไตเทียม (1 ชั้น)",
+              "extension": "501",
+              "phone": "042-245555 ต่อ 501",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "dialysis-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "dialysis-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "dialysis-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b5-f1-dialysis",
+              "kind": "room",
+              "name": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม",
+              "category": "ไตเทียม",
+              "description": "บริการฟอกเลือดด้วยเครื่องไตเทียม",
+              "extension": "1124, 1127",
+              "phone": "042-245555 ต่อ 1124, 1127",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "pathology",
+      "code": "PATH-LAB-6",
+      "mapNumber": 6,
+      "name": "อาคาร 6 — อาคารพยาธิวิทยา (แลปเบอร์ 10) (2 ชั้น)",
+      "description": "ห้องปฏิบัติการชันสูตร พยาธิวิทยาคลินิก เจาะเลือด IPD ตรวจ CBC/Chem/Immuno",
+      "lat": 17.4152,
+      "lng": 102.7807,
+      "floors": [
+        {
+          "id": "path-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ห้อง LAB ชันสูตร & เจาะเลือด IPD",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-path-main",
+              "kind": "room",
+              "name": "ห้อง LAB ชันสูตร & เจาะเลือด IPD",
+              "category": "LAB ชันสูตร",
+              "description": "ตรวจ CBC, Chem, Immuno, Blood Gas",
+              "extension": "1254",
+              "phone": "042-245555 ต่อ 1254",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "path-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "path-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "path-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b6-f1-lab",
+              "kind": "room",
+              "name": "ห้อง LAB ชันสูตร IPD (CBC, Chem, Immuno)",
+              "category": "LAB ชันสูตร",
+              "description": "เจาะเลือด IPD ตรวจ CBC Chem Immuno Blood Gas",
+              "extension": "1254, 1253, 1258",
+              "phone": "042-245555 ต่อ 1254, 1253, 1258",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "pathology-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ห้องปฏิบัติการจุลชีววิทยา & Out Lab",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "pathology-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 6 — อาคารพยาธิวิทยา (แลปเบอร์ 10) (2 ชั้น)",
+              "extension": "602",
+              "phone": "042-245555 ต่อ 602",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "pathology-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "pathology-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "pathology-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b6-f2-micro",
+              "kind": "room",
+              "name": "ห้องปฏิบัติการจุลชีววิทยา & Out Lab CD4",
+              "category": "LAB จุลชีววิทยา",
+              "description": "ตรวจทางจุลชีววิทยา เพาะเชื้อ และตรวจ CD4",
+              "extension": "1256, 1408, 1453",
+              "phone": "042-245555 ต่อ 1256, 1408, 1453",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "medical-records",
+      "code": "SOC-MED-7",
+      "mapNumber": 7,
+      "name": "อาคาร 7 — อาคารเวชกรรมสังคม (2 ชั้น)",
+      "description": "บริการยื่นบัตร คลังเวชระเบียน เวชกรรมสังคม และนวดแพทย์แผนไทย",
+      "lat": 17.4158,
+      "lng": 102.7794,
+      "floors": [
+        {
+          "id": "rec-f1",
+          "level": 1,
+          "name": "ชั้น 1 — เวชกรรมสังคม & คลังเวชระเบียน",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "rec-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 7 — อาคารเวชกรรมสังคมและเวชระเบียน (2 ชั้น)",
+              "extension": "701",
+              "phone": "042-245555 ต่อ 701",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "rec-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "rec-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "rec-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b7-f1-soc",
+              "kind": "room",
+              "name": "เวชกรรมสังคม & คลังเวชระเบียน",
+              "category": "เวชกรรมสังคม",
+              "description": "งานส่งเสริมสุขภาพ ชุมชน และคลังเอกสารเวชระเบียน",
+              "extension": "1164, 1200",
+              "phone": "042-245555 ต่อ 1164, 1200",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "medical-records-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ศูนย์นวดและแพทย์แผนไทย",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "medical-records-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 7 — อาคารเวชกรรมสังคมและเวชระเบียน (2 ชั้น)",
+              "extension": "702",
+              "phone": "042-245555 ต่อ 702",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "medical-records-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "medical-records-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "medical-records-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b7-f2-thai-med",
+              "kind": "room",
+              "name": "ศูนย์นวดและคลินิกแพทย์แผนไทย",
+              "category": "แพทย์แผนไทย",
+              "description": "บริการนวดประคบสมุนไพร และฝังเข็มแพทย์แผนไทย",
+              "extension": "1200",
+              "phone": "042-245555 ต่อ 1200",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "surgery",
+      "code": "SURGERY-8",
+      "mapNumber": 8,
+      "name": "อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+      "description": "ห้องผ่าตัด หอผู้ป่วยวิกฤตศัลยกรรม (ICU S.1), BURN UNIT & WOUND CARE",
+      "lat": 17.4149,
+      "lng": 102.7805,
+      "floors": [
+        {
+          "id": "surg-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-surg-icu",
+              "kind": "room",
+              "name": "ICU S.1 (หอผู้ป่วยวิกฤตศัลยกรรม 1)",
+              "category": "ICU ศัลยกรรม",
+              "description": "ดูแลผู้ป่วยวิกฤตหลังผ่าตัดศัลยกรรม",
+              "extension": "1261",
+              "phone": "042-245555 ต่อ 1261",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            },
+            {
+              "id": "room-organ-transplant",
+              "kind": "room",
+              "name": "ศูนย์ปลูกถ่าย & บริจาคอวัยวะ",
+              "category": "ปลูกถ่ายอวัยวะ",
+              "description": "ประสานงานปลูกถ่ายและบริจาคอวัยวะ",
+              "extension": "1301",
+              "phone": "042-245555 ต่อ 1301",
+              "mobile": "",
+              "x": 50,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            },
+            {
+              "id": "surg-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surg-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surg-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "room-wound-care",
+              "kind": "room",
+              "name": "ศูนย์ดูแลแผล WOUND CARE",
+              "category": "ดูแลแผล",
+              "description": "รักษาและดูแลแผลเรื้อรัง แผลกดทับ",
+              "extension": "1276",
+              "phone": "042-245555 ต่อ 1276",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "surgery-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f3",
+          "level": 3,
+          "name": "ชั้น 3 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "surgery-f3-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 3",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 3 อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+              "extension": "803",
+              "phone": "042-245555 ต่อ 803",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "surgery-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f4",
+          "level": 4,
+          "name": "ชั้น 4 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "surgery-f4-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 4",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 4 อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+              "extension": "804",
+              "phone": "042-245555 ต่อ 804",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "surgery-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f5",
+          "level": 5,
+          "name": "ชั้น 5 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "room-burn-unit",
+              "kind": "room",
+              "name": "หอผู้ป่วยไฟไหม้ BURN UNIT",
+              "category": "BURN UNIT",
+              "description": "ดูแลรักษาผู้ป่วยแผลไฟไหม้และน้ำร้อนลวก",
+              "extension": "1274",
+              "phone": "042-245555 ต่อ 1274",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "surgery-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f6",
+          "level": 6,
+          "name": "ชั้น 6 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "surgery-f6-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 6",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 6 อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+              "extension": "806",
+              "phone": "042-245555 ต่อ 806",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "surgery-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "surgery-f7",
+          "level": 7,
+          "name": "ชั้น 7 — อาคารศัลยกรรม",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "surgery-f7-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 7",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 7 อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+              "extension": "807",
+              "phone": "042-245555 ต่อ 807",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "surgery-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "surgery-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "surgery-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "mec",
+      "code": "MEC-9",
+      "mapNumber": 9,
+      "name": "อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+      "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
+      "lat": 17.4158,
+      "lng": 102.7797,
+      "floors": [
+        {
+          "id": "mec-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "mec-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "901",
+              "phone": "042-245555 ต่อ 901",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "mec-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "902",
+              "phone": "042-245555 ต่อ 902",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f3",
+          "level": 3,
+          "name": "ชั้น 3 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "mec-f3-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 3",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 3 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "903",
+              "phone": "042-245555 ต่อ 903",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f4",
+          "level": 4,
+          "name": "ชั้น 4 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "mec-f4-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 4",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 4 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "904",
+              "phone": "042-245555 ต่อ 904",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f5",
+          "level": 5,
+          "name": "ชั้น 5 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "mec-f5-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 5",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 5 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "905",
+              "phone": "042-245555 ต่อ 905",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f6",
+          "level": 6,
+          "name": "ชั้น 6 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "mec-f6-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 6",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 6 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "906",
+              "phone": "042-245555 ต่อ 906",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f7",
+          "level": 7,
+          "name": "ชั้น 7 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "mec-f7-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 7",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 7 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "907",
+              "phone": "042-245555 ต่อ 907",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f8",
+          "level": 8,
+          "name": "ชั้น 8 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 8",
+          "items": [
+            {
+              "id": "mec-f8-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 8",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 8 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "908",
+              "phone": "042-245555 ต่อ 908",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f8-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f8-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f8-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "mec-f9",
+          "level": 9,
+          "name": "ชั้น 9 — ศูนย์แพทยศาสตร์",
+          "shortName": "ชั้น 9",
+          "items": [
+            {
+              "id": "mec-f9-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 9",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 9 อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+              "extension": "909",
+              "phone": "042-245555 ต่อ 909",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "mec-f9-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "mec-f9-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "mec-f9-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "hon-10",
+      "mapNumber": 10,
+      "code": "HON-10",
+      "name": "อาคาร 10 — หอพักเจ้าหน้าที่และหอผู้ป่วยรวงผึ้ง (3 ชั้น)",
+      "description": "หอพักเจ้าหน้าที่และหอผู้ป่วยรวงผึ้ง",
+      "floors": [
+        {
+          "id": "hon-10-f1",
+          "level": 1,
+          "name": "ชั้น 1 — หอผู้ป่วยรวงผึ้ง",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "hon-10-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 10 — หอพักเจ้าหน้าที่และหอผู้ป่วยรวงผึ้ง (3 ชั้น)",
+              "extension": "1001",
+              "phone": "042-245555 ต่อ 1001",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "hon-10-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "hon-10-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยรวงผึ้ง",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "hon-10-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 10 — หอพักเจ้าหน้าที่และหอผู้ป่วยรวงผึ้ง (3 ชั้น)",
+              "extension": "1002",
+              "phone": "042-245555 ต่อ 1002",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "hon-10-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "hon-10-f3",
+          "level": 3,
+          "name": "ชั้น 3 — หอผู้ป่วยรวงผึ้ง",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "hon-10-f3-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 3",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 3 อาคาร 10 — หอพักเจ้าหน้าที่และหอผู้ป่วยรวงผึ้ง (3 ชั้น)",
+              "extension": "1003",
+              "phone": "042-245555 ต่อ 1003",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "hon-10-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "hon-10-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
       "id": "somdet",
-      "code": "SOMDET-25",
-      "mapNumber": 25,
-      "name": "อาคาร 25 — อาคารสมเด็จพระเทพรัตนราชสุดาฯ (200 ปี)",
-      "description": "หอผู้ป่วยพิเศษ ศูนย์ศัลยกรรม และหอผู้ป่วยวิกฤต (ICU)",
+      "code": "EXCELLENT-11",
+      "mapNumber": 11,
+      "name": "อาคาร 11 — อาคารศูนย์บริการโรคหัวใจ มะเร็ง และวินิจฉัยรักษา (สมเด็จพระเทพฯ 200 ปี) (7 ชั้น)",
+      "description": "ศูนย์เชี่ยวชาญระดับสูง: หอผู้ป่วยพิเศษ, ศัลยกรรมหัวใจ CVT, CATH LAB, MRI, CT SCAN, OR",
       "lat": 17.4149,
       "lng": 102.7801,
       "floors": [
         {
           "id": "somdet-f1",
           "level": 1,
-          "name": "ชั้น 1 — ศูนย์ศัลยกรรม & หอผู้ป่วยพิเศษ",
+          "name": "ชั้น 1 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 1",
           "mapImageUrl": "",
           "items": [
@@ -1393,6 +3524,33 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "08:00 - 16:30 น."
               }
+            },
+            {
+              "id": "somdet-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [
@@ -1438,9 +3596,65 @@
           ]
         },
         {
+          "id": "somdet-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคารสมเด็จพระเทพฯ",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "somdet-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 11 — อาคารศูนย์บริการโรคหัวใจ มะเร็งฯ (สมเด็จพระเทพฯ 200 ปี) (7 ชั้น)",
+              "extension": "1102",
+              "phone": "042-245555 ต่อ 1102",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "somdet-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
           "id": "somdet-f3",
           "level": 3,
-          "name": "ชั้น 3 — หอผู้ป่วยวิกฤต ICU & ศัลยกรรมหัวใจ CVT",
+          "name": "ชั้น 3 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 3",
           "items": [
             {
@@ -1456,6 +3670,33 @@
               "y": 20,
               "w": 35,
               "h": 25
+            },
+            {
+              "id": "somdet-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [],
@@ -1464,7 +3705,7 @@
         {
           "id": "somdet-f4",
           "level": 4,
-          "name": "ชั้น 4 — ศูนย์ผ่าตัด OR 401-403",
+          "name": "ชั้น 4 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 4",
           "items": [
             {
@@ -1500,6 +3741,33 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "08:00 - 16:30 น."
               }
+            },
+            {
+              "id": "somdet-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [],
@@ -1508,7 +3776,7 @@
         {
           "id": "somdet-f5",
           "level": 5,
-          "name": "ชั้น 5 — ศูนย์ห้องผ่าตัด OR 501 - 512",
+          "name": "ชั้น 5 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 5",
           "items": [
             {
@@ -1530,6 +3798,33 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "08:00 - 16:30 น."
               }
+            },
+            {
+              "id": "somdet-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [],
@@ -1538,7 +3833,7 @@
         {
           "id": "somdet-f6",
           "level": 6,
-          "name": "ชั้น 6 — ห้องฉีดสีหัวใจ CATH LAB",
+          "name": "ชั้น 6 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 6",
           "items": [
             {
@@ -1574,6 +3869,33 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "24 ชั่วโมง"
               }
+            },
+            {
+              "id": "somdet-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [],
@@ -1582,7 +3904,7 @@
         {
           "id": "somdet-f7",
           "level": 7,
-          "name": "ชั้น 7 — หอผู้ป่วยหนักโรคหัวใจ CCU & ICU NEURO",
+          "name": "ชั้น 7 — อาคารสมเด็จพระเทพฯ",
           "shortName": "ชั้น 7",
           "items": [
             {
@@ -1618,6 +3940,2106 @@
                 "lastCleanedTime": "เพิ่งทำความสะอาด",
                 "openHours": "24 ชั่วโมง"
               }
+            },
+            {
+              "id": "somdet-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "somdet-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "somdet-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "luangta-bua",
+      "code": "BUA-12",
+      "mapNumber": 12,
+      "name": "อาคาร 12 — อาคาร 96 ปี หลวงตามหาบัวญาณสัมปันโน (10 ชั้น)",
+      "description": "อาคารหอผู้ป่วย 96 ปี หลวงตามหาบัว หอผู้ป่วยพิเศษ และศูนย์บริการเฉพาะทาง",
+      "lat": 17.4154,
+      "lng": 102.7818,
+      "floors": [
+        {
+          "id": "bua-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคาร 96 ปี",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-bua-f1",
+              "kind": "room",
+              "name": "เคาน์เตอร์ประชาสัมพันธ์ อาคาร 96 ปี",
+              "category": "บริการผู้ป่วย",
+              "description": "ต้อนรับและยื่นบัตรอาคาร 96 ปี",
+              "extension": "2101",
+              "phone": "042-245555 ต่อ 2101",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            },
+            {
+              "id": "b12-f1-info",
+              "kind": "room",
+              "name": "ประชาสัมพันธ์ 2101 & ห้องตรวจ 2102-2103",
+              "category": "บริการผู้ป่วย",
+              "description": "ต้อนรับ ประชาสัมพันธ์ และยื่นบัตรตึก 96 ปี",
+              "extension": "2101, 2102, 2103, 2107",
+              "phone": "042-245555 ต่อ 2101, 2102, 2103, 2107",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "bua-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "bua-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "bua-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคาร 96 ปี",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "b12-f2-sp2",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 2",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 2",
+              "extension": "2211, 2213, 2205",
+              "phone": "042-245555 ต่อ 2211, 2213, 2205",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "luangta-bua-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f3",
+          "level": 3,
+          "name": "ชั้น 3 — อาคาร 96 ปี",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "b12-f3-sp3",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 3",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 3",
+              "extension": "2310, 2311, 2305",
+              "phone": "042-245555 ต่อ 2310, 2311, 2305",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "luangta-bua-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f4",
+          "level": 4,
+          "name": "ชั้น 4 — อาคาร 96 ปี",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "luangta-bua-f4-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 4",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 4 อาคาร 12 — อาคาร 96 ปี หลวงตามหาบัวญาณสัมปันโน (10 ชั้น)",
+              "extension": "1204",
+              "phone": "042-245555 ต่อ 1204",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "luangta-bua-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f5",
+          "level": 5,
+          "name": "ชั้น 5 — อาคาร 96 ปี",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "luangta-bua-f5-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 5",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 5 อาคาร 12 — อาคาร 96 ปี หลวงตามหาบัวญาณสัมปันโน (10 ชั้น)",
+              "extension": "1205",
+              "phone": "042-245555 ต่อ 1205",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "luangta-bua-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f6",
+          "level": 6,
+          "name": "ชั้น 6 — อาคาร 96 ปี",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "b12-f6-semi",
+              "kind": "room",
+              "name": "หอผู้ป่วย Semi ICU ชั้น 6",
+              "category": "Semi ICU",
+              "description": "ดูแลผู้ป่วยในระดับกึ่งวิกฤต Semi ICU",
+              "extension": "2610, 2611, 2605",
+              "phone": "042-245555 ต่อ 2610, 2611, 2605",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "luangta-bua-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f7",
+          "level": 7,
+          "name": "ชั้น 7 — อาคาร 96 ปี",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "b12-f7-sp7",
+              "kind": "room",
+              "name": "หอผู้ป่วยพิเศษ 7 & ห้องประชุมภาณุพันธุ",
+              "category": "หอผู้ป่วยพิเศษ",
+              "description": "หอผู้ป่วยพิเศษและห้องประชุมใหญ่ภาณุพันธุ",
+              "extension": "2708, 2710, 2714",
+              "phone": "042-245555 ต่อ 2708, 2710, 2714",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "luangta-bua-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f8",
+          "level": 8,
+          "name": "ชั้น 8 — อาคาร 96 ปี",
+          "shortName": "ชั้น 8",
+          "items": [
+            {
+              "id": "luangta-bua-f8-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 8",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 8 อาคาร 12 — อาคาร 96 ปี หลวงตามหาบัวญาณสัมปันโน (10 ชั้น)",
+              "extension": "1208",
+              "phone": "042-245555 ต่อ 1208",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "luangta-bua-f8-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f8-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f8-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f9",
+          "level": 9,
+          "name": "ชั้น 9 — อาคาร 96 ปี",
+          "shortName": "ชั้น 9",
+          "items": [
+            {
+              "id": "room-monk-icu",
+              "kind": "room",
+              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธวิกฤต",
+              "extension": "2912",
+              "phone": "042-245555 ต่อ 2912",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "b12-f9-monk",
+              "kind": "room",
+              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์ 9",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธและวิกฤต",
+              "extension": "2913, 2914, 2912",
+              "phone": "042-245555 ต่อ 2913, 2914, 2912",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "luangta-bua-f9-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f9-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f9-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "luangta-bua-f10",
+          "level": 10,
+          "name": "ชั้น 10 — อาคาร 96 ปี",
+          "shortName": "ชั้น 10",
+          "items": [
+            {
+              "id": "b12-f10-vip",
+              "kind": "room",
+              "name": "ห้องพักพิเศษ VIP 1001 - 1010",
+              "category": "ห้องพิเศษ VIP",
+              "description": "ห้องพักพิเศษ VIP สำหรับผู้ป่วยและครอบครัว",
+              "extension": "2002, 2003, 2012, 2016",
+              "phone": "042-245555 ต่อ 2002, 2003, 2012, 2016",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "luangta-bua-f10-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f10-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "luangta-bua-f10-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-74y",
+      "code": "B69Y-13",
+      "mapNumber": 13,
+      "name": "อาคาร 13 — อาคารตึก 69 ปี (74 ปี คลองจินดา) (8 ชั้น)",
+      "description": "ศูนย์ออร์โธปิดิกส์, SPINAL UNIT, P ICU และ N ICU",
+      "lat": 17.4143,
+      "lng": 102.7809,
+      "floors": [
+        {
+          "id": "b74y-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-69-opd",
+              "kind": "room",
+              "name": "คลินิกอายุรกรรม 69 & ห้อง ACUTE",
+              "category": "อายุรกรรม",
+              "description": "ตรวจรักษาผู้ป่วยในและห้อง ACUTE",
+              "extension": "5105",
+              "phone": "042-245555 ต่อ 5105",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 30,
+              "h": 22
+            },
+            {
+              "id": "b13-f1-opd",
+              "kind": "room",
+              "name": "ทำบัตร 5110 & คลินิกอายุรกรรม 69 & ห้อง ACUTE",
+              "category": "อายุรกรรม",
+              "description": "ยื่นบัตร คลินิกอายุรกรรม และห้องรักษาผู้ป่วย ACUTE",
+              "extension": "5110, 5105, 5106, 5104",
+              "phone": "042-245555 ต่อ 5110, 5105, 5106, 5104",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b74y-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b74y-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b74y-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f2",
+          "level": 2,
+          "name": "ชั้น 2 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "b13-f2-surg",
+              "kind": "room",
+              "name": "หอผู้ป่วยศัลยกรรมชาย & ศัลยกรรมหญิง (ตึก 69)",
+              "category": "ศัลยกรรม",
+              "description": "ดูแลผู้ป่วยในศัลยกรรมชายและหญิง",
+              "extension": "5211, 5216, 5204",
+              "phone": "042-245555 ต่อ 5211, 5216, 5204",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b-74y-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f3",
+          "level": 3,
+          "name": "ชั้น 3 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 3",
+          "items": [
+            {
+              "id": "room-spinal-unit",
+              "kind": "room",
+              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผู้ป่วยบาดเจ็บกระดูกสันหลังและไขสันหลัง",
+              "extension": "5318",
+              "phone": "042-245555 ต่อ 5318",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "b13-f3-spinal",
+              "kind": "room",
+              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT & ออร์โธปิดิกส์ 1",
+              "category": "ออร์โธปิดิกส์",
+              "description": "รักษาผู้ป่วยบาดเจ็บกระดูกสันหลัง ไขสันหลัง และกระดูก",
+              "extension": "5318, 5320, 5308",
+              "phone": "042-245555 ต่อ 5318, 5320, 5308",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b-74y-f3-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f3-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f3-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f4",
+          "level": 4,
+          "name": "ชั้น 4 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 4",
+          "items": [
+            {
+              "id": "room-joint-unit",
+              "kind": "room",
+              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผ่าตัดเปลี่ยนข้อเข่าและข้อสะโพกเทียม",
+              "extension": "5417",
+              "phone": "042-245555 ต่อ 5417",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "b13-f4-joint",
+              "kind": "room",
+              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT & ออร์โธปิดิกส์หญิง",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ผ่าตัดเปลี่ยนข้อเข่า ข้อสะโพกเทียม และออร์โธปิดิกส์หญิง",
+              "extension": "5417, 5418, 5402",
+              "phone": "042-245555 ต่อ 5417, 5418, 5402",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b-74y-f4-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f4-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f4-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f5",
+          "level": 5,
+          "name": "ชั้น 5 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 5",
+          "items": [
+            {
+              "id": "b13-f5-ortho2",
+              "kind": "room",
+              "name": "หอผู้ป่วยออร์โธปิดิกส์ 2",
+              "category": "ออร์โธปิดิกส์",
+              "description": "ดูแลผู้ป่วยในออร์โธปิดิกส์ 2",
+              "extension": "5502, 5532, 5533",
+              "phone": "042-245555 ต่อ 5502, 5532, 5533",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b-74y-f5-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f5-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f5-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f6",
+          "level": 6,
+          "name": "ชั้น 6 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 6",
+          "items": [
+            {
+              "id": "room-picu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU",
+              "category": "ICU เด็ก",
+              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤต",
+              "extension": "5624",
+              "phone": "042-245555 ต่อ 5624",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "b13-f6-picu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU & กุมารเวชกรรม 2",
+              "category": "ICU เด็ก",
+              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤตและกุมารเวชกรรม",
+              "extension": "5624, 5626, 5601",
+              "phone": "042-245555 ต่อ 5624, 5626, 5601",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "b-74y-f6-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f6-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f6-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f7",
+          "level": 7,
+          "name": "ชั้น 7 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 7",
+          "items": [
+            {
+              "id": "room-nicu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU",
+              "category": "ICU ทารก",
+              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อยและวิกฤต",
+              "extension": "5722",
+              "phone": "042-245555 ต่อ 5722",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "b13-f7-nicu",
+              "kind": "room",
+              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU & ROP Clinic",
+              "category": "ICU ทารก",
+              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อย วิกฤต และตรวจจอตา ROP",
+              "extension": "5722, 5727, 5725",
+              "phone": "042-245555 ต่อ 5722, 5727, 5725",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "b-74y-f7-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f7-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f7-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "b-74y-f8",
+          "level": 8,
+          "name": "ชั้น 8 — อาคารตึก 69 ปี",
+          "shortName": "ชั้น 8",
+          "items": [
+            {
+              "id": "b13-f8-ns",
+              "kind": "room",
+              "name": "หอผู้ป่วยทารกแรกเกิด NS & กุมารเวชกรรม 3",
+              "category": "ทารกแรกเกิด",
+              "description": "ดูแลทารกแรกเกิดป่วยและกุมารเวชกรรม 3",
+              "extension": "5822, 5823, 5806",
+              "phone": "042-245555 ต่อ 5822, 5823, 5806",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 40,
+              "h": 25,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            },
+            {
+              "id": "b-74y-f8-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f8-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "b-74y-f8-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-14",
+      "mapNumber": 14,
+      "code": "FACILITY-14",
+      "name": "อาคาร 14 — งานอาคารสถานที่ (1 ชั้น)",
+      "description": "หน่วยซ่อมบำรุงและงานอาคารสถานที่ประจำโรงพยาบาล",
+      "floors": [
+        {
+          "id": "b-14-f1",
+          "level": 1,
+          "name": "ชั้น 1 — งานอาคารสถานที่",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b14-f1-main",
+              "kind": "room",
+              "name": "สำนักงานงานอาคารสถานที่ & ช่างซ่อมบำรุง",
+              "category": "งานสนับสนุน",
+              "description": "บริการงานอาคารสถานที่ ระบบไฟฟ้า ประปา ซ่อมบำรุง",
+              "extension": "1137, 1306",
+              "phone": "042-245555 ต่อ 1137, 1306",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-15",
+      "mapNumber": 15,
+      "code": "SALINE-15",
+      "name": "อาคาร 15 — อาคารน้ำเกลือ (1 ชั้น)",
+      "description": "หน่วยผลิตและสำรองสารน้ำเกลือทางการแพทย์",
+      "floors": [
+        {
+          "id": "b-15-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารน้ำเกลือ",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b15-f1-main",
+              "kind": "room",
+              "name": "หน่วยผลิตสารน้ำเกลือทางการแพทย์",
+              "category": "งานสนับสนุน",
+              "description": "ผลิตและควบคุมคุณภาพสารน้ำเกลือ",
+              "extension": "1317",
+              "phone": "042-245555 ต่อ 1317",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-16",
+      "mapNumber": 16,
+      "code": "SALINE-WH-16",
+      "name": "อาคาร 16 — อาคารคลังน้ำเกลือ (1 ชั้น)",
+      "description": "คลังจัดเก็บและจ่ายสารน้ำเกลือประจำโรงพยาบาล",
+      "floors": [
+        {
+          "id": "b-16-f1",
+          "level": 1,
+          "name": "ชั้น 1 — คลังน้ำเกลือ",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b16-f1-main",
+              "kind": "room",
+              "name": "คลังสารน้ำเกลือทางการแพทย์",
+              "category": "งานสนับสนุน",
+              "description": "คลังจัดเก็บและกระจายสารน้ำเกลือ",
+              "extension": "1230, 3807",
+              "phone": "042-245555 ต่อ 1230, 3807",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-17",
+      "mapNumber": 17,
+      "code": "LAUNDRY-17",
+      "name": "อาคาร 17 — อาคารโรงซักฟอก (1 ชั้น)",
+      "description": "งานซักฟอกและอบผ้าผู้ป่วยทางการแพทย์",
+      "floors": [
+        {
+          "id": "b-17-f1",
+          "level": 1,
+          "name": "ชั้น 1 — โรงซักฟอก",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b17-f1-main",
+              "kind": "room",
+              "name": "หน่วยงานซักฟอกและอบผ้าทางการแพทย์",
+              "category": "งานสนับสนุน",
+              "description": "ซัก อบ และฆ่าเชื้อผ้าผู้ป่วยและชุดปฏิบัติงาน",
+              "extension": "1440, 1313",
+              "phone": "042-245555 ต่อ 1440, 1313",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-18",
+      "mapNumber": 18,
+      "code": "BOILER-18",
+      "name": "อาคาร 18 — อาคารบอยเลอร์ (1 ชั้น)",
+      "description": "งานหม้อต้มไอน้ำพลังงานบอยเลอร์ประจำโรงพยาบาล",
+      "floors": [
+        {
+          "id": "b-18-f1",
+          "level": 1,
+          "name": "ชั้น 1 — อาคารบอยเลอร์",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b18-f1-main",
+              "kind": "room",
+              "name": "ห้องควบคุมระบบหม้อน้ำไอน้ำ (Boiler)",
+              "category": "งานสนับสนุน",
+              "description": "ควบคุมระบบไอน้ำแรงดันสูงสำหรับฆ่าเชื้อเครื่องมือแพทย์",
+              "extension": "1309",
+              "phone": "042-245555 ต่อ 1309",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "code": "NUTRI-19",
+      "mapNumber": 19,
+      "name": "อาคาร 19 — อาคารโภชนาการ (โรงครัว) (1 ชั้น)",
+      "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
+      "lat": 17.4144,
+      "lng": 102.7803,
+      "floors": [
+        {
+          "id": "nutri-f1",
+          "level": 1,
+          "name": "ชั้น 1 — โรงครัวโภชนาการ",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "nutri-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 27 — อาคารโภชนาการ (โรงครัว)",
+              "extension": "2701",
+              "phone": "042-245555 ต่อ 2701",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "nutri-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "nutri-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "nutri-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b19-f1-main",
+              "kind": "room",
+              "name": "ฝ่ายโภชนาการ & โรงครัวจัดเตรียมอาหารผู้ป่วย",
+              "category": "โภชนาการ",
+              "description": "จัดเตรียมและปรุงอาหารโภชนาการบำบัดสำหรับผู้ป่วยใน",
+              "extension": "1128, 1308",
+              "phone": "042-245555 ต่อ 1128, 1308",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "kitti-sophon",
+      "code": "KITTI-20",
+      "mapNumber": 20,
+      "name": "อาคาร 20 — อาคารสงฆ์อาพาธ (ตึกสงฆ์กิตติโสภณ) (2 ชั้น)",
+      "description": "หอผู้ป่วยพระสงฆ์อาพาธ และหน่วยล้างไตทางหน้าท้อง CAPD",
+      "lat": 17.4147,
+      "lng": 102.7808,
+      "floors": [
+        {
+          "id": "kitti-f1",
+          "level": 1,
+          "name": "ชั้น 1 — หอผู้ป่วยพระสงฆ์อาพาธ",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "kitti-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 20 — อาคารสงฆ์อาพาธ (ตึกสงฆ์กิตติโสภณ) (2 ชั้น)",
+              "extension": "2001",
+              "phone": "042-245555 ต่อ 2001",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "kitti-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "kitti-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "kitti-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b20-f1-monk",
+              "kind": "room",
+              "name": "หอผู้ป่วยพระสงฆ์อาพาธ & หน่วย CAPD",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ดูแลพระภิกษุสงฆ์อาพาธ และล้างไตทางหน้าท้อง CAPD",
+              "extension": "1234, 1142, 1124",
+              "phone": "042-245555 ต่อ 1234, 1142, 1124",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "kitti-sophon-f2",
+          "level": 2,
+          "name": "ชั้น 2 — หอผู้ป่วยสงฆ์พิเศษ",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "kitti-sophon-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 20 — อาคารสงฆ์อาพาธ (ตึกสงฆ์กิตติโสภณ) (2 ชั้น)",
+              "extension": "2002",
+              "phone": "042-245555 ต่อ 2002",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "kitti-sophon-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "kitti-sophon-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "kitti-sophon-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b20-f2-monk-sp",
+              "kind": "room",
+              "name": "หอผู้ป่วยพระสงฆ์พิเศษ ชั้น 2",
+              "category": "หอผู้ป่วยสงฆ์",
+              "description": "ห้องพักพิเศษพระภิกษุสงฆ์อาพาธ",
+              "extension": "1240",
+              "phone": "042-245555 ต่อ 1240",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "multipurpose",
+      "code": "MULTI-21",
+      "mapNumber": 21,
+      "name": "อาคาร 21 — อาคารอเนกประสงค์หลวงตาอินทร์ถวาย (1 ชั้น)",
+      "description": "อาคารอเนกประสงค์หลวงตาอินทร์ถวาย ห้องประชุมใหญ่ ศูนย์การเรียนรู้",
+      "lat": 17.4155,
+      "lng": 102.782,
+      "floors": [
+        {
+          "id": "multi-f1",
+          "level": 1,
+          "name": "ชั้น 1 — หอประชุมอเนกประสงค์",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "multi-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 21 — อาคารอเนกประสงค์หลวงตาอินทร์ถวาย (1 ชั้น)",
+              "extension": "2101",
+              "phone": "042-245555 ต่อ 2101",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "multi-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "multi-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "multi-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b21-f1-hall",
+              "kind": "room",
+              "name": "หอประชุมอเนกประสงค์หลวงตาอินทร์ถวาย",
+              "category": "หอประชุม",
+              "description": "หอประชุมใหญ่ จัดงานพิธีและกิจกรรมสำคัญ",
+              "extension": "3805, 3806",
+              "phone": "042-245555 ต่อ 3805, 3806",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-22",
+      "mapNumber": 22,
+      "code": "MED-EQUIP-22",
+      "name": "อาคาร 22 — อาคารศูนย์เครื่องมือแพทย์ (1 ชั้น)",
+      "description": "ศูนย์จัดเก็บและบริหารจัดการเครื่องมือแพทย์ประจำโรงพยาบาล",
+      "floors": [
+        {
+          "id": "b-22-f1",
+          "level": 1,
+          "name": "ชั้น 1 — ศูนย์เครื่องมือแพทย์",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "b22-f1-main",
+              "kind": "room",
+              "name": "ศูนย์บริหารจัดการเครื่องมือแพทย์กลาง",
+              "category": "เครื่องมือแพทย์",
+              "description": "เบิกจ่าย ตรวจสอบและซ่อมบำรุงเครื่องมือแพทย์",
+              "extension": "1349, 1484",
+              "phone": "042-245555 ต่อ 1349, 1484",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "preecha",
+      "code": "PREECHA-23",
+      "mapNumber": 23,
+      "name": "อาคาร 23 — อาคารเภสัชกรรม (อาคารปรีชา-ศิริพรรณ) (2 ชั้น)",
+      "description": "หอผู้ป่วยใน ศูนย์ศัลยกรรมกระดูกและข้อ และงานเภสัชกรรม",
+      "lat": 17.4146,
+      "lng": 102.7804,
+      "floors": [
+        {
+          "id": "preecha-f1",
+          "level": 1,
+          "name": "ชั้น 1 — คลังยา & คลินิกออร์โธปิดิกส์",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "preecha-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 23 — อาคารปรีชา-ศิริพรรณ (เภสัชกรรม) (2 ชั้น)",
+              "extension": "2301",
+              "phone": "042-245555 ต่อ 2301",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "preecha-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "preecha-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "preecha-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b23-f1-main",
+              "kind": "room",
+              "name": "ห้องคลังยา & ศัลยกรรมกระดูกและข้อ (ปรีชา)",
+              "category": "คลังยา/ศัลยกรรม",
+              "description": "คลังคุมสต็อกยา และตรวจศัลยกรรมกระดูกและข้อ",
+              "extension": "1156, 1118, 1189",
+              "phone": "042-245555 ต่อ 1156, 1118, 1189",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        },
+        {
+          "id": "preecha-f2",
+          "level": 2,
+          "name": "ชั้น 2 — ศัลยกรรมตกแต่ง & หอผู้ป่วยศัลยกรรม",
+          "shortName": "ชั้น 2",
+          "items": [
+            {
+              "id": "preecha-f2-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 2",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 2 อาคาร 23 — อาคารปรีชา-ศิริพรรณ (เภสัชกรรม) (2 ชั้น)",
+              "extension": "2302",
+              "phone": "042-245555 ต่อ 2302",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "preecha-f2-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "preecha-f2-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "preecha-f2-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            },
+            {
+              "id": "b23-f2-plastic",
+              "kind": "room",
+              "name": "คลินิกศัลยกรรมตกแต่ง & หอผู้ป่วยศัลยกรรม 2",
+              "category": "ศัลยกรรมตกแต่ง",
+              "description": "ตรวจและรักษาศัลยกรรมตกแต่งและหอผู้ป่วยศัลยกรรม",
+              "extension": "1460, 1214, 1424",
+              "phone": "042-245555 ต่อ 1460, 1214, 1424",
+              "mobile": "",
+              "x": 15,
+              "y": 20,
+              "w": 35,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "08:00 - 16:30 น."
+              }
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "cssd",
+      "code": "CSSD-26",
+      "mapNumber": 26,
+      "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
+      "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์",
+      "lat": 17.4146,
+      "lng": 102.7806,
+      "floors": [
+        {
+          "id": "cssd-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "cssd-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
+              "extension": "2601",
+              "phone": "042-245555 ต่อ 2601",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "cssd-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "cssd-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "cssd-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "physical-therapy",
+      "code": "PT-30",
+      "mapNumber": 30,
+      "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
+      "description": "ศูนย์ฟื้นฟูสมรรถภาพทางกายและกายภาพบำบัด",
+      "lat": 17.4151,
+      "lng": 102.7813,
+      "floors": [
+        {
+          "id": "pt-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "room-pt-main",
+              "kind": "room",
+              "name": "ศูนย์กายภาพบำบัด & กิจกรรมบำบัด",
+              "category": "กายภาพบำบัด",
+              "description": "ฟื้นฟูสมรรถภาพ กระตุ้นพัฒนาการ และไฟฟ้าบำบัด",
+              "extension": "1192",
+              "phone": "042-245555 ต่อ 1192",
+              "mobile": "",
+              "x": 20,
+              "y": 20,
+              "w": 35,
+              "h": 25
+            },
+            {
+              "id": "pt-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "pt-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "pt-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
+            }
+          ],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "forensic",
+      "code": "FORENSIC-53",
+      "mapNumber": 53,
+      "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
+      "description": "กลุ่มงานนิติเวชศาสตร์ และงานชันสูตรพลิกศพ",
+      "lat": 17.4142,
+      "lng": 102.7814,
+      "floors": [
+        {
+          "id": "forensic-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [
+            {
+              "id": "forensic-f1-room-main",
+              "kind": "room",
+              "name": "จุดบริการผู้ป่วย / หอผู้ป่วย ชั้น 1",
+              "category": "หอผู้ป่วย/บริการ",
+              "description": "จุดบริการผู้ป่วยประจำ ชั้น 1 อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
+              "extension": "5301",
+              "phone": "042-245555 ต่อ 5301",
+              "x": 20,
+              "y": 20,
+              "w": 38,
+              "h": 22,
+              "facilityStatus": {
+                "cleaningStatus": "clean",
+                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
+                "lastCleanedTime": "เพิ่งทำความสะอาด",
+                "openHours": "24 ชั่วโมง"
+              }
+            },
+            {
+              "id": "forensic-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "forensic-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "forensic-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [],
@@ -1637,8 +6059,8 @@
         {
           "id": "er-f1",
           "level": 1,
-          "name": "ชั้น 1 — ห้องอุบัติเหตุฉุกเฉิน & CT Scan",
-          "shortName": "ชั้น 1 ER",
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
           "mapImageUrl": "",
           "items": [
             {
@@ -1694,6 +6116,33 @@
                 "lastCleanedTime": "13:40 น.",
                 "openHours": "24 ชั่วโมง"
               }
+            },
+            {
+              "id": "er-f1-lift-a",
+              "kind": "poi",
+              "name": "ลิฟต์ A",
+              "category": "ลิฟต์โดยสาร",
+              "description": "ลิฟต์โดยสารประจำอาคาร",
+              "x": 82,
+              "y": 45
+            },
+            {
+              "id": "er-f1-stairs-a",
+              "kind": "poi",
+              "name": "บันได A",
+              "category": "บันไดหลัก",
+              "description": "บันไดหลักประจำอาคาร",
+              "x": 88,
+              "y": 45
+            },
+            {
+              "id": "er-f1-wc",
+              "kind": "poi",
+              "name": "ห้องน้ำ",
+              "category": "ห้องน้ำแยกชาย-หญิง/ผู้พิการ",
+              "description": "ห้องน้ำประจำชั้น",
+              "x": 10,
+              "y": 75
             }
           ],
           "routeNodes": [
@@ -1706,1022 +6155,6 @@
               "floorId": "er-f1"
             }
           ],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "mec",
-      "code": "MEC-8",
-      "mapNumber": 8,
-      "name": "อาคาร 8 — อาคารศูนย์แพทยศาสตร์ศึกษาชั้นคลินิก",
-      "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
-      "lat": 17.4158,
-      "lng": 102.7797,
-      "floors": [
-        {
-          "id": "mec-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "kitti-sophon",
-      "code": "KITTI-19",
-      "mapNumber": 19,
-      "name": "อาคาร 19 — อาคารตึกสงฆ์กิตติโสภณ",
-      "description": "หอผู้ป่วยพระสงฆ์ และบริการผู้ป่วยใน",
-      "lat": 17.4147,
-      "lng": 102.7808,
-      "floors": [
-        {
-          "id": "kitti-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "preecha",
-      "code": "PREECHA-23",
-      "mapNumber": 23,
-      "name": "อาคาร 23 — อาคารปรีชา-ศิริพรรณ",
-      "description": "หอผู้ป่วยในและบริการทางการแพทย์เฉพาะทาง",
-      "lat": 17.4146,
-      "lng": 102.7804,
-      "floors": [
-        {
-          "id": "preecha-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "b-74y",
-      "code": "B74Y-24",
-      "mapNumber": 24,
-      "name": "อาคาร 24 — อาคาร 74 ปี คลองจินดา",
-      "description": "หอผู้ป่วยในและศูนย์คลินิกการรักษา",
-      "lat": 17.4143,
-      "lng": 102.7809,
-      "floors": [
-        {
-          "id": "b74y-f1",
-          "level": 1,
-          "name": "ชั้น 1 — คลินิกอายุรกรรม 69 & ห้อง ACUTE & ทำบัตร",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-69-opd",
-              "kind": "room",
-              "name": "คลินิกอายุรกรรม 69 & ห้อง ACUTE",
-              "category": "อายุรกรรม",
-              "description": "ตรวจรักษาผู้ป่วยในและห้อง ACUTE",
-              "extension": "5105",
-              "phone": "042-245555 ต่อ 5105",
-              "mobile": "",
-              "x": 15,
-              "y": 20,
-              "w": 30,
-              "h": 22
-            },
-            {
-              "id": "b13-f1-opd",
-              "kind": "room",
-              "name": "ทำบัตร 5110 & คลินิกอายุรกรรม 69 & ห้อง ACUTE",
-              "category": "อายุรกรรม",
-              "description": "ยื่นบัตร คลินิกอายุรกรรม และห้องรักษาผู้ป่วย ACUTE",
-              "extension": "5110, 5105, 5106, 5104",
-              "phone": "042-245555 ต่อ 5110, 5105, 5106, 5104",
-              "mobile": "",
-              "x": 15,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f2",
-          "level": 2,
-          "name": "ชั้น 2 — หอผู้ป่วยศัลยกรรมชาย & หญิง",
-          "shortName": "ชั้น 2",
-          "items": [
-            {
-              "id": "b13-f2-surg",
-              "kind": "room",
-              "name": "หอผู้ป่วยศัลยกรรมชาย & ศัลยกรรมหญิง (ตึก 69)",
-              "category": "ศัลยกรรม",
-              "description": "ดูแลผู้ป่วยในศัลยกรรมชายและหญิง",
-              "extension": "5211, 5216, 5204",
-              "phone": "042-245555 ต่อ 5211, 5216, 5204",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f3",
-          "level": 3,
-          "name": "ชั้น 3 — ศูนย์โรคกระดูกสันหลัง SPINAL UNIT",
-          "shortName": "ชั้น 3",
-          "items": [
-            {
-              "id": "room-spinal-unit",
-              "kind": "room",
-              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT",
-              "category": "ออร์โธปิดิกส์",
-              "description": "ดูแลผู้ป่วยบาดเจ็บกระดูกสันหลังและไขสันหลัง",
-              "extension": "5318",
-              "phone": "042-245555 ต่อ 5318",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            },
-            {
-              "id": "b13-f3-spinal",
-              "kind": "room",
-              "name": "ศูนย์โรคกระดูกสันหลัง SPINAL UNIT & ออร์โธปิดิกส์ 1",
-              "category": "ออร์โธปิดิกส์",
-              "description": "รักษาผู้ป่วยบาดเจ็บกระดูกสันหลัง ไขสันหลัง และกระดูก",
-              "extension": "5318, 5320, 5308",
-              "phone": "042-245555 ต่อ 5318, 5320, 5308",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f4",
-          "level": 4,
-          "name": "ชั้น 4 — ศูนย์ข้อต่อ JOINT UNIT",
-          "shortName": "ชั้น 4",
-          "items": [
-            {
-              "id": "room-joint-unit",
-              "kind": "room",
-              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT",
-              "category": "ออร์โธปิดิกส์",
-              "description": "ดูแลผ่าตัดเปลี่ยนข้อเข่าและข้อสะโพกเทียม",
-              "extension": "5417",
-              "phone": "042-245555 ต่อ 5417",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            },
-            {
-              "id": "b13-f4-joint",
-              "kind": "room",
-              "name": "ศูนย์ผ่าตัดเปลี่ยนข้อต่อ JOINT UNIT & ออร์โธปิดิกส์หญิง",
-              "category": "ออร์โธปิดิกส์",
-              "description": "ผ่าตัดเปลี่ยนข้อเข่า ข้อสะโพกเทียม และออร์โธปิดิกส์หญิง",
-              "extension": "5417, 5418, 5402",
-              "phone": "042-245555 ต่อ 5417, 5418, 5402",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f5",
-          "level": 5,
-          "name": "ชั้น 5 — หอผู้ป่วยออร์โธปิดิกส์ 2",
-          "shortName": "ชั้น 5",
-          "items": [
-            {
-              "id": "b13-f5-ortho2",
-              "kind": "room",
-              "name": "หอผู้ป่วยออร์โธปิดิกส์ 2",
-              "category": "ออร์โธปิดิกส์",
-              "description": "ดูแลผู้ป่วยในออร์โธปิดิกส์ 2",
-              "extension": "5502, 5532, 5533",
-              "phone": "042-245555 ต่อ 5502, 5532, 5533",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f6",
-          "level": 6,
-          "name": "ชั้น 6 — หอผู้ป่วยวิกฤตเด็ก P ICU",
-          "shortName": "ชั้น 6",
-          "items": [
-            {
-              "id": "room-picu",
-              "kind": "room",
-              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU",
-              "category": "ICU เด็ก",
-              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤต",
-              "extension": "5624",
-              "phone": "042-245555 ต่อ 5624",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            },
-            {
-              "id": "b13-f6-picu",
-              "kind": "room",
-              "name": "หอผู้ป่วยวิกฤตเด็ก P ICU & กุมารเวชกรรม 2",
-              "category": "ICU เด็ก",
-              "description": "ดูแลผู้ป่วยเด็กขั้นวิกฤตและกุมารเวชกรรม",
-              "extension": "5624, 5626, 5601",
-              "phone": "042-245555 ต่อ 5624, 5626, 5601",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "24 ชั่วโมง"
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f7",
-          "level": 7,
-          "name": "ชั้น 7 — หอผู้ป่วยวิกฤตทารก N ICU & ROP",
-          "shortName": "ชั้น 7",
-          "items": [
-            {
-              "id": "room-nicu",
-              "kind": "room",
-              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU",
-              "category": "ICU ทารก",
-              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อยและวิกฤต",
-              "extension": "5722",
-              "phone": "042-245555 ต่อ 5722",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            },
-            {
-              "id": "b13-f7-nicu",
-              "kind": "room",
-              "name": "หอผู้ป่วยวิกฤตทารกแรกเกิด N ICU & ROP Clinic",
-              "category": "ICU ทารก",
-              "description": "ดูแลทารกแรกเกิดน้ำหนักน้อย วิกฤต และตรวจจอตา ROP",
-              "extension": "5722, 5727, 5725",
-              "phone": "042-245555 ต่อ 5722, 5727, 5725",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "24 ชั่วโมง"
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "b-74y-f8",
-          "level": 8,
-          "name": "ชั้น 8 — หอผู้ป่วยทารกแรกเกิด NS & กุมารเวช 3",
-          "shortName": "ชั้น 8",
-          "items": [
-            {
-              "id": "b13-f8-ns",
-              "kind": "room",
-              "name": "หอผู้ป่วยทารกแรกเกิด NS & กุมารเวชกรรม 3",
-              "category": "ทารกแรกเกิด",
-              "description": "ดูแลทารกแรกเกิดป่วยและกุมารเวชกรรม 3",
-              "extension": "5822, 5823, 5806",
-              "phone": "042-245555 ต่อ 5822, 5823, 5806",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "luangta-bua",
-      "code": "BUA-55",
-      "mapNumber": 55,
-      "name": "อาคาร 55 — อาคารหลวงตาบัว ญาณสัมปันโน",
-      "description": "อาคารหอผู้ป่วยและศูนย์บริการเฉพาะทาง",
-      "lat": 17.4154,
-      "lng": 102.7818,
-      "floors": [
-        {
-          "id": "bua-f1",
-          "level": 1,
-          "name": "ชั้น 1 — ประชาสัมพันธ์ & ตรวจโรค",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-bua-f1",
-              "kind": "room",
-              "name": "เคาน์เตอร์ประชาสัมพันธ์ อาคาร 96 ปี",
-              "category": "บริการผู้ป่วย",
-              "description": "ต้อนรับและยื่นบัตรอาคาร 96 ปี",
-              "extension": "2101",
-              "phone": "042-245555 ต่อ 2101",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 30,
-              "h": 22
-            },
-            {
-              "id": "b12-f1-info",
-              "kind": "room",
-              "name": "ประชาสัมพันธ์ 2101 & ห้องตรวจ 2102-2103",
-              "category": "บริการผู้ป่วย",
-              "description": "ต้อนรับ ประชาสัมพันธ์ และยื่นบัตรตึก 96 ปี",
-              "extension": "2101, 2102, 2103, 2107",
-              "phone": "042-245555 ต่อ 2101, 2102, 2103, 2107",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f2",
-          "level": 2,
-          "name": "ชั้น 2 — หอผู้ป่วยพิเศษ 2",
-          "shortName": "ชั้น 2",
-          "items": [
-            {
-              "id": "b12-f2-sp2",
-              "kind": "room",
-              "name": "หอผู้ป่วยพิเศษ 2",
-              "category": "หอผู้ป่วยพิเศษ",
-              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 2",
-              "extension": "2211, 2213, 2205",
-              "phone": "042-245555 ต่อ 2211, 2213, 2205",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f3",
-          "level": 3,
-          "name": "ชั้น 3 — หอผู้ป่วยพิเศษ 3",
-          "shortName": "ชั้น 3",
-          "items": [
-            {
-              "id": "b12-f3-sp3",
-              "kind": "room",
-              "name": "หอผู้ป่วยพิเศษ 3",
-              "category": "หอผู้ป่วยพิเศษ",
-              "description": "หอผู้ป่วยพิเศษและห้องพักพิเศษ ชั้น 3",
-              "extension": "2310, 2311, 2305",
-              "phone": "042-245555 ต่อ 2310, 2311, 2305",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f6",
-          "level": 6,
-          "name": "ชั้น 6 — หอผู้ป่วย Semi ICU",
-          "shortName": "ชั้น 6",
-          "items": [
-            {
-              "id": "b12-f6-semi",
-              "kind": "room",
-              "name": "หอผู้ป่วย Semi ICU ชั้น 6",
-              "category": "Semi ICU",
-              "description": "ดูแลผู้ป่วยในระดับกึ่งวิกฤต Semi ICU",
-              "extension": "2610, 2611, 2605",
-              "phone": "042-245555 ต่อ 2610, 2611, 2605",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "24 ชั่วโมง"
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f7",
-          "level": 7,
-          "name": "ชั้น 7 — หอผู้ป่วยพิเศษ 7 & ห้องประชุม",
-          "shortName": "ชั้น 7",
-          "items": [
-            {
-              "id": "b12-f7-sp7",
-              "kind": "room",
-              "name": "หอผู้ป่วยพิเศษ 7 & ห้องประชุมภาณุพันธุ",
-              "category": "หอผู้ป่วยพิเศษ",
-              "description": "หอผู้ป่วยพิเศษและห้องประชุมใหญ่ภาณุพันธุ",
-              "extension": "2708, 2710, 2714",
-              "phone": "042-245555 ต่อ 2708, 2710, 2714",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f9",
-          "level": 9,
-          "name": "ชั้น 9 — หอผู้ป่วยสงฆ์ 9 & ICU สงฆ์",
-          "shortName": "ชั้น 9",
-          "items": [
-            {
-              "id": "room-monk-icu",
-              "kind": "room",
-              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์",
-              "category": "หอผู้ป่วยสงฆ์",
-              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธวิกฤต",
-              "extension": "2912",
-              "phone": "042-245555 ต่อ 2912",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            },
-            {
-              "id": "b12-f9-monk",
-              "kind": "room",
-              "name": "หอผู้ป่วยสงฆ์อาพาธ 9 & ICU สงฆ์ 9",
-              "category": "หอผู้ป่วยสงฆ์",
-              "description": "ดูแลรักษาพระภิกษุสงฆ์อาพาธและวิกฤต",
-              "extension": "2913, 2914, 2912",
-              "phone": "042-245555 ต่อ 2913, 2914, 2912",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "24 ชั่วโมง"
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "luangta-bua-f10",
-          "level": 10,
-          "name": "ชั้น 10 — ห้องพักพิเศษ VIP 1001-1010",
-          "shortName": "ชั้น 10",
-          "items": [
-            {
-              "id": "b12-f10-vip",
-              "kind": "room",
-              "name": "ห้องพักพิเศษ VIP 1001 - 1010",
-              "category": "ห้องพิเศษ VIP",
-              "description": "ห้องพักพิเศษ VIP สำหรับผู้ป่วยและครอบครัว",
-              "extension": "2002, 2003, 2012, 2016",
-              "phone": "042-245555 ต่อ 2002, 2003, 2012, 2016",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 40,
-              "h": 25,
-              "facilityStatus": {
-                "cleaningStatus": "clean",
-                "cleaningStatusText": "🟢 ทำความสะอาด & ฆ่าเชื้อแล้ว",
-                "lastCleanedTime": "เพิ่งทำความสะอาด",
-                "openHours": "08:00 - 16:30 น."
-              }
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "dialysis",
-      "code": "DIALYSIS-16",
-      "mapNumber": 16,
-      "name": "อาคาร 16 — อาคารหน่วยไตเทียม",
-      "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม",
-      "lat": 17.4153,
-      "lng": 102.7801,
-      "floors": [
-        {
-          "id": "dialysis-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "pathology",
-      "code": "PATH-18",
-      "mapNumber": 18,
-      "name": "อาคาร 18 — อาคารพยาธิวิทยา",
-      "description": "ห้องปฏิบัติการชันสูตรและพยาธิวิทยาคลินิก",
-      "lat": 17.4152,
-      "lng": 102.7807,
-      "floors": [
-        {
-          "id": "path-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-path-main",
-              "kind": "room",
-              "name": "ห้อง LAB ชันสูตร & เจาะเลือด IPD",
-              "category": "LAB ชันสูตร",
-              "description": "ตรวจ CBC, Chem, Immuno, Blood Gas",
-              "extension": "1254",
-              "phone": "042-245555 ต่อ 1254",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "special-ward",
-      "code": "WARD-20",
-      "mapNumber": 20,
-      "name": "อาคาร 20 — หอผู้ป่วยพิเศษ",
-      "description": "ห้องพักและหอผู้ป่วยพิเศษ",
-      "lat": 17.4156,
-      "lng": 102.7812,
-      "floors": [
-        {
-          "id": "ward20-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-delivery",
-              "kind": "room",
-              "name": "ห้องคลอด & ผ่าตัดทำหมัน",
-              "category": "ห้องคลอด",
-              "description": "บริการทำคลอด ผ่าตัดสูตินรีเวช และทำหมัน",
-              "extension": "1331",
-              "phone": "042-245555 ต่อ 1331",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "special-ward-f2",
-          "level": 2,
-          "name": "ชั้น 2 — หอผู้ป่วยหลังคลอด PP 1",
-          "shortName": "ชั้น 2",
-          "items": [
-            {
-              "id": "room-pp1",
-              "kind": "room",
-              "name": "หอผู้ป่วยหลังคลอด PP 1",
-              "category": "หลังคลอด",
-              "description": "ดูแลมารดาและทารกหลังคลอด",
-              "extension": "1335",
-              "phone": "042-245555 ต่อ 1335",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "surgery",
-      "code": "SURGERY-22",
-      "mapNumber": 22,
-      "name": "อาคาร 22 — อาคารศัลยกรรม",
-      "description": "ห้องผ่าตัด หอผู้ป่วยศัลยกรรม และศูนย์ดูแลผู้ป่วยหลังผ่าตัด",
-      "lat": 17.4149,
-      "lng": 102.7805,
-      "floors": [
-        {
-          "id": "surg-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-surg-icu",
-              "kind": "room",
-              "name": "ICU S.1 (หอผู้ป่วยวิกฤตศัลยกรรม 1)",
-              "category": "ICU ศัลยกรรม",
-              "description": "ดูแลผู้ป่วยวิกฤตหลังผ่าตัดศัลยกรรม",
-              "extension": "1261",
-              "phone": "042-245555 ต่อ 1261",
-              "mobile": "",
-              "x": 15,
-              "y": 20,
-              "w": 30,
-              "h": 22
-            },
-            {
-              "id": "room-organ-transplant",
-              "kind": "room",
-              "name": "ศูนย์ปลูกถ่าย & บริจาคอวัยวะ",
-              "category": "ปลูกถ่ายอวัยวะ",
-              "description": "ประสานงานปลูกถ่ายและบริจาคอวัยวะ",
-              "extension": "1301",
-              "phone": "042-245555 ต่อ 1301",
-              "mobile": "",
-              "x": 50,
-              "y": 20,
-              "w": 30,
-              "h": 22
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "surgery-f2",
-          "level": 2,
-          "name": "ชั้น 2 — ศูนย์ดูแลแผล WOUND CARE",
-          "shortName": "ชั้น 2",
-          "items": [
-            {
-              "id": "room-wound-care",
-              "kind": "room",
-              "name": "ศูนย์ดูแลแผล WOUND CARE",
-              "category": "ดูแลแผล",
-              "description": "รักษาและดูแลแผลเรื้อรัง แผลกดทับ",
-              "extension": "1276",
-              "phone": "042-245555 ต่อ 1276",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        },
-        {
-          "id": "surgery-f5",
-          "level": 5,
-          "name": "ชั้น 5 — หอผู้ป่วยไฟไหม้ BURN UNIT",
-          "shortName": "ชั้น 5",
-          "items": [
-            {
-              "id": "room-burn-unit",
-              "kind": "room",
-              "name": "หอผู้ป่วยไฟไหม้ BURN UNIT",
-              "category": "BURN UNIT",
-              "description": "ดูแลรักษาผู้ป่วยแผลไฟไหม้และน้ำร้อนลวก",
-              "extension": "1274",
-              "phone": "042-245555 ต่อ 1274",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "physical-therapy",
-      "code": "PT-30",
-      "mapNumber": 30,
-      "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
-      "description": "ศูนย์ฟื้นฟูสมรรถภาพทางกายและกายภาพบำบัด",
-      "lat": 17.4151,
-      "lng": 102.7813,
-      "floors": [
-        {
-          "id": "pt-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [
-            {
-              "id": "room-pt-main",
-              "kind": "room",
-              "name": "ศูนย์กายภาพบำบัด & กิจกรรมบำบัด",
-              "category": "กายภาพบำบัด",
-              "description": "ฟื้นฟูสมรรถภาพ กระตุ้นพัฒนาการ และไฟฟ้าบำบัด",
-              "extension": "1192",
-              "phone": "042-245555 ต่อ 1192",
-              "mobile": "",
-              "x": 20,
-              "y": 20,
-              "w": 35,
-              "h": 25
-            }
-          ],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "chalert-prakiat",
-      "code": "CHALERM-3",
-      "mapNumber": 3,
-      "name": "อาคาร 3 — อาคารเฉลิมพระเกียรติ",
-      "description": "บริการผู้ป่วยและห้องปฏิบัติการ",
-      "lat": 17.4161,
-      "lng": 102.7792,
-      "floors": [
-        {
-          "id": "chalerm-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "malai-clinic",
-      "code": "MALAI-5",
-      "mapNumber": 5,
-      "name": "อาคาร 5 — มาลัยคลินิก",
-      "description": "คลินิกปฐมภูมิและคลินิกเฉพาะทาง",
-      "lat": 17.4159,
-      "lng": 102.7793,
-      "floors": [
-        {
-          "id": "malai-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "medical-records",
-      "code": "REC-6",
-      "mapNumber": 6,
-      "name": "อาคาร 6 — อาคารเวชระเบียนและแพทย์แผนไทย",
-      "description": "บริการยื่นบัตร คลังเวชระเบียน และศูนย์นวดแพทย์แผนไทย",
-      "lat": 17.4158,
-      "lng": 102.7794,
-      "floors": [
-        {
-          "id": "rec-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "cssd",
-      "code": "CSSD-26",
-      "mapNumber": 26,
-      "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
-      "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์",
-      "lat": 17.4146,
-      "lng": 102.7806,
-      "floors": [
-        {
-          "id": "cssd-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "nutrition",
-      "code": "NUTRI-27",
-      "mapNumber": 27,
-      "name": "อาคาร 27 — อาคารโภชนาการและส่วนบริการ",
-      "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
-      "lat": 17.4144,
-      "lng": 102.7803,
-      "floors": [
-        {
-          "id": "nutri-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "forensic",
-      "code": "FORENSIC-53",
-      "mapNumber": 53,
-      "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
-      "description": "กลุ่มงานนิติเวชศาสตร์ และงานชันสูตรพลิกศพ",
-      "lat": 17.4142,
-      "lng": 102.7814,
-      "floors": [
-        {
-          "id": "forensic-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "multipurpose",
-      "code": "MULTI-59",
-      "mapNumber": 59,
-      "name": "อาคาร 59 — อาคารอเนกประสงค์และห้องประชุม",
-      "description": "ห้องประชุมใหญ่ ศูนย์การเรียนรู้ และงานสัมมนา",
-      "lat": 17.4155,
-      "lng": 102.782,
-      "floors": [
-        {
-          "id": "multi-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
           "routeEdges": []
         }
       ]
