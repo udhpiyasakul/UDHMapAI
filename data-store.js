@@ -1,5 +1,5 @@
 (function () {
-  const KEY = 'udh-map-data-v1';
+  const KEY = 'udh-map-data-v2';
   const clone = (value) => JSON.parse(JSON.stringify(value));
   
   function valid(data) {
@@ -11,20 +11,43 @@
   }
 
   async function load() {
+    // 1. Always fetch map-data.json to compare schemaVersion
+    let serverData = null;
+    try {
+      const response = await fetch(`map-data.json?t=${Date.now()}`);
+      if (response.ok) {
+        serverData = await response.json();
+      }
+    } catch (e) {
+      console.warn('Could not fetch server map-data.json:', e);
+    }
+
+    // 2. Check LocalStorage
     const saved = localStorage.getItem(KEY);
     if (saved) {
       try {
-        const data = JSON.parse(saved);
-        if (valid(data)) return data;
+        const localData = JSON.parse(saved);
+        // If serverData has a newer or different schemaVersion, prioritize serverData
+        if (serverData && valid(serverData)) {
+          if (!localData.schemaVersion || localData.schemaVersion !== serverData.schemaVersion) {
+            console.log('New schemaVersion detected on server. Updating LocalStorage to:', serverData.schemaVersion);
+            localStorage.setItem(KEY, JSON.stringify(serverData));
+            return serverData;
+          }
+        }
+        if (valid(localData)) return localData;
       } catch (err) {
         console.warn('LocalStorage data corrupt, falling back to map-data.json', err);
       }
     }
-    const response = await fetch('map-data.json');
-    if (!response.ok) throw new Error('ไม่สามารถโหลด map-data.json ได้');
-    const data = await response.json();
-    if (!valid(data)) throw new Error('โครงสร้าง map-data.json ไม่ถูกต้อง');
-    return data;
+
+    // Fallback to serverData
+    if (serverData && valid(serverData)) {
+      localStorage.setItem(KEY, JSON.stringify(serverData));
+      return serverData;
+    }
+
+    throw new Error('ไม่สามารถโหลด map-data.json ได้');
   }
 
   function save(data) {
@@ -67,6 +90,9 @@
     clone,
     valid,
     getAssets,
-    reset: () => localStorage.removeItem(KEY)
+    reset: () => {
+      localStorage.removeItem(KEY);
+      localStorage.removeItem('udh-map-data-v1');
+    }
   };
 })();
