@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.9.0",
+  "schemaVersion": "2.0.0",
   "hospital": {
     "id": "udh",
     "name": "โรงพยาบาลอุดรธานี (Udon Thani Hospital)",
@@ -22,7 +22,8 @@
       ],
       "googleMapsUrl": "https://www.google.com/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@17.4162989,102.7806858,462m"
     },
-    "officialDocReference": "สมุดโทรศัพท์โรงพยาบาลอุดรธานี ฉบับอัปเดต กุมภาพันธ์ 2568 & ร่างป้ายบอกทาง 2569"
+    "officialDocReference": "สมุดโทรศัพท์โรงพยาบาลอุดรธานี ฉบับอัปเดต กุมภาพันธ์ 2568 & ร่างป้ายบอกทาง 2569",
+    "officialTableReference": "ตารางดรรชนีหมายเลขอาคารจาก 2ผังบริเวณเริ่มต้น 1-4-69 (ส่งทีม).pdf (อาคาร 1 - 23)"
   },
   "campusMap": {
     "imageUrl": "Map.jpg",
@@ -35,9 +36,9 @@
   "buildings": [
     {
       "id": "opd",
-      "code": "OPD-21",
-      "mapNumber": 21,
-      "name": "อาคาร 21 — อาคารอำนวยการและผู้ป่วยนอก (OPD)",
+      "code": "OPD-1",
+      "mapNumber": 1,
+      "name": "อาคาร 1 — อาคารอำนวยการและผู้ป่วยนอก (7 ชั้น)",
       "description": "ศูนย์อำนวยการ เวชระเบียน คลินิกตรวจโรคทั่วไป จักษุ อายุรกรรม ER และห้องยาหลัก",
       "lat": 17.4151,
       "lng": 102.7803,
@@ -669,10 +670,170 @@
       "officialPhone": "042-245555"
     },
     {
+      "id": "malai-clinic",
+      "code": "OPD-OLD-2",
+      "mapNumber": 2,
+      "name": "อาคาร 2 — อาคารผู้ป่วยนอก (เดิม)",
+      "description": "อาคารผู้ป่วยนอกเดิม คลินิกปฐมภูมิ และคลินิกเฉพาะทางผู้ป่วยนอก",
+      "lat": 17.4159,
+      "lng": 102.7793,
+      "floors": [
+        {
+          "id": "malai-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "chalert-prakiat",
+      "code": "OR-XRAY-3",
+      "mapNumber": 3,
+      "name": "อาคาร 3 — อาคารผ่าตัด / X-RAY (เก่า)",
+      "description": "อาคารเฉลิมพระเกียรติ บริการห้องผ่าตัดเดิมและงานรังสีวิทยา X-RAY",
+      "lat": 17.4161,
+      "lng": 102.7792,
+      "floors": [
+        {
+          "id": "chalerm-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "special-ward",
+      "code": "OBGYN-4",
+      "mapNumber": 4,
+      "name": "อาคาร 4 — อาคารสูตินรีเวช (5 ชั้น)",
+      "description": "อาคารหอผู้ป่วยสูตินรีเวช ห้องคลอด หอผู้ป่วยพิเศษ และฝากครรภ์",
+      "lat": 17.4156,
+      "lng": 102.7812,
+      "floors": [
+        {
+          "id": "ward20-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "dialysis",
+      "code": "DIALYSIS-5",
+      "mapNumber": 5,
+      "name": "อาคาร 5 — อาคารไตเทียม (1 ชั้น)",
+      "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม และล้างไตทางหน้าท้อง CAPD",
+      "lat": 17.4153,
+      "lng": 102.7801,
+      "floors": [
+        {
+          "id": "dialysis-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "pathology",
+      "code": "PATH-LAB-6",
+      "mapNumber": 6,
+      "name": "อาคาร 6 — อาคารพยาธิวิทยา (แลปเบอร์ 10)",
+      "description": "ห้องปฏิบัติการชันสูตร พยาธิวิทยาคลินิก เจาะเลือด IPD ตรวจ CBC/Chem/Immuno",
+      "lat": 17.4152,
+      "lng": 102.7807,
+      "floors": [
+        {
+          "id": "path-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "medical-records",
+      "code": "SOC-MED-7",
+      "mapNumber": 7,
+      "name": "อาคาร 7 — อาคารเวชกรรมสังคมและเวชระเบียน (2 ชั้น)",
+      "description": "บริการยื่นบัตร คลังเวชระเบียน เวชกรรมสังคม และศูนย์นวดแพทย์แผนไทย",
+      "lat": 17.4158,
+      "lng": 102.7794,
+      "floors": [
+        {
+          "id": "rec-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "surgery",
+      "code": "SURGERY-8",
+      "mapNumber": 8,
+      "name": "อาคาร 8 — อาคารศัลยกรรม (7 ชั้น)",
+      "description": "ห้องผ่าตัด หอผู้ป่วยวิกฤตศัลยกรรม (ICU S.1), BURN UNIT & WOUND CARE",
+      "lat": 17.4149,
+      "lng": 102.7805,
+      "floors": [
+        {
+          "id": "surg-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "mec",
+      "code": "MEC-9",
+      "mapNumber": 9,
+      "name": "อาคาร 9 — อาคารศูนย์แพทยศาสตร์ชั้นคลินิก (9 ชั้น)",
+      "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
+      "lat": 17.4158,
+      "lng": 102.7797,
+      "floors": [
+        {
+          "id": "mec-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
       "id": "somdet",
-      "code": "SOMDET-25",
-      "mapNumber": 25,
-      "name": "อาคาร 25 — อาคารสมเด็จพระเทพฯ (200 ปี / EXCELLENT CENTER)",
+      "code": "EXCELLENT-11",
+      "mapNumber": 11,
+      "name": "อาคาร 11 — อาคารศูนย์บริการโรคหัวใจ มะเร็ง และวินิจฉัยรักษา (สมเด็จพระเทพฯ 200 ปี)",
       "description": "ศูนย์เชี่ยวชาญระดับสูง: หอผู้ป่วยพิเศษ, ศัลยกรรมหัวใจ CVT, CATH LAB, MRI, CT SCAN, OR",
       "lat": 17.4149,
       "lng": 102.7801,
@@ -765,6 +926,186 @@
       ]
     },
     {
+      "id": "luangta-bua",
+      "code": "BUA-12",
+      "mapNumber": 12,
+      "name": "อาคาร 12 — อาคาร 96 ปี หลวงตามหาบัวญาณสัมปันโน (10 ชั้น)",
+      "description": "อาคารหอผู้ป่วย 96 ปี หลวงตามหาบัว หอผู้ป่วยพิเศษ และศูนย์บริการเฉพาะทาง",
+      "lat": 17.4154,
+      "lng": 102.7818,
+      "floors": [
+        {
+          "id": "bua-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "b-74y",
+      "code": "B69Y-13",
+      "mapNumber": 13,
+      "name": "อาคาร 13 — อาคารตึก 69 ปี (74 ปี คลองจินดา) (8 ชั้น)",
+      "description": "ศูนย์ออร์โธปิดิกส์, SPINAL UNIT, P ICU และ N ICU",
+      "lat": 17.4143,
+      "lng": 102.7809,
+      "floors": [
+        {
+          "id": "b74y-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "code": "NUTRI-19",
+      "mapNumber": 19,
+      "name": "อาคาร 19 — อาคารโภชนาการ (โรงครัว)",
+      "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
+      "lat": 17.4144,
+      "lng": 102.7803,
+      "floors": [
+        {
+          "id": "nutri-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "kitti-sophon",
+      "code": "KITTI-20",
+      "mapNumber": 20,
+      "name": "อาคาร 20 — อาคารสงฆ์อาพาธ (ตึกสงฆ์กิตติโสภณ) (2 ชั้น)",
+      "description": "หอผู้ป่วยพระสงฆ์อาพาธ และหน่วยล้างไตทางหน้าท้อง CAPD",
+      "lat": 17.4147,
+      "lng": 102.7808,
+      "floors": [
+        {
+          "id": "kitti-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "multipurpose",
+      "code": "MULTI-21",
+      "mapNumber": 21,
+      "name": "อาคาร 21 — อาคารอเนกประสงค์หลวงตาอินทร์ถวาย (1 ชั้น)",
+      "description": "อาคารอเนกประสงค์หลวงตาอินทร์ถวาย ห้องประชุมใหญ่ ศูนย์การเรียนรู้",
+      "lat": 17.4155,
+      "lng": 102.782,
+      "floors": [
+        {
+          "id": "multi-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "preecha",
+      "code": "PREECHA-23",
+      "mapNumber": 23,
+      "name": "อาคาร 23 — อาคารปรีชา-ศิริพรรณ (เภสัชกรรม) (2 ชั้น)",
+      "description": "หอผู้ป่วยใน ศูนย์ศัลยกรรมกระดูกและข้อ และงานเภสัชกรรม",
+      "lat": 17.4146,
+      "lng": 102.7804,
+      "floors": [
+        {
+          "id": "preecha-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "cssd",
+      "code": "CSSD-26",
+      "mapNumber": 26,
+      "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
+      "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์ประจำโรงพยาบาล",
+      "lat": 17.4146,
+      "lng": 102.7806,
+      "floors": [
+        {
+          "id": "cssd-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "physical-therapy",
+      "code": "PT-30",
+      "mapNumber": 30,
+      "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
+      "description": "ศูนย์ฟื้นฟูสมรรถภาพ กระตุ้นพัฒนาการ กิจกรรมบำบัด และไฟฟ้าบำบัด",
+      "lat": 17.4151,
+      "lng": 102.7813,
+      "floors": [
+        {
+          "id": "pt-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
+      "id": "forensic",
+      "code": "FORENSIC-53",
+      "mapNumber": 53,
+      "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
+      "description": "กลุ่มงานนิติเวชศาสตร์ งานชันสูตรพลิกศพ และนิติเวชวิทยา",
+      "lat": 17.4142,
+      "lng": 102.7814,
+      "floors": [
+        {
+          "id": "forensic-f1",
+          "level": 1,
+          "name": "ชั้น 1",
+          "shortName": "ชั้น 1",
+          "items": [],
+          "routeNodes": [],
+          "routeEdges": []
+        }
+      ]
+    },
+    {
       "id": "er",
       "code": "ER-57",
       "mapNumber": 57,
@@ -845,346 +1186,6 @@
               "floorId": "er-f1"
             }
           ],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "mec",
-      "code": "MEC-8",
-      "mapNumber": 8,
-      "name": "อาคาร 8 — อาคารศูนย์แพทยศาสตร์ศึกษาชั้นคลินิก",
-      "description": "ศูนย์การศึกษาและฝึกอบรมทางการแพทย์โรงพยาบาลอุดรธานี",
-      "lat": 17.4158,
-      "lng": 102.7797,
-      "floors": [
-        {
-          "id": "mec-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "kitti-sophon",
-      "code": "KITTI-19",
-      "mapNumber": 19,
-      "name": "อาคาร 19 — อาคารตึกสงฆ์กิตติโสภณ",
-      "description": "อาคารตึกสงฆ์กิตติโสภณ และหน่วยล้างไตทางหน้าท้อง CAPD",
-      "lat": 17.4147,
-      "lng": 102.7808,
-      "floors": [
-        {
-          "id": "kitti-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "preecha",
-      "code": "PREECHA-23",
-      "mapNumber": 23,
-      "name": "อาคาร 23 — อาคารปรีชา-ศิริพรรณ",
-      "description": "หอผู้ป่วยใน ศูนย์ศัลยกรรมกระดูกและข้อ และศัลยกรรมตกแต่ง",
-      "lat": 17.4146,
-      "lng": 102.7804,
-      "floors": [
-        {
-          "id": "preecha-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "b-74y",
-      "code": "B69Y-24",
-      "mapNumber": 24,
-      "name": "อาคาร 24 — อาคาร 69 ปี (74 ปี คลองจินดา)",
-      "description": "อาคาร 69 ปี (74 ปี คลองจินดา) ศูนย์ออร์โธปิดิกส์, SPINAL UNIT, P ICU และ N ICU",
-      "lat": 17.4143,
-      "lng": 102.7809,
-      "floors": [
-        {
-          "id": "b74y-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "luangta-bua",
-      "code": "BUA-55",
-      "mapNumber": 55,
-      "name": "อาคาร 55 — อาคาร 96 พรรษา (หลวงตาบัว ญาณสัมปันโน)",
-      "description": "อาคารหอผู้ป่วย 96 พรรษา (หลวงตาบัว) หอผู้ป่วยพิเศษ และศูนย์บริการเฉพาะทาง",
-      "lat": 17.4154,
-      "lng": 102.7818,
-      "floors": [
-        {
-          "id": "bua-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "dialysis",
-      "code": "DIALYSIS-16",
-      "mapNumber": 16,
-      "name": "อาคาร 16 — อาคารหน่วยไตเทียม",
-      "description": "ศูนย์ฟอกเลือดด้วยเครื่องไตเทียม และล้างไตทางหน้าท้อง",
-      "lat": 17.4153,
-      "lng": 102.7801,
-      "floors": [
-        {
-          "id": "dialysis-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "pathology",
-      "code": "PATH-18",
-      "mapNumber": 18,
-      "name": "อาคาร 18 — อาคารพยาธิวิทยาคลินิก (LAB)",
-      "description": "ห้องปฏิบัติการชันสูตร เจาะเลือด IPD ตรวจ CBC/Chem/Immuno",
-      "lat": 17.4152,
-      "lng": 102.7807,
-      "floors": [
-        {
-          "id": "path-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "special-ward",
-      "code": "WARD-20",
-      "mapNumber": 20,
-      "name": "อาคาร 20 — อาคารหอผู้ป่วยสูติ-นรีเวช (หอผู้ป่วยพิเศษ)",
-      "description": "หอผู้ป่วยพิเศษ ห้องพักผู้ป่วย และห้องคลอดสูติ-นรีเวช",
-      "lat": 17.4156,
-      "lng": 102.7812,
-      "floors": [
-        {
-          "id": "ward20-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "surgery",
-      "code": "SURGERY-22",
-      "mapNumber": 22,
-      "name": "อาคาร 22 — อาคารศัลยกรรม",
-      "description": "ห้องผ่าตัด หอผู้ป่วยวิกฤตศัลยกรรม (ICU S.1), BURN UNIT & WOUND CARE",
-      "lat": 17.4149,
-      "lng": 102.7805,
-      "floors": [
-        {
-          "id": "surg-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "physical-therapy",
-      "code": "PT-30",
-      "mapNumber": 30,
-      "name": "อาคาร 30 — หน่วยกายภาพบำบัด",
-      "description": "ศูนย์ฟื้นฟูสมรรถภาพ กระตุ้นพัฒนาการ กิจกรรมบำบัด และไฟฟ้าบำบัด",
-      "lat": 17.4151,
-      "lng": 102.7813,
-      "floors": [
-        {
-          "id": "pt-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "chalert-prakiat",
-      "code": "CHALERM-3",
-      "mapNumber": 3,
-      "name": "อาคาร 3 — อาคารเฉลิมพระเกียรติ",
-      "description": "บริการผู้ป่วยนอก คลินิกปฐมภูมิ และห้องปฏิบัติการ",
-      "lat": 17.4161,
-      "lng": 102.7792,
-      "floors": [
-        {
-          "id": "chalerm-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "malai-clinic",
-      "code": "MALAI-5",
-      "mapNumber": 5,
-      "name": "อาคาร 5 — มาลัยคลินิก",
-      "description": "คลินิกปฐมภูมิ และคลินิกเฉพาะทางผู้ป่วยนอก",
-      "lat": 17.4159,
-      "lng": 102.7793,
-      "floors": [
-        {
-          "id": "malai-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "medical-records",
-      "code": "REC-6",
-      "mapNumber": 6,
-      "name": "อาคาร 6 — อาคารเวชระเบียนและแพทย์แผนไทย",
-      "description": "บริการยื่นบัตร คลังเวชระเบียน และศูนย์นวดแพทย์แผนไทย",
-      "lat": 17.4158,
-      "lng": 102.7794,
-      "floors": [
-        {
-          "id": "rec-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "cssd",
-      "code": "CSSD-26",
-      "mapNumber": 26,
-      "name": "อาคาร 26 — อาคารอบและฆ่าเชื้อกลาง (CSSD)",
-      "description": "ศูนย์ปราศจากเชื้อและฆ่าเชื้อเครื่องมือแพทย์ประจำโรงพยาบาล",
-      "lat": 17.4146,
-      "lng": 102.7806,
-      "floors": [
-        {
-          "id": "cssd-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "nutrition",
-      "code": "NUTRI-27",
-      "mapNumber": 27,
-      "name": "อาคาร 27 — อาคารโภชนาการและส่วนบริการ",
-      "description": "ฝ่ายโภชนาการ จัดเตรียมอาหารผู้ป่วย และบริการสนับสนุน",
-      "lat": 17.4144,
-      "lng": 102.7803,
-      "floors": [
-        {
-          "id": "nutri-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "forensic",
-      "code": "FORENSIC-53",
-      "mapNumber": 53,
-      "name": "อาคาร 53 — อาคารนิติเวชศาสตร์ / ห้องเก็บศพ",
-      "description": "กลุ่มงานนิติเวชศาสตร์ งานชันสูตรพลิกศพ และนิติเวชวิทยา",
-      "lat": 17.4142,
-      "lng": 102.7814,
-      "floors": [
-        {
-          "id": "forensic-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
-          "routeEdges": []
-        }
-      ]
-    },
-    {
-      "id": "multipurpose",
-      "code": "MULTI-59",
-      "mapNumber": 59,
-      "name": "อาคาร 59 — อาคารอเนกประสงค์และห้องประชุม",
-      "description": "ห้องประชุมใหญ่ ศูนย์การเรียนรู้ และงานสัมมนาวิชาการ",
-      "lat": 17.4155,
-      "lng": 102.782,
-      "floors": [
-        {
-          "id": "multi-f1",
-          "level": 1,
-          "name": "ชั้น 1",
-          "shortName": "ชั้น 1",
-          "items": [],
-          "routeNodes": [],
           "routeEdges": []
         }
       ]
